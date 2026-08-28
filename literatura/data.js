@@ -8,13 +8,6 @@
 
 const LIVROS = [
   {
-    titulo: "Dom Casmurro",
-    autor: "Machado de Assis",
-    ano: "2024",
-    bimestre: "2",
-    observacoes: "Exemplo — apague depois de cadastrar os livros reais."
-  },
-  {
     titulo: "Memórias Póstumas de Brás Cubas",
     autor: "Machado de Assis",
     ano: "",
