@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matemática — 2º semestre — 2025</title>
+<style>
+  body { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  .aviso { border: 1px solid; border-radius: 4px; padding: 10px 14px; font-size: 0.9rem; margin-bottom: 24px; }
+  .questao { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid; }
+  .questao h2 { font-size: 1.05rem; margin-bottom: 4px; }
+  img.figura { max-width: 100%; width: 420px; display: block; margin: 10px 0; border: 1px solid; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
+</style>
+</head>
+<body>
+  <h1>Matemática — 2º semestre — 2025</h1>
+  <p><strong>Professores:</strong> Ruben Carneiro e Juliana Jong · <strong>AC1 · Simulado Vital</strong></p>
+
+  <div class="aviso">
+    Esta é uma transcrição só dos enunciados (com as figuras originais). As respostas,
+    correções e notas dos alunos que fizeram a prova original não estão aqui. As análises em
+    "Ver análise" foram escritas por IA — úteis pra estudar, mas vale conferir com os
+    professores se tiver dúvida numa resposta específica.
+  </div>
+
+  <div class="questao">
+    <h2>Questão 01</h2>
+    <p>Considere o triângulo representado abaixo, onde <em>x</em>, <em>x</em> + 30 e <em>y</em> são as
+    medidas, em graus, de seus ângulos internos.</p>
+    <img class="figura" src="imagens/q01-triangulo.jpg" alt="Triângulo com ângulos internos y (vértice A), x+30 (vértice B) e x (vértice C)">
+    <p>a) Determine a fórmula que expressa <em>y</em> em função de <em>x</em>.</p>
+    <p>b) Podemos dizer que a fórmula obtida no item anterior é uma função de R em R, sendo <em>x</em> e
+    <em>y</em> ângulos de um triângulo medidos em graus? Justifique sua resposta.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> A soma dos ângulos internos de um triângulo é 180°:
+        y + x + (x+30) = 180 → y + 2x + 30 = 180 → <strong>y = -2x + 150</strong> (ou f(x) = -2x + 150).</p>
+        <p><strong>b)</strong> Como fórmula algébrica, sim, é uma função de R em R (pra todo x real existe
+        um y real). Mas se x e y precisam representar ângulos de um triângulo de verdade, o domínio não
+        pode ser todo o R: os três ângulos (x, x+30 e y) precisam ser todos positivos e menores que 180°,
+        e isso só acontece pra um intervalo restrito de x (aproximadamente 0° &lt; x &lt; 75°). Ou seja, o
+        problema não é o coeficiente "a" ser negativo (isso não tem relação com a validade dos ângulos) —
+        o problema é que nem todo x real corresponde a um triângulo de verdade.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 02</h2>
+    <p>Uma função f está definida no intervalo [-2, 9] da seguinte forma: para x ∈ [-2, 2], f leva x em
+    x², e, no restante do domínio, o seu gráfico é formado por dois segmentos de reta conforme mostra a
+    figura.</p>
+    <img class="figura" src="imagens/q02-grafico.jpg" alt="Gráfico de f: parábola de -2 a 2, segmento constante em y=4 de 2 a 5, e segmento subindo até (9,6)">
+    <p>a) Determine os valores de f nos pontos x = -3/2, x = 7/2.</p>
+    <p>b) Determine o valor de f no ponto x = 8.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Pelo gráfico: de x=2 a x=5, f é constante em 4; de x=5 a x=9, f é uma reta de (5,4) até (9,6),
+        com coeficiente angular (6-4)/(9-5) = 1/2, ou seja f(x) = 0,5x + 1,5 nesse trecho.</p>
+        <p><strong>a)</strong> x=-3/2 está em [-2,2], então usa f(x)=x²: f(-3/2) = (-3/2)² =
+        <strong>9/4</strong>. x=7/2=3,5 está em [2,5] (trecho constante): <strong>f(7/2) = 4</strong>.</p>
+        <p><strong>b)</strong> x=8 está no trecho [5,9]: f(8) = 0,5×8 + 1,5 = 4 + 1,5 =
+        <strong>11/2 (5,5)</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 03</h2>
+    <p>Considere a função em R dada pela lei</p>
+    <p style="text-align:center"><code>f(x) = √(-3 / (x + 5))</code></p>
+    <p>a) Determine f(-32)</p>
+    <p>b) Determine o domínio da função.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> f(-32) = √(-3/(-32+5)) = √(-3/-27) = √(1/9) = <strong>1/3</strong>.</p>
+        <p><strong>b)</strong> Pra raiz quadrada existir, o que está dentro dela precisa ser ≥ 0:
+        -3/(x+5) ≥ 0. Como o numerador (-3) é sempre negativo, a fração só é ≥ 0 se o denominador também
+        for negativo (negativo ÷ negativo = positivo), ou seja x+5 &lt; 0 → x &lt; -5 (não pode ser igual
+        a -5, porque aí o denominador zera e a divisão não existe). Domínio:
+        <strong>D = {x ∈ R | x &lt; -5}</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 04</h2>
+    <p>Duas empresas de entrega de mercadorias, A e B, são concorrentes. A empresa A cobra R$ 4,00 por
+    quilo da encomenda e mais R$ 30,00 de taxa fixa. Já a tarifa da empresa B é de R$ 6,00 por quilo, sem
+    taxa fixa, para encomendas de até 30 quilos; para encomendas de mais de 30 quilos, a empresa B cobra
+    R$ 2,00 por quilo, mais uma taxa fixa de R$ 120,00.</p>
+    <p>a) Considerando uma mercadoria de até 30 quilos, a partir de qual peso é mais barato pedir uma
+    entrega pela empresa A?</p>
+    <p>b) Considerando uma mercadoria de mais de 30 quilos, até que peso é mais barato pedir uma entrega
+    pela empresa A do que pela empresa B?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Custo de A: A(x) = 4x + 30. Custo de B: B(x) = 6x (até 30kg) ou B(x) = 2x + 120 (acima de 30kg).</p>
+        <p><strong>a)</strong> Queremos 4x + 30 &lt; 6x → 30 &lt; 2x → <strong>x &gt; 15kg</strong>. A
+        partir de 15kg, a empresa A fica mais barata.</p>
+        <p><strong>b)</strong> Queremos 4x + 30 &lt; 2x + 120 → 2x &lt; 90 → <strong>x &lt; 45kg</strong>.
+        Ou seja, entre 30 e 45kg (sem incluir 45kg, onde os preços empatam em R$210), a empresa A ainda
+        sai mais barata. Se estiver contando só quilos inteiros, o último peso em que A é estritamente
+        mais barata é 44kg.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 05</h2>
+    <p>Determine a raiz quadrada da expressão</p>
+    <p style="text-align:center"><code>x² - 4x + 4</code></p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>x² - 4x + 4 é um trinômio quadrado perfeito: x² - 4x + 4 = (x-2)². Então
+        √(x² - 4x + 4) = √((x-2)²) = <strong>|x-2|</strong> (módulo, não só "x-2" — a raiz quadrada de um
+        quadrado sempre devolve um valor não-negativo pra qualquer x real).</p>
+        <p>Atenção: o discriminante dessa expressão (tratada como equação x²-4x+4=0) é Δ=0, mas isso
+        <strong>não</strong> significa que "não dá pra determinar a raiz" — Δ=0 só indica que é um
+        quadrado perfeito (raiz dupla em x=2), o que é exatamente o que permite simplificar pra |x-2|.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 06</h2>
+    <p>Sabendo que no triângulo ABC da figura, AB = 20 e BP/PA = 2/3, calcule:</p>
+    <p>a) a medida de AP.</p>
+    <p>b) a medida de AC.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Como P está sobre AB, AP + BP = 20. Chamando AP de x, BP = 20-x. Da razão
+        BP/PA = 2/3: (20-x)/x = 2/3 → 3(20-x) = 2x → 60-3x = 2x → 60 = 5x →
+        <strong>x = AP = 12</strong> (e BP = 8).</p>
+        <p><strong>b)</strong> Pelos ângulos marcados iguais na figura (ângulo comum em A, e os dois
+        ângulos x marcados iguais), os triângulos ABC e ACP são semelhantes (caso AA), o que gera a
+        relação AC/AB = AP/AC, ou seja AC é a média geométrica entre AB e AP: AC² = AB × AP = 20 × 12 =
+        240 → <strong>AC = √240 = 4√15</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 07</h2>
+    <p>No triângulo isósceles ABC da figura, M é ponto médio de AB e N é ponto médio de AC. Se MN = 15 e
+    a altura relativa à base BC do triângulo é 24, calcule:</p>
+    <img class="figura" src="imagens/q07-triangulo.jpg" alt="Triângulo isósceles ABC com base média MN=15 e altura 24 relativa à base BC">
+    <p>a) a medida de BC.</p>
+    <p>b) a área do triângulo ABC.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> MN é a base média do triângulo em relação a BC (M e N são pontos médios de
+        dois lados). Pelo teorema da base média, MN = BC/2, logo <strong>BC = 2 × 15 = 30</strong>.</p>
+        <p><strong>b)</strong> Área = (base × altura)/2 = (30 × 24)/2 = 720/2 = <strong>360</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 08</h2>
+    <p>Um produto que custava R$ 1500,00 sofreu dois aumentos sucessivos de 20% e um desconto de 40%.
+    Qual é o preço final desse produto?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O erro mais comum aqui é somar as porcentagens (20% + 20% = 40% de aumento) — mas aumentos
+        sucessivos se multiplicam, não se somam. O jeito certo é aplicar cada variação em sequência:</p>
+        <p>1500 × 1,20 = 1800 (depois do 1º aumento)<br>
+        1800 × 1,20 = 2160 (depois do 2º aumento)<br>
+        2160 × 0,60 = <strong>1296</strong> (depois do desconto de 40%)</p>
+        <p>Preço final: <strong>R$ 1296,00</strong>. (Se você somar os dois aumentos de 20% como um único
+        "aumento de 40%", chega em 1500×1,40×0,60 = R$1260 — um valor próximo, mas matematicamente
+        incorreto, porque ignora que o segundo aumento de 20% incide sobre o valor já aumentado, não
+        sobre o valor original.)</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 09</h2>
+    <p>Um trapézio isósceles possui a base maior medindo o dobro da menor e altura de medida 4 cm. Esse
+    trapézio possui área igual ao de um losango cuja diagonal maior mede 9 cm e diagonal menor mede 8 cm.
+    Calcule o perímetro desse trapézio, em cm.</p>
+    <img class="figura" src="imagens/q09-figuras.jpg" alt="Trapézio isósceles com base maior 2x, base menor x e lado 4, ao lado de um losango com diagonais 9 e 8">
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Área do losango = (D × d)/2 = (9 × 8)/2 = 36.</p>
+        <p>Área do trapézio (base maior 2x, base menor x, altura 4) = ((2x+x) × 4)/2 = 6x. Igualando às
+        áreas: 6x = 36 → <strong>x = 6</strong>. Então base maior = 12, base menor = 6.</p>
+        <p>Falta o lado (perna) do trapézio: a diferença entre as bases dividida por 2 dá a "sobra"
+        horizontal de cada lado: (12-6)/2 = 3. Com a altura 4, o lado é a hipotenusa de um triângulo
+        retângulo de catetos 3 e 4: lado = √(3²+4²) = √25 = 5.</p>
+        <p>Perímetro = base maior + base menor + 2×lado = 12 + 6 + 2×5 = <strong>28 cm</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao" style="border-bottom:none">
+    <h2>Questão 10</h2>
+    <p>Um polígono convexo possui 27 diagonais. Determine que polígono é esse e qual é a soma de seus
+    ângulos internos.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Número de diagonais de um polígono de n lados: D = n(n-3)/2. Com D=27:
+        27 = n(n-3)/2 → 54 = n² - 3n → n² - 3n - 54 = 0.</p>
+        <p>Resolvendo (Δ = 9 + 216 = 225, √225 = 15): n = (3 ± 15)/2 → n=9 ou n=-6 (descartado, não existe
+        polígono com lados negativos). Então <strong>n = 9</strong> (um eneágono/nonágono).</p>
+        <p>Soma dos ângulos internos: Si = (n-2) × 180 = (9-2) × 180 = 7 × 180 =
+        <strong>1260°</strong>.</p>
+      </div>
+    </details>
+  </div>
+</body>
+</html>

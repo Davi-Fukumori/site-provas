@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de média — Colégio Vital Brasil</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Colégio Vital Brasil</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../provas/index.html">Provas</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="index.html" aria-current="page">Calculadora de média</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Calculadora de média</h1>
+    <p>
+      Primeiro preencha o Simulado Vital (por área) e a nota do Bernoulli — eles valem
+      igual para todas as matérias. Depois preencha as notas de cada matéria.
+    </p>
+
+    <section class="bloco-areas">
+      <h2>Simulado Vital por área</h2>
+      <p>Conta como uma 3ª nota contínua (C3) na fórmula de cada matéria.</p>
+      <div class="filtros">
+        <div class="campo">
+          <label for="area-exatas">Exatas</label>
+          <input type="number" id="area-exatas" min="0" max="10" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="area-linguas">Linguagens</label>
+          <input type="number" id="area-linguas" min="0" max="10" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="area-humanas">Humanas</label>
+          <input type="number" id="area-humanas" min="0" max="10" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="area-biologicas">Biológicas</label>
+          <input type="number" id="area-biologicas" min="0" max="10" step="0.1">
+        </div>
+      </div>
+      <p class="resumo-geral">Simulado Vital (C3): <strong id="simulado-geral">–</strong></p>
+    </section>
+
+    <section class="bloco-areas bloco-bonus">
+      <h2>Bônus (Bernoulli)</h2>
+      <p>
+        O Bônus vem da nota do Bernoulli ÷ 10, somado na AC2 de toda matéria (sem
+        passar de 10). É igual para todas — inclusive a AC2 de cada matéria abaixo é
+        compartilhada com as outras da mesma área.
+      </p>
+      <div class="filtros">
+        <div class="campo">
+          <label for="nota-bernoulli">Nota Bernoulli</label>
+          <input type="number" id="nota-bernoulli" min="0" max="10" step="0.1">
+        </div>
+      </div>
+      <p class="resumo-geral">Bônus na AC2: <strong id="bonus-geral">–</strong></p>
+    </section>
+
+    <div class="config-minima">
+      <label for="nota-minima">Nota mínima para aprovação</label>
+      <input type="number" id="nota-minima" value="6" min="0" max="10" step="0.1">
+    </div>
+
+    <div id="lista-materias" class="lista-materias"></div>
+  </main>
+
+  <footer>
+    Se a escola mudar algum peso, edite <code>calculadora/materias.js</code> —
+    não precisa mexer no resto do site.
+  </footer>
+
+  <script src="materias.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/calculadora.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Literatura — Colégio Vital Brasil</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Colégio Vital Brasil</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../provas/index.html">Provas</a></li>
+        <li><a href="index.html" aria-current="page">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Livros de Literatura</h1>
+    <p>Livros cobrados em cada ano e bimestre, agrupados abaixo.</p>
+
+    <div id="lista-livros"></div>
+  </main>
+
+  <footer>
+    Faltou algum livro? Veja o <a href="../README.md">README</a> para saber como adicionar.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/livros.js"></script>
+</body>
+</html>

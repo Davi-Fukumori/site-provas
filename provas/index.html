@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provas — Colégio Vital Brasil</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Colégio Vital Brasil</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="index.html" aria-current="page">Provas</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Provas antigas</h1>
+    <p>Filtre por matéria, ano ou professor, ou busque pelo título da prova.</p>
+
+    <div class="filtros">
+      <div class="campo">
+        <label for="busca">Buscar</label>
+        <input type="text" id="busca" placeholder="Título da prova...">
+      </div>
+      <div class="campo">
+        <label for="filtro-materia">Matéria</label>
+        <select id="filtro-materia"></select>
+      </div>
+      <div class="campo">
+        <label for="filtro-ano">Ano</label>
+        <select id="filtro-ano"></select>
+      </div>
+      <div class="campo">
+        <label for="filtro-professor">Professor</label>
+        <select id="filtro-professor"></select>
+      </div>
+    </div>
+
+    <div id="lista-provas" class="lista-provas"></div>
+  </main>
+
+  <footer>
+    Não achou a prova que procurava? Peça pra quem está cuidando do site adicionar — veja o <a href="../README.md">README</a>.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/provas.js"></script>
+</body>
+</html>
