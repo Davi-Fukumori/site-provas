@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
       secaoBimestre.className = "grupo-bimestre";
 
       var tituloBimestre = document.createElement("h3");
-      tituloBimestre.textContent = bimestre + "º bimestre";
+      // "bimestre" pode ser um número simples ("1") ou um texto livre/vazio.
+      tituloBimestre.textContent = /^\d+$/.test(bimestre) ? bimestre + "º bimestre" : bimestre;
       secaoBimestre.appendChild(tituloBimestre);
 
       var lista = document.createElement("ul");
@@ -79,6 +80,18 @@ document.addEventListener("DOMContentLoaded", function () {
       obs.className = "obs-livro";
       obs.textContent = livro.observacoes;
       item.appendChild(obs);
+    }
+
+    if (livro.arquivo) {
+      var link = document.createElement("a");
+      link.className = "botao botao-secundario";
+      link.href = livro.arquivo;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "Ver material de apoio";
+      link.style.marginTop = "8px";
+      link.style.display = "inline-block";
+      item.appendChild(link);
     }
 
     return item;
