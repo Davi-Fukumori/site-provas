@@ -1,5 +1,8 @@
 # Site legado de provas — Colégio Vital Brasil
 
+🔗 **Site no ar:** https://davi-fukumori.github.io/site-provas/
+📦 **Repositório:** https://github.com/Davi-Fukumori/site-provas
+
 Site estático (sem servidor, sem banco de dados) com:
 - **Provas** antigas organizadas por matéria/professor/ano
 - **Literatura**: lista dos livros cobrados por ano/bimestre
