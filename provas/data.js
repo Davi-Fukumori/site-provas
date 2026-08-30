@@ -14,7 +14,7 @@
 const PROVAS = [
   {
     materia: "Biologia",
-    professores: ["Kamila Drequeceler"],
+    professores: ["Kamila"],
     ano: "2025",
     bimestre: "AC1 - 2º semestre",
     titulo: "Prova AC1 - 2º semestre — 2025",
@@ -22,7 +22,7 @@ const PROVAS = [
   },
   {
     materia: "Matemática",
-    professores: ["Ruben Carneiro", "Juliana Jong"],
+    professores: ["Ruben", "Juliana"],
     ano: "2025",
     bimestre: "AC1 - 2º semestre",
     titulo: "Prova AC1 - 2º semestre — 2025",
