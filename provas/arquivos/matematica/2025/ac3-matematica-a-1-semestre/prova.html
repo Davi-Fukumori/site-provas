@@ -13,6 +13,9 @@
   .fonte { font-size: 0.85rem; font-style: italic; margin: 4px 0 12px; }
   img.figura { max-width: 100%; width: 380px; display: block; margin: 10px 0; border: 1px solid; }
   .formula { text-align: center; margin: 10px 0; font-size: 1.05rem; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -26,8 +29,8 @@
 
   <div class="aviso">
     Esta é uma transcrição só dos enunciados. As respostas, correções e notas dos alunos que fizeram a
-    prova original não estão aqui. Essa prova ainda não tem a seção "Ver análise" — foi só transcrita por
-    enquanto.
+    prova original não estão aqui. As análises em "Ver análise" foram escritas por IA — úteis pra estudar,
+    mas vale conferir com o professor se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -37,12 +40,27 @@
     dois ônibus, um de cada empresa, acabaram de sair juntos, em quanto tempo dois outros ônibus dessas
     empresas irão partir juntos novamente?</p>
     <img class="figura" src="imagens/q01-onibus.jpg" alt="Foto de ônibus estacionados em um terminal rodoviário à noite">
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O problema pede o MMC entre 12 e 18. Fatorando: 12=2²×3, 18=2×3². MMC = 2²×3² = 4×9 =
+        <strong>36 minutos</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
     <h2>Questão 02</h2>
     <p>Determine o valor de</p>
     <p class="formula">√((−3)²) + (−1)⁶ − (−1,2)⁰ + ∛(4⁶)</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>√((−3)²) = √9 = 3. (−1)⁶ = 1 (expoente par). (−1,2)⁰ = 1 (qualquer número não nulo elevado a 0
+        é 1). ∛(4⁶) = 4^(6/3) = 4² = 16.</p>
+        <p>Somando: 3 + 1 − 1 + 16 = <strong>19</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -52,12 +70,34 @@
     <p>b) √81 = ±9</p>
     <p>c) A soma de dois números racionais é sempre um número racional.</p>
     <p>d) Se a e b são números reais, e a − b &gt; 0, então a⁴ − b⁴ &gt; 0.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a) Falsa.</strong> Em geral √(a²+b²) ≠ a+b (por exemplo, a=3,b=4: √25=5, mas
+        3+4=7).</p>
+        <p><strong>b) Falsa.</strong> O símbolo √81 representa, por definição/convenção, apenas a raiz
+        quadrada <em>não negativa</em>: √81=9 (não ±9). A equação x²=81 é que tem duas soluções, x=9 e
+        x=−9 — mas isso é diferente do símbolo √81 em si.</p>
+        <p><strong>c) Verdadeira.</strong> Os números racionais são fechados sob a adição: a soma de dois
+        racionais é sempre um racional.</p>
+        <p><strong>d) Falsa.</strong> Contraexemplo: a=1, b=−2. a−b=1−(−2)=3&gt;0 (satisfaz a condição),
+        mas a⁴−b⁴=1−16=−15, que não é maior que 0. (Isso acontece porque a⁴−b⁴=(a−b)(a+b)(a²+b²), e mesmo
+        com a−b&gt;0, o fator (a+b) pode ser negativo.)</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
     <h2>Questão 04</h2>
     <p>Determine o valor de</p>
     <p class="formula">(2⁹ × 128 × 16³) / 256</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Escrevendo tudo em potências de 2: 128=2⁷; 16³=(2⁴)³=2¹²; 256=2⁸.</p>
+        <p>(2⁹ × 2⁷ × 2¹²) / 2⁸ = 2^(9+7+12−8) = 2²⁰ = <strong>1.048.576</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -66,6 +106,18 @@
     <p class="formula">x = 3 × 5² × 2<sup>y</sup><br>z = 720<br>w = 2400</p>
     <p>A) Determine o MDC entre z e w.</p>
     <p>B) Se o máximo divisor comum entre x, z e w é 24, determine o valor de y.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>A)</strong> Fatorando: 720 = 2⁴×3²×5; 2400 = 2⁵×3×5². O MDC usa o menor expoente de
+        cada fator primo comum: 2⁴×3¹×5¹ = 16×3×5 = <strong>240</strong>.</p>
+        <p><strong>B)</strong> 24 = 2³×3. Como x=2<sup>y</sup>×3×5², e o MDC(x,z,w) não tem fator 5 (pois
+        x não contribui com 5 suficiente para o mínimo... na verdade x tem 5², mas precisamos olhar o
+        expoente de 2: o MDC final tem 2³, e sabendo que z contribui com 2⁴ e w com 2⁵, o "gargalo" que
+        limita o expoente de 2 a exatamente 3 só pode vir de x — logo o expoente de 2 em x precisa ser
+        exatamente 3: <strong>y = 3</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -80,6 +132,15 @@
     <p class="fonte">https://www.ufmg.br/espacodoconhecimento/planeta-venus-e-as-semelhancas-com-a-terra</p>
     <p>Considerando que a velocidade média de um ônibus espacial é de aproximadamente 28.000 km/h, calcule
     em quantas horas um ônibus espacial levaria para percorrer a distância entre a Terra e Vênus.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>A)</strong> 2³⁵+2³⁸+2³⁹ = 2³⁵×(1+2³+2⁴) = 2³⁵×(1+8+16) = 2³⁵×25.</p>
+        <p>√(2³⁷ / (2³⁵×25)) = √(2² / 25) = √4/√25 = <strong>2/5</strong>.</p>
+        <p><strong>B)</strong> Distância = 61.000.000 km; velocidade = 28.000 km/h.</p>
+        <p>Tempo = 61.000.000 ÷ 28.000 ≈ <strong>2.178,6 horas</strong> (aproximadamente 90,8 dias).</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>

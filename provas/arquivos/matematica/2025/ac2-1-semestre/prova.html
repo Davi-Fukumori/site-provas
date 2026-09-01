@@ -11,6 +11,9 @@
   .questao h2 { font-size: 1.05rem; margin-bottom: 4px; }
   .fonte { font-size: 0.85rem; font-style: italic; margin: 4px 0 12px; }
   .alt { margin: 2px 0 2px 12px; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -21,7 +24,8 @@
     Prova de múltipla escolha (15 questões). Esta é uma transcrição só dos enunciados e alternativas —
     quando a questão tinha uma figura, ela foi descrita em texto porque nas fotos originais o aluno tinha
     escrito cálculos por cima do desenho. As respostas marcadas e notas do aluno que fez a prova original
-    não estão aqui. Essa prova ainda não tem a seção "Ver análise" — foi só transcrita por enquanto.
+    não estão aqui. As análises em "Ver análise" foram escritas por IA — úteis pra estudar, mas vale
+    conferir com os professores se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -40,6 +44,13 @@
     <p class="alt">c) "3ª Classe", impresso na cor azul.</p>
     <p class="alt">d) "2ª Classe", impresso na cor azul.</p>
     <p class="alt">e) "1ª Classe", impresso na cor azul.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>D=1,2%: D&gt;5%? Não. D&gt;3%? Não. Escolhe-se a cor azul. D&gt;1,0%? Sim (1,2&gt;1,0) →
+        escreve-se "2ª Classe". <strong>Resposta: d)</strong> "2ª Classe", impresso na cor azul.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -47,6 +58,14 @@
     <p>Seja a inequação |−2x+6| ≤ 4, no conjunto dos números reais. A quantidade de números inteiros
     contidos em seu conjunto solução é ___.</p>
     <p class="alt">a) 2 &nbsp; b) 3 &nbsp; c) 4 &nbsp; d) 5 &nbsp; e) 6</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>|−2x+6|≤4 → −4≤−2x+6≤4 → −10≤−2x≤−2 → dividindo por −2 (inverte as desigualdades): 5≥x≥1, ou
+        seja, 1≤x≤5. Inteiros nesse intervalo: 1, 2, 3, 4, 5 — <strong>5 números</strong>.
+        <strong>Resposta: d) 5</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -58,6 +77,16 @@
     <p class="alt">c) múltiplo de 9.</p>
     <p class="alt">d) quadrado perfeito.</p>
     <p class="alt">e) primo.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>y ÷ 12: quociente 6, resto 9 → y = 12×6+9 = 81. x ÷ y: quociente 9, resto 6 → x = 9×81+6 =
+        729+6 = <strong>735</strong>. Verificando as alternativas: 735 é ímpar (não é par); 735÷7=105
+        exato, <strong>é divisível por 7</strong>; 735÷9=81,67 (não é múltiplo de 9); não é quadrado
+        perfeito (27²=729, 28²=784); não é primo (735=7×105). <strong>Resposta: b)</strong> divisível por
+        7.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -72,6 +101,17 @@
     <p>O vencedor do jogo foi</p>
     <p class="alt">a) Maria &nbsp; b) Selton &nbsp; c) Tadeu &nbsp; d) Valentina &nbsp; e) Não houve
     vencedores</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Convertendo as dízimas em frações e somando cada par de cartas:</p>
+        <p>Maria: 4/3+4/5=32/15; 6/5+7/3=53/15. Soma=85/15=17/3 (não inteiro).</p>
+        <p>Selton: 2/9+1/5=19/45; 3/10+1/6=7/15. Soma=19/45+21/45=40/45=8/9 (não inteiro).</p>
+        <p>Tadeu: 10/9+3/10=127/90; 17/10+8/9=233/90. Soma=360/90=<strong>4</strong> (inteiro!).</p>
+        <p>Valentina: 2/3+7/2=25/6; 1/10+1/2=3/5. Soma=125/30+18/30=143/30 (não inteiro).</p>
+        <p>Apenas Tadeu obteve um número inteiro. <strong>Resposta: c) Tadeu</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -93,6 +133,21 @@
     na superfície terrestre.</p>
     <p>Quantas afirmações apresentadas são verdadeiras:</p>
     <p class="alt">a) 1 &nbsp; b) 2 &nbsp; c) 3 &nbsp; d) 4 &nbsp; e) 5</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>1) Definição de escala numérica e gráfica: <strong>verdadeira</strong>.</p>
+        <p>2) Escala 1:3.000.000 → 1 cm no mapa = 30 km reais. 72 mm = 7,2 cm → 7,2×30 = 216 km:
+        <strong>verdadeira</strong> (a conta bate certinho).</p>
+        <p>3) Aqui a afirmação inverte o conceito: quanto <em>menor</em> a escala numérica (maior o
+        denominador, como 1:5.000.000), maior a área representada — não é "maior a escala". Uma escala de
+        1:5.000.000 é, na verdade, uma escala pequena (pouco detalhe, grande área). <strong>Falsa</strong>.</p>
+        <p>4) Fazenda A: 5×8=40 cm². Fazenda B: 2,5×4=10 cm². Razão: 40/10=4 vezes maior, não 2.
+        <strong>Falsa</strong>.</p>
+        <p>5) Definição correta de escala: <strong>verdadeira</strong>.</p>
+        <p>Total: 3 verdadeiras. <strong>Resposta: c) 3</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -109,6 +164,18 @@
     fauna.</p>
     <p class="alt">d) algumas investigações que serão arquivadas envolvem espécies da fauna.</p>
     <p class="alt">e) nenhuma investigação que envolve espécies da flora será arquivada.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Toda investigação é (exclusivamente) de fauna OU de flora. Fauna nunca é arquivada. Pela
+        contrapositiva: se uma investigação <em>é</em> arquivada, ela não pode ser de fauna — logo, como só
+        resta a opção flora, ela precisa ser de flora. Isso é exatamente a alternativa
+        <strong>b)</strong>. As demais não podem ser concluídas com certeza: não sabemos se toda flora é
+        arquivada (a), nem que todo não-arquivado é fauna (c, pode ser flora não arquivada), nem que fauna
+        é arquivada às vezes (d, contradiz a premissa), nem que flora nunca é arquivada (e, não garantido).
+        <strong>Resposta: b)</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -116,6 +183,18 @@
     <p>Considere que A = [2;5], B = ]0;4], C = [1;7[ e D = [0;10]. Determine quantos inteiros possuem em
     C<sub>D</sub><sup>(A∪B)</sup> − C.</p>
     <p class="alt">a) 6 &nbsp; b) 7 &nbsp; c) 8 &nbsp; d) 10 &nbsp; e) 11</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Lendo a expressão como "complementar em D de [(A∪B) − C]" (a forma que bate com a resolução
+        feita ao lado da questão na prova original, que já calcula (A∪B)−C antes do complementar):</p>
+        <p>A∪B = [2;5] ∪ ]0;4] = ]0;5]. Subtraindo C=[1;7[: (A∪B)−C = ]0;5] \ [1;7[ = ]0;1[ (só o
+        intervalo aberto entre 0 e 1, já que [1;7[ cobre todo o resto de ]0;5]).</p>
+        <p>O complementar de ]0;1[ em relação a D=[0;10] é: D \ ]0;1[ = {0} ∪ [1;10].</p>
+        <p>Inteiros nesse conjunto: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 — <strong>11 inteiros</strong>.
+        <strong>Resposta: e) 11</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -127,6 +206,17 @@
     A e também na C.</p>
     <p>Determine quantos são, ao todo, os possíveis valores de m.</p>
     <p class="alt">a) 61 &nbsp; b) 60 &nbsp; c) 90 &nbsp; d) 120 &nbsp; e) 150</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Como todos os 300 alunos prestaram em pelo menos uma universidade, |A∪C| ≤ 300. Pela fórmula da
+        união: |A∪C| = |A|+|C|−m = 240+150−m = 390−m ≤ 300 → <strong>m ≥ 90</strong>.</p>
+        <p>Por outro lado, m (a interseção A∩C) não pode ser maior que o menor dos dois conjuntos: m ≤
+        min(240,150) = <strong>150</strong>.</p>
+        <p>Logo, m pode variar de 90 a 150. Quantidade de valores inteiros possíveis: 150−90+1 =
+        <strong>61</strong>. <strong>Resposta: a) 61</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -138,6 +228,17 @@
     mudanças de trajetória e posição, para que não ocorra colisão entre os ciclistas, a medida do ângulo
     central entre o ciclista A e o ciclista B após 30 segundos da partida de ambos é:</p>
     <p class="alt">a) 30° &nbsp; b) 45° &nbsp; c) 60° &nbsp; d) 90° &nbsp; e) 120°</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Convertendo as velocidades: A = 36 km/h = 10 m/s; B = 54 km/h = 15 m/s.</p>
+        <p>Em 30 s: A percorre 10×30 = 300 m; B percorre 15×30 = 450 m.</p>
+        <p>Ângulo percorrido por A (900 m = volta completa = 360°): (300/900)×360° = 120°. Ângulo
+        percorrido por B: (450/900)×360° = 180°. Como vão em sentidos opostos, juntos "consomem"
+        120°+180°=300° do círculo entre eles (pelo caminho mais longo) — o ângulo central entre os dois
+        (pelo caminho mais curto) é 360°−300° = <strong>60°</strong>. <strong>Resposta: c) 60°</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -153,6 +254,25 @@
     <p>( ) Se v<sub>A</sub> = v<sub>B</sub>, então S<sub>t</sub> é um triângulo equilátero.</p>
     <p>Quantas afirmações apresentadas são verdadeiras:</p>
     <p class="alt">a) 1 &nbsp; b) 2 &nbsp; c) 3 &nbsp; d) 4 &nbsp; e) 5</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Em qualquer instante t, o triângulo O-A-B tem lados OA=v<sub>A</sub>t, OB=v<sub>B</sub>t e ângulo
+        de 60° entre eles em O. Pela Lei dos Cossenos, AB²=OA²+OB²−OA·OB (já que cos60°=0,5).</p>
+        <p><strong>v<sub>A</sub>=2v<sub>B</sub> (OA=2x, OB=x):</strong> AB²=4x²+x²−2x²=3x². Testando se é
+        retângulo: OA²=4x² e OB²+AB²=x²+3x²=4x² — <strong>iguais! É retângulo</strong> (ângulo reto em B).
+        Sendo retângulo, não pode ser <em>também</em> acutângulo.</p>
+        <p><strong>v<sub>A</sub>=3v<sub>B</sub> (OA=3x, OB=x):</strong> AB²=9x²+x²−3x²=7x². OA²=9x² vs
+        OB²+AB²=x²+7x²=8x². Como 9x²&gt;8x², o ângulo oposto a OA (o maior lado) é
+        <strong>obtuso</strong>.</p>
+        <p><strong>v<sub>A</sub>=v<sub>B</sub> (OA=OB=x):</strong> AB²=x²+x²−x²=x² → AB=x. Como OA=OB=AB=x,
+        é um triângulo <strong>equilátero</strong> (não retângulo).</p>
+        <p>Resumindo as 5 afirmações: (1) V — retângulo com v<sub>A</sub>=2v<sub>B</sub>; (2) V — obtuso
+        com v<sub>A</sub>=3v<sub>B</sub>; (3) F — com v<sub>A</sub>=v<sub>B</sub> é equilátero, não
+        retângulo; (4) F — com v<sub>A</sub>=2v<sub>B</sub> é retângulo, não acutângulo; (5) V — confirmado
+        acima. Total: <strong>3 verdadeiras</strong>. <strong>Resposta: c) 3</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -162,6 +282,15 @@
     vértice M, entre os segmentos CM e MB.</p>
     <p>A medida de BC é:</p>
     <p class="alt">a) 5 &nbsp; b) 6 &nbsp; c) 7 &nbsp; d) 8 &nbsp; e) 9</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Propriedade da mediana relativa à hipotenusa: num triângulo retângulo, a mediana até a
+        hipotenusa vale metade da hipotenusa. Logo, AB = 2×CM = 2×5 = 10.</p>
+        <p>Pelo Teorema de Pitágoras: AC²+BC²=AB² → 6²+x²=10² → 36+x²=100 → x²=64 → x=8.
+        <strong>Resposta: d) 8</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -189,6 +318,22 @@
     menos de 75 cm³ de mel. Lembre-se: Volume do prisma = área da base . altura.</p>
     <p>A sequência das afirmações é:</p>
     <p class="alt">a) VFVF &nbsp; b) FVFV &nbsp; c) VVFF &nbsp; d) FFVV &nbsp; e) VVVF</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>1)</strong> Hexágono regular = 6 triângulos equiláteros de lado ℓ, área = 6×(ℓ²√3/4) =
+        1,5ℓ²√3. Um triângulo equilátero de mesmo perímetro (6ℓ) tem lado 2ℓ, área = (2ℓ)²√3/4 = ℓ²√3. Razão:
+        1,5ℓ²√3 ÷ ℓ²√3 = 1,5. <strong>Verdadeira</strong>.</p>
+        <p><strong>2)</strong> O nome correto para essa organização social das abelhas é "sociedade"
+        (eussocialidade), não "colônia isomorfa" (termo que não existe na Biologia). <strong>Falsa</strong>.</p>
+        <p><strong>3)</strong> Ângulo interno do hexágono regular = (6−2)×180°/6 = 120° — e 3 hexágonos se
+        encontram em cada vértice (3×120°=360°), preenchendo o plano sem sobras. <strong>Verdadeira</strong>.</p>
+        <p><strong>4)</strong> Área do hexágono de lado 0,5 cm: 6×(0,5²√3/4) ≈ 0,6495 cm². Volume de 1
+        alvéolo (altura 1 cm): ≈0,6495 cm³. Para 200 alvéolos: ≈129,9 cm³ — isso é <em>mais</em> que 75
+        cm³, não menos. <strong>Falsa</strong>.</p>
+        <p>Sequência: V, F, V, F. <strong>Resposta: a) VFVF</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -198,6 +343,20 @@
     trajeto AB, BD e DC percorrendo em cada trecho a mesma distância. Se ele tivesse ido diretamente de A
     até C, teria percorrido uma distância de:</p>
     <p class="alt">a) 120 km &nbsp; b) 60√3 km &nbsp; c) 130 km &nbsp; d) 80√3 km &nbsp; e) 140 km</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Como AB=BD (mesma distância percorrida), o triângulo ABD é isósceles, e os ângulos da base
+        (em A e em D) são iguais: ângulo ADB = ângulo DAB = 36°, sobrando 108° no ângulo em B.</p>
+        <p>Como A, B, C estão alinhados na estrada, o ângulo DBC (suplementar de ABD) = 180°−108° = 72°.</p>
+        <p>Como BD=DC, o triângulo BDC também é isósceles, com ângulo DBC=72° igual ao ângulo DCB (ambos
+        opostos a lados iguais) = 72°, sobrando ângulo BDC = 180−72−72=36°.</p>
+        <p>Somando os ângulos em D: ângulo ADC = ângulo ADB + ângulo BDC = 36°+36° = 72°. No triângulo
+        ADC, ângulo DAC=36° (mesmo ângulo DAB) e ângulo ADC=72°, logo ângulo ACD=180−36−72=72°.</p>
+        <p>Como ângulo ADC = ângulo ACD = 72°, o triângulo ADC é isósceles com AC = AD = <strong>120 km</strong>.
+        <strong>Resposta: a) 120 km</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -205,6 +364,15 @@
     <p>Seja ABC um triângulo equilátero de lado 5 cm em que O é o ponto de encontro das alturas. Quanto
     mede o segmento AO?</p>
     <p class="alt">a) 5√3/2 &nbsp; b) 5√3/3 &nbsp; c) 2√5/3 &nbsp; d) √3/2 &nbsp; e) √3/3</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Num triângulo equilátero, o ponto de encontro das alturas (que coincide com o baricentro)
+        divide cada altura na razão 2:1 a partir do vértice. A altura do triângulo de lado 5 é h =
+        (5√3)/2.</p>
+        <p>AO = (2/3)×h = (2/3)×(5√3/2) = 5√3/3. <strong>Resposta: b) 5√3/3</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -213,6 +381,19 @@
     CB = CE e que EB̂D mede 39°.</p>
     <p>Nas condições dadas, a medida de AB̂C é</p>
     <p class="alt">a) 102° &nbsp; b) 108° &nbsp; c) 111° &nbsp; d) 115° &nbsp; e) 117°</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Chame ângulo BAC=α e ângulo BCA=γ. Como AB=AD, o triângulo ABD é isósceles: ângulo ABD =
+        (180−α)/2 = 90−α/2. Como CB=CE, o triângulo CBE é isósceles: ângulo CBE = (180−γ)/2 = 90−γ/2.</p>
+        <p>Com E e D nessa ordem sobre AC (entre A e C), o ângulo ABC se decompõe como ângulo ABD +
+        (ângulo DBC), e separadamente ângulo CBE se decompõe como (ângulo DBC) + ângulo DBE — daí:</p>
+        <p>ângulo DBC = ângulo CBE − ângulo DBE = (90−γ/2) − 39</p>
+        <p>ângulo ABC = ângulo ABD + ângulo DBC = (90−α/2) + (90−γ/2) − 39 = 141 − (α+γ)/2</p>
+        <p>Como α+γ+β=180° (β=ângulo ABC), então α+γ=180−β. Substituindo: β = 141 − (180−β)/2 = 51 + β/2 →
+        β/2 = 51 → <strong>β = 102°</strong>. <strong>Resposta: a) 102°</strong>.</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>
