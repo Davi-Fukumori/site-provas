@@ -13,6 +13,9 @@
   img.figura { max-width: 100%; width: 420px; display: block; margin: 10px 0; border: 1px solid; }
   table.dados { border-collapse: collapse; margin: 10px 0; font-size: 0.9rem; }
   table.dados th, table.dados td { border: 1px solid; padding: 4px 10px; text-align: left; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -22,7 +25,8 @@
   <div class="aviso">
     Esta é uma transcrição só dos enunciados (com as figuras originais, quando davam pra recortar sem
     nenhuma marca de resposta). As respostas, correções e notas dos alunos que fizeram a prova original
-    não estão aqui. Essa prova ainda não tem a seção "Ver análise" — foi só transcrita por enquanto.
+    não estão aqui. As análises em "Ver análise" foram escritas por IA — úteis pra estudar, mas vale
+    conferir com o professor se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -44,6 +48,24 @@
     <p>b) Assuma que essa bateria é operacional até que 75% da quantidade <sup>63</sup>Ni sejam consumidos.
     Qual a vida útil da bateria em anos, sabendo que o tempo de meia-vida do <sup>63</sup>Ni é de 100 anos?
     A massa da bateria aumenta, diminui ou se mantém ao longo do seu tempo de uso?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O <sup>63</sup>Ni decai por emissão beta, se transformando em <sup>63</sup>Cu
+        (que é estável). Por isso, o gráfico do <sup>63</sup>Ni deve ser uma curva de <strong>decaimento
+        exponencial</strong> (caindo pela metade a cada 100 anos), enquanto o gráfico do <sup>63</sup>Cu
+        deve ser uma curva <strong>crescente</strong> com o formato "espelhado" — já que cada átomo de Ni
+        que decai vira um átomo de Cu, a soma dos dois permanece sempre igual ao número inicial de átomos
+        de Ni.</p>
+        <p><strong>b)</strong> Se 75% do <sup>63</sup>Ni foi consumido, restam 25% (ou seja, 1/4) da
+        quantidade inicial. Com meia-vida de 100 anos: 100% → 50% (após 100 anos) → 25% (após mais 100
+        anos, totalizando 200 anos). Logo, a <strong>vida útil da bateria é de 200 anos</strong>. Quanto à
+        massa: ela se <strong>mantém praticamente constante</strong>, pois o decaimento beta transforma um
+        nêutron do núcleo em um próton (Ni vira Cu), mudando o número atômico mas emitindo apenas um
+        elétron e um antineutrino — partículas de massa desprezível — sem alterar de forma perceptível a
+        massa total do material.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -57,6 +79,24 @@
     <p>c) Quantas partículas alfas e betas o <sup>224</sup>Rn emite até sofrer transmutação e se tornar o
     <sup>208</sup>Pb?</p>
     <p class="fonte">Dados: Utilizar números atômicos dos elementos da tabela periódica.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Pelo gráfico, o <sup>210</sup>Rn cai de 0,04 para 0,02 mol em cerca de 2,4h
+        (essa é sua meia-vida), enquanto o <sup>224</sup>Rn cai de 0,04 para 0,02 mol em cerca de 1,8h. A
+        razão entre as meias-vidas é 2,4 ÷ 1,8 = <strong>4/3 (≈ 1,33)</strong>.</p>
+        <p><strong>b)</strong> O <sup>210</sup>Rn (Z = 86) emite uma partícula alfa, que reduz o número
+        atômico em 2 e o número de massa em 4. O isótopo formado é o <strong><sup>206</sup>Po</strong>
+        (polônio-206, Z = 84).</p>
+        <p><strong>c)</strong> Do <sup>224</sup>Rn (Z=86, A=224) até o <sup>208</sup>Pb (Z=82, A=208), a
+        massa diminui em 224−208 = 16 — como cada partícula alfa reduz a massa em 4, isso indica
+        <strong>4 partículas alfa</strong> emitidas. Essas 4 partículas alfa, sozinhas, reduziriam o número
+        atômico em 4×2 = 8 (de 86 para 78), mas o produto final tem Z = 82. Como cada partícula beta emitida
+        <strong>aumenta</strong> o número atômico em 1 (um nêutron vira um próton), são necessárias
+        82 − 78 = <strong>4 partículas beta</strong> para completar a transmutação. Resposta: 4 partículas
+        alfa e 4 partículas beta.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -70,6 +110,18 @@
     <p>b) Equacione a reação que representa a obtenção do fósforo a partir do
     <sup>32</sup><sub>16</sub>S. Cite o nome do elemento produzido nessa reação, além do fósforo.</p>
     <p class="fonte">Dado: P (Z = 15).</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> 6 semanas = 42 dias. Com meia-vida de 14 dias, isso equivale a 42 ÷ 14 =
+        <strong>3 meias-vidas</strong>. A quantidade restante é 100% ÷ 2³ = 100% ÷ 8 =
+        <strong>12,5%</strong> do fósforo-32 radioativo original.</p>
+        <p><strong>b)</strong> Equação: ¹₀n + <sup>32</sup><sub>16</sub>S → <sup>32</sup><sub>15</sub>P +
+        <sup>1</sup><sub>1</sub>H. Conferindo a conservação de massa (1+32=32+1) e de carga (0+16=15+1), o
+        outro produto formado, além do fósforo-32, é um <strong>próton (hidrogênio-1)</strong> — ou seja,
+        um nêutron do enxofre-32 "vira" fósforo-32 ao capturar o nêutron incidente e liberar um próton.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -100,6 +152,19 @@
     Submersa 1, Fase Sobrenadante 2 e Fase Submersa 2.</p>
     <p>b) Calcule o valor da densidade de uma mistura de 40% de água e 60% de água com sal. Justifique sua
     resposta apresentando os cálculos.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Na água (densidade 1,00): PP (0,90) e PEAD (0,94) flutuam →
+        <strong>Fase Sobrenadante 1 = PP e PEAD</strong>; PS (1,04) e PVC (1,22) afundam →
+        <strong>Fase Submersa 1 = PS e PVC</strong>. Colocando essa fase submersa na água com sal
+        (densidade 1,17): PS (1,04) flutua → <strong>Fase Sobrenadante 2 = PS</strong>; PVC (1,22) afunda →
+        <strong>Fase Submersa 2 = PVC</strong>.</p>
+        <p><strong>b)</strong> Considerando uma média ponderada pelas proporções de cada líquido na
+        mistura: densidade = (0,40 × 1,00) + (0,60 × 1,17) = 0,40 + 0,702 =
+        <strong>1,102 g/cm³</strong> (aproximadamente).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -112,6 +177,22 @@
     nos frascos A, B e C.</p>
     <p>b) Depois de identificar os frascos que contêm as misturas de água e acetona e de água e cloreto de
     sódio, apresente a técnica de separação capaz de isolar cada um dos seus componentes.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Duas propriedades físicas úteis para diferenciar os três líquidos são a
+        <strong>densidade</strong> (cada mistura tem uma densidade diferente, por causa das diferentes
+        substâncias e concentrações envolvidas) e a <strong>temperatura de ebulição</strong> (o álcool puro,
+        a mistura água/acetona e a solução salina têm pontos de ebulição distintos entre si).</p>
+        <p><strong>b)</strong> Para separar a <strong>água e o cloreto de sódio</strong> (sal dissolvido em
+        líquido), usa-se a <strong>destilação simples</strong>: a água evapora, é condensada e recolhida
+        separadamente, restando o sal (sólido) no frasco original. Para separar a <strong>água e a
+        acetona</strong> (dois líquidos miscíveis, mas com pontos de ebulição bem diferentes — acetona ≈
+        56 °C, água ≈ 100 °C), também se usa a <strong>destilação</strong> (simples, dada a grande
+        diferença entre os pontos de ebulição): a acetona evapora primeiro e é recolhida separadamente,
+        restando a água no frasco original.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -124,6 +205,20 @@
     ligação entre N e H.</p>
     <p>b) Em seguida, nomeie a ligação química interatômica presente no N₂. Nomeie, também, a geometria
     molecular do NH₃.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> A substância simples citada é o gás nitrogênio, <strong>N₂</strong> (formada
+        por átomos de um único elemento químico). A ligação entre N e H (presente na amônia, NH₃) é
+        <strong>covalente polar</strong>, já que o nitrogênio é bem mais eletronegativo que o hidrogênio,
+        gerando uma distribuição desigual da densidade eletrônica entre os átomos.</p>
+        <p><strong>b)</strong> No N₂, a ligação interatômica é uma <strong>ligação covalente (tripla
+        covalente apolar)</strong>, já que é formada entre átomos do mesmo elemento (mesma eletronegatividade,
+        sem polarização da ligação). A geometria molecular do NH₃ é <strong>piramidal (trigonal
+        piramidal)</strong>, resultado da repulsão do par de elétrons não-ligante do nitrogênio, que
+        "empurra" os três hidrogênios para fora do plano.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -133,6 +228,17 @@
     <p>a) Nomeie o CO₂, indique a geometria molecular do SO₂.</p>
     <p>b) Em seguida, escreva o símbolo do elemento químico que compõe um dos gases residuais, sabendo que
     esse elemento pertence ao grupo 15 da tabela de classificação periódica.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O CO₂ é chamado de <strong>dióxido de carbono</strong> (ou gás carbônico). A
+        geometria molecular do SO₂ é <strong>angular</strong>, pois, apesar de ter apenas três átomos, o
+        enxofre central possui um par de elétrons não-ligante que distorce a geometria (que seria linear
+        sem esse par isolado), forçando os dois oxigênios para um ângulo menor que 180°.</p>
+        <p><strong>b)</strong> Entre os gases citados, o que contém um elemento do grupo 15 (VA) da tabela
+        periódica é o <strong>N₂</strong> — o elemento é o <strong>nitrogênio (N)</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -144,6 +250,20 @@
     o aumento da produção agrícola, foi indicada ao Prêmio Nobel da Paz em 1997.</p>
     <p>a) Escreva as fórmulas estruturais do gás nitrogênio (N₂) e dos íons nitrato (NO₃⁻) e amônio (NH₃).</p>
     <p>b) Qual o tipo de ligação química presente em cada composto químico formado?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> N₂: N≡N (ligação tripla entre os dois nitrogênios, cada um completando o
+        octeto). NO₃⁻ (íon nitrato): um átomo de N central ligado a três átomos de O — na estrutura mais
+        estável, há ressonância entre as três formas possíveis, com uma ligação dupla N=O e duas ligações
+        simples N–O (uma delas carregando a carga negativa), sendo a carga −1 distribuída entre os
+        oxigênios. NH₃ (amônia): N central ligado a três H por ligações simples, com um par de elétrons
+        não-ligante no nitrogênio, resultando na geometria piramidal já comentada na Questão 06.</p>
+        <p><strong>b)</strong> Em todos os três casos, a ligação química é <strong>covalente</strong> — no
+        N₂, covalente apolar (átomos iguais); no NO₃⁻ e no NH₃, covalente polar (átomos de eletronegatividades
+        diferentes, N–O e N–H).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -159,6 +279,18 @@
     camadas de grafeno quando a placa de vidro é deslocada conforme indicado na figura. Desconsidere
     qualquer interferência do vidro;</p>
     <p>b) Cite outras três formas alotrópicas do carbono.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Como cada camada absorve 2% da luz que chega até ela, a porcentagem
+        transmitida após n camadas é dada por %T = 100% × (0,98)ⁿ — ou seja, o gráfico não é uma reta, mas
+        uma <strong>curva de decaimento exponencial</strong>, decrescente e cada vez menos íngreme à medida
+        que n aumenta (semelhante ao formato de um decaimento radioativo).</p>
+        <p><strong>b)</strong> Além do grafeno, outras formas alotrópicas do carbono são o
+        <strong>diamante</strong>, o <strong>grafite</strong> e os <strong>fulerenos</strong> (ou, como
+        variante, os nanotubos de carbono).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -173,6 +305,27 @@
     moléculas de H₂O e H₂S.</p>
     <p>c) Desenhe a estrutura de Lewis para o H₂S e preveja a geometria dessa molécula.</p>
     <p>d) Que tipo de ligação química ocorre nos compostos H₂O e H₂S?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Oxigênio (Z=8): configuração da camada de valência 2s² 2p⁴. Enxofre (Z=16):
+        configuração da camada de valência 3s² 3p⁴. Ambos têm 6 elétrons na camada de valência (mesmo
+        grupo, 16/VIA), mas em níveis de energia diferentes.</p>
+        <p><strong>b)</strong> A água forma <strong>ligações de hidrogênio</strong> entre suas moléculas —
+        interação intermolecular forte, possível porque o oxigênio é muito eletronegativo e tem raio
+        atômico pequeno, concentrando bastante carga negativa. Já o H₂S não forma ligações de hidrogênio
+        significativas, pois o enxofre, apesar de estar no mesmo grupo, é maior e menos eletronegativo que
+        o oxigênio — suas moléculas interagem apenas por forças dipolo-dipolo, bem mais fracas. Por isso a
+        água tem um ponto de ebulição muito mais alto (100 °C) e é líquida nas CNTP, enquanto o H₂S, com
+        interações mais fracas, é gasoso nas CNTP.</p>
+        <p><strong>c)</strong> Estrutura de Lewis do H₂S: H–S–H, com dois pares de elétrons não-ligantes no
+        enxofre. Assim como na água, esses pares isolados fazem com que a geometria molecular seja
+        <strong>angular</strong> (não linear).</p>
+        <p><strong>d)</strong> Em ambos os compostos (H₂O e H₂S), a ligação química é
+        <strong>covalente polar</strong>, já que O e S são mais eletronegativos que o H, gerando uma
+        distribuição desigual dos elétrons compartilhados.</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>

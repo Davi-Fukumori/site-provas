@@ -13,6 +13,9 @@
   img.figura { max-width: 100%; width: 480px; display: block; margin: 10px 0; border: 1px solid; }
   table.dados { border-collapse: collapse; margin: 10px 0; font-size: 0.85rem; }
   table.dados th, table.dados td { border: 1px solid; padding: 4px 8px; text-align: left; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -23,7 +26,8 @@
     Esta é uma transcrição só dos enunciados. As respostas, correções e notas dos alunos que fizeram a
     prova original não estão aqui. Em duas questões (01 e 03), o fluxograma original tinha as respostas
     do aluno escritas em cima do próprio desenho, então em vez da figura, o fluxograma foi descrito em
-    texto. Essa prova ainda não tem a seção "Ver análise" — foi só transcrita por enquanto.
+    texto. As análises em "Ver análise" foram escritas por IA — úteis pra estudar, mas vale conferir com o
+    professor se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -34,12 +38,30 @@
     <p>A separação dos grânulos plásticos obtidos após a trituração foi feita colocando-se a mistura em
     soluções apropriadas, conforme o esquema a seguir: a Mistura 1 (início) é colocada em H₂O destilada
     (d = 1,00 g/mL) — o que flutua vira "W" e o que afunda vira Mistura 2; a Mistura 2 é colocada em
-    solução de CaCl₂·2H₂O 32% (d = 1,30 g/mL) — o que flutua vira "X" e o que afunda vira Mistura 3; a
-    Mistura 3 é colocada em solução de NaCl 20% (d = 1,15 g/mL) — o que flutua vira "Y" e o que afunda vira
+    solução de NaCl 20% (d = 1,15 g/mL) — o que flutua vira "X" e o que afunda vira Mistura 3; a Mistura 3
+    é colocada em solução de CaCl₂·2H₂O 32% (d = 1,30 g/mL) — o que flutua vira "Y" e o que afunda vira
     "Z".</p>
     <p>a) Cite o nome da técnica empregada na separação dos diferentes tipos de plástico. Para qual tipo de
     misturas tal técnica pode ser utilizada?</p>
     <p>b) Quais são os plásticos correspondentes às letras W, X, Y e Z, respectivamente?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> A técnica empregada é a <strong>flotação/decantação por densidade</strong>
+        (separação por diferença de densidade em líquidos com densidades conhecidas). Ela pode ser
+        utilizada para separar misturas de <strong>sólidos insolúveis</strong> entre si e no líquido usado,
+        mas com densidades diferentes — o material menos denso que o líquido flutua, e o mais denso afunda.</p>
+        <p><strong>b)</strong> Comparando a densidade de cada plástico com a de cada solução, na ordem em
+        que a mistura passa por elas (água 1,00 → NaCl 1,15 → CaCl₂ 1,30):</p>
+        <p>Na água (1,00): só o PEAD (0,96) é menos denso e flutua → <strong>W = PEAD</strong>. Os demais
+        (PET 1,38, PVC 1,25, PS 1,06) afundam e seguem para a próxima etapa.</p>
+        <p>Na solução de NaCl (1,15): dentre os restantes, só o PS (1,06) é menos denso que 1,15 e flutua →
+        <strong>X = PS</strong>. PET (1,38) e PVC (1,25) continuam afundando.</p>
+        <p>Na solução de CaCl₂ (1,30): o PVC (1,25) é menos denso que 1,30 e flutua →
+        <strong>Y = PVC</strong>. Já o PET (1,38), mais denso que todas as soluções utilizadas, afunda em
+        todas as etapas → <strong>Z = PET</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -49,6 +71,17 @@
     57,9 gramas, foi colocada numa proveta de 50 cm³ que continha 25 cm³ de água e mediu-se o volume de
     água deslocado na proveta. Sabendo-se que a densidade do ouro puro é de 19,3 g/cm³, qual será o volume
     final lido na proveta em cm³ se a medalha for de ouro puro?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Se a medalha fosse de ouro puro, seu volume seria V = massa ÷ densidade = 57,9 g ÷ 19,3 g/cm³ =
+        <strong>3 cm³</strong> (já que 19,3 × 3 = 57,9).</p>
+        <p>Esse volume, ao ser submerso, desloca um volume igual de água, somando-se ao volume inicial da
+        proveta: 25 cm³ + 3 cm³ = <strong>28 cm³</strong>. Esse seria o volume final lido na proveta, caso
+        a medalha fosse realmente de ouro puro (se a leitura real fosse diferente disso, seria um indício
+        de que a medalha não é de ouro puro).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -76,6 +109,25 @@
     <p>a) Qual(is) substância(s) está(ão) presente(s) nas Frações 1 e 3?</p>
     <p>b) Ao término dessa rota de separação, não foi possível a separação de todos os componentes do
     resíduo. Quais componentes continuam misturados e em qual fração? Justifique sua resposta.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Ao adicionar água, apenas o <strong>ácido cítrico</strong> se dissolve (é
+        solúvel em água), indo para a Fração 2 (filtrado). Os outros três — fluoreto de cálcio, antraceno e
+        ácido palmítico, todos insolúveis em água — permanecem sólidos, formando a
+        <strong>Fração 1 = CaF₂ + antraceno + ácido palmítico</strong>. Ao tratar essa Fração 1 com etanol,
+        o fluoreto de cálcio (insolúvel em álcool) permanece sólido, enquanto o antraceno (solúvel em
+        álcool) e o ácido palmítico (miscível em álcool) se dissolvem. Assim,
+        <strong>Fração 3 = apenas fluoreto de cálcio (CaF₂)</strong>.</p>
+        <p><strong>b)</strong> Os componentes que continuam misturados são o <strong>antraceno e o ácido
+        palmítico</strong>, ambos presentes na <strong>Fração 4</strong> (o filtrado de etanol). Isso ocorre
+        porque os dois têm a mesma característica de solubilidade em relação aos dois solventes usados
+        (insolúveis em água, solúveis/miscíveis em álcool), então nenhuma das duas etapas de dissolução
+        seletiva foi capaz de separá-los — seria necessário um solvente ou método adicional (como
+        destilação fracionada, já que têm pontos de ebulição diferentes) para separar esses dois
+        componentes.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -87,6 +139,17 @@
     <p class="fonte">(www.theforensicteacher.com. Adaptado.)</p>
     <p>Qual o nome da mudança de estado físico que ocorre com o iodo no processo de revelação de
     impressões digitais? Essa transformação ocorreu de modo endotérmico ou exotérmico?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>A mudança de estado é a <strong>sublimação</strong> — o iodo passa diretamente do estado
+        <strong>sólido</strong> para o estado <strong>gasoso</strong>, sem passar pelo estado líquido
+        (característica marcante do iodo, que sublima facilmente mesmo a temperaturas relativamente
+        baixas). Essa transformação é <strong>endotérmica</strong>, pois é necessário fornecer calor
+        (aquecimento) para que as moléculas de iodo sólido ganhem energia suficiente para passar ao estado
+        gasoso.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -98,6 +161,22 @@
     <p>- Métodos físicos de separação utilizado;</p>
     <p>- Cite os aparelhos ou vidrarias necessários para a realização de cada método usado.</p>
     <p class="fonte">Obs: Somente os aparelhos e vidrarias essenciais para cada método.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>A mistura tem três componentes com naturezas bem diferentes (um sólido insolúvel + dois líquidos
+        imiscíveis, um dos quais tem um sólido dissolvido), então a separação se dá em três etapas:</p>
+        <p><strong>1) Filtração</strong> — separa a <strong>areia</strong> (sólido insolúvel) do restante
+        da mistura (água salgada + óleo, ambos líquidos que passam pelo filtro). Vidrarias: funil, papel de
+        filtro e um béquer (ou erlenmeyer) para recolher o filtrado.</p>
+        <p><strong>2) Decantação</strong> — como óleo e água salgada são líquidos imiscíveis, formam duas
+        camadas (o óleo, menos denso, fica por cima). Vidraria: funil de separação (funil de decantação/de
+        bromo), que permite escoar a fase inferior (água salgada) e reter a fase superior (óleo).</p>
+        <p><strong>3) Destilação simples</strong> — para separar a <strong>água</strong> do
+        <strong>sal</strong> dissolvido na fase aquosa. Vidrarias: balão de destilação, condensador,
+        termômetro e um recipiente para recolher a água destilada (o sal permanece sólido no balão).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -110,6 +189,20 @@
     <p>a) Apresente a temperatura de ebulição do UF₆ a 10 atm.</p>
     <p>b) Indique a temperatura e a pressão em que as três fases (líquida, sólida e gasosa) estejam
     simultaneamente em equilíbrio.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> A temperatura de ebulição é lida no gráfico como o ponto em que a curva de
+        equilíbrio líquido-gás cruza a linha horizontal de 10 atm — pelo formato do diagrama apresentado,
+        isso ocorre em torno de <strong>140-150 °C</strong> (o valor exato depende da leitura direta da
+        curva no gráfico da prova).</p>
+        <p><strong>b)</strong> O ponto em que as três fases coexistem em equilíbrio é o
+        <strong>ponto triplo</strong> — no diagrama, é onde a curva sólido-líquido (quase vertical) encontra
+        a curva líquido-gás. Para o UF₆ real, esse ponto ocorre em aproximadamente
+        <strong>64 °C e 1,5 atm</strong> — valores que devem corresponder ao ponto de encontro das curvas no
+        gráfico da prova.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -121,6 +214,20 @@
     <img class="figura" src="imagens/q07-diagrama.jpg" alt="Diagrama do processo de descafeinação do café: grãos de café crus + água, cozimento, filtração em carvão ativado, obtendo solução B e grãos de café descafeinados via solução C/D">
     <p>Com base nas informações do texto, do diagrama e em seus conhecimentos, responda:</p>
     <p>Entre as soluções A, B, C e D, qual(is) pode(m) ser considerada(s) descafeinada(s)?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>No diagrama, a cafeína é retida especificamente nas etapas de <strong>"filtração da solução em
+        carvão ativado"</strong> — é o carvão ativado que adsorve a cafeína, retendo-a. As soluções A e C
+        são as soluções obtidas logo após o cozimento dos grãos, <strong>antes</strong> de passarem pelo
+        carvão ativado, e por isso ainda contêm cafeína. Já as soluções <strong>B e D</strong> são obtidas
+        <strong>depois</strong> da filtração em carvão ativado — tendo perdido a cafeína, mas mantendo os
+        compostos de sabor e aroma, que não são retidos pelo carvão nessa etapa. Por isso, as soluções
+        <strong>B e D podem ser consideradas descafeinadas</strong> (é inclusive a solução B/D que é
+        reutilizada na segunda etapa do processo, para reidratar os grãos sem cafeína e devolver a eles o
+        sabor e aroma que haviam sido extraídos).</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>

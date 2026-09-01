@@ -12,6 +12,9 @@
   .fonte { font-size: 0.85rem; font-style: italic; margin: 4px 0 12px; }
   table.dados { border-collapse: collapse; margin: 10px 0; font-size: 0.85rem; }
   table.dados th, table.dados td { border: 1px solid; padding: 4px 8px; text-align: left; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -21,7 +24,8 @@
   <div class="aviso">
     Esta é uma transcrição só dos enunciados. As respostas, correções e notas dos alunos que fizeram a
     prova original não estão aqui. Essa prova não tinha figuras, só tabelas e configurações eletrônicas.
-    Essa prova ainda não tem a seção "Ver análise" — foi só transcrita por enquanto.
+    As análises em "Ver análise" foram escritas por IA — úteis pra estudar, mas vale conferir com o
+    professor se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -36,6 +40,25 @@
     Qual dos átomos, A, B, C ou D, apresenta-se na natureza como átomo isolado?</p>
     <p>b) Qual dos átomos, A, B ou C, ao fazer uma ligação iônica, adquire carga +1? Se esse átomo
     interagir com o átomo D, qual será a fórmula da substância formada nessa interação?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Pelo total de elétrons de cada configuração: A tem 26 elétrons (é o <strong>Fe</strong>, ferro);
+        B tem 36 elétrons (é o <strong>Kr</strong>, criptônio); C tem 47 elétrons (é a <strong>Ag</strong>,
+        prata); D tem 16 elétrons (é o <strong>S</strong>, enxofre).</p>
+        <p><strong>a)</strong> Boa condutividade elétrica e térmica é uma propriedade típica de
+        <strong>metais</strong> — nesse grupo, isso corresponde a <strong>A (Fe) e C (Ag)</strong>, ambos
+        metais com ligação metálica. Já o átomo que se apresenta na natureza como átomo isolado é o
+        <strong>B (Kr)</strong>, um gás nobre — por ter a camada de valência completa, não forma ligações
+        químicas com outros átomos, existindo isoladamente em forma monoatômica.</p>
+        <p><strong>b)</strong> Observando a configuração de C (Ag): termina em "...5s¹ 4d¹⁰" — ou seja, tem
+        apenas 1 elétron na camada mais externa (5s¹), que é facilmente perdido, formando o cátion Ag⁺
+        (carga +1). É esse o átomo, entre A, B e C, que adquire carga +1 numa ligação iônica. Interagindo
+        com o átomo D (S), que tende a ganhar 2 elétrons formando o ânion S²⁻ (regra do octeto: 3s²3p⁴ +
+        2e⁻ → 3s²3p⁶), a fórmula da substância iônica formada é <strong>Ag₂S</strong> (sulfeto de prata —
+        aliás, o composto responsável pelo escurecimento/tarnish de objetos de prata).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -47,6 +70,17 @@
     <p>a) Qual a sua distribuição eletrônica por subníveis de energia?</p>
     <p>b) Qual a fórmula dos compostos iônicos formados entre o tecnécio catiônico (+2) com: cloro
     (Z = 17)?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O tecnécio tem Z = 43. Sua distribuição eletrônica, seguindo o diagrama de
+        Linus Pauling, é: <strong>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d⁵</strong> (soma total: 43
+        elétrons).</p>
+        <p><strong>b)</strong> O cloro (Z=17, grupo 17/halogênios) tende a formar o ânion Cl⁻ (carga −1).
+        Combinando com o tecnécio catiônico Tc²⁺, para equilibrar as cargas são necessários dois íons
+        cloreto para cada íon de tecnécio: a fórmula do composto iônico é <strong>TcCl₂</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -60,12 +94,40 @@
     (Z= 8) e o alumínio (Z=13), alumínio.</p>
     <p>b) Dentre os elementos químicos citados no texto, indique o número atômico daquele que apresenta o
     menor número de camadas eletrônicas e a família a que pertence o de maior raio atômico.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O alumínio (grupo 13) tende a perder 3 elétrons, formando Al³⁺; o oxigênio
+        (grupo 16) tende a ganhar 2 elétrons, formando O²⁻. Para equilibrar as cargas (cruzando os
+        números), a fórmula é <strong>Al₂O₃</strong> (óxido de alumínio, alumina).</p>
+        <p><strong>b)</strong> Entre os elementos citados no texto (Al, Ag, In, Sb, Te), o
+        <strong>alumínio (Z = 13)</strong> é o único do 3º período — os demais (Ag, In, Sb, Te) estão todos
+        no 5º período —, por isso é o que apresenta o <strong>menor número de camadas eletrônicas</strong>
+        (3 camadas). Já o de <strong>maior raio atômico</strong> tende a ser o <strong>índio (In)</strong>:
+        mesmo estando no mesmo período que Ag, Sb e Te, o índio fica mais à esquerda da tabela entre esses
+        quatro (grupo 13, "família do boro"), o que costuma resultar em um raio atômico maior do que os
+        elementos de grupos mais à direita do mesmo período (Sb, Te) — e maior até que a prata, por conta do
+        efeito de contração observado nos metais de transição do bloco d.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
     <h2>Questão 04</h2>
     <p>Dê a configuração eletrônica no estado fundamental do elemento com número atômico Z = 76. Determine
     o período e o grupo da Tabela Periódica a que pertence o elemento.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O elemento de Z = 76 é o <strong>ósmio (Os)</strong>. Sua configuração eletrônica no estado
+        fundamental é: <strong>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 4f¹⁴ 5d⁶</strong> (soma
+        total: 76 elétrons).</p>
+        <p>Como o elétron mais energético está no subnível 5d (com a camada 6s já preenchida), o ósmio
+        pertence ao <strong>6º período</strong> e ao <strong>grupo 8</strong> da Tabela Periódica (a
+        chamada "família do ferro", que também inclui o Fe e o Ru) — é um metal de transição, não um metal
+        alcalino-terroso.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -76,6 +138,21 @@
     Periódica em que estão situados.</p>
     <p>b) Em seguida, identifique, entre sódio e magnésio, o elemento de maior raio atômico, justificando
     sua resposta.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Calculando o número de nêutrons: no <sup>23</sup>Na, N = 23 − 11 = 12; no
+        <sup>24</sup>Mg, N = 24 − 12 = 12. Como os dois átomos têm o <strong>mesmo número de nêutrons (12)</strong>,
+        eles são classificados como <strong>isótonos</strong>. Ambos estão situados no
+        <strong>3º período</strong> da Tabela Periódica (já que Na, Z=11, e Mg, Z=12, têm elétrons de
+        valência no nível 3).</p>
+        <p><strong>b)</strong> O <strong>sódio</strong> tem o maior raio atômico entre os dois. Isso
+        acontece porque, dentro de um mesmo período, o raio atômico diminui da esquerda para a direita — à
+        medida que o número atômico aumenta (mais prótons no núcleo), a força de atração sobre os elétrons
+        de valência também aumenta, "puxando" a eletrosfera para mais perto do núcleo. Como o sódio (Z=11)
+        está à esquerda do magnésio (Z=12) no mesmo período, seu raio atômico é maior.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -93,6 +170,23 @@
     Tabela Periódica?</p>
     <p>b) Qual a fórmula molecular da substância formada pela interação do elemento X com o elemento Y?
     Que tipo de ligação ocorre nessa interação?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O elemento com <strong>menor 1ª Energia de Ionização</strong> é o que perde
+        elétrons com mais facilidade — nesse caso, o <strong>Z</strong> (1ª E.I. = 419, a menor entre os
+        três). Observando os "saltos" grandes de energia entre uma ionização e a seguinte (que indicam
+        quando se começa a remover um elétron de uma camada mais interna, já sem elétrons de valência), tanto
+        X (salto grande entre a 1ª e a 2ª E.I.) quanto Z (mesmo padrão) indicam que ambos têm
+        <strong>apenas 1 elétron de valência</strong> — ou seja, <strong>X e Z pertencem ao mesmo grupo</strong>
+        (grupo 1, metais alcalinos). Já Y apresenta um salto grande apenas entre a 6ª e a 7ª E.I., indicando
+        6 elétrons de valência (grupo 16).</p>
+        <p><strong>b)</strong> Sendo X um metal do grupo 1 (tende a formar cátion +1) e Y um elemento do
+        grupo 16 (tende a formar ânion −2), a fórmula da substância formada é <strong>X₂Y</strong>. O tipo
+        de ligação é <strong>iônica</strong>, típica entre um metal (baixa energia de ionização) e um
+        ametal fortemente eletronegativo.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -107,6 +201,27 @@
     elementos.</p>
     <p>b) Construa e explique a ordem crescente da fila de eletronegatividade dos seguintes elementos:
     carbono, bromo, nitrogênio, oxigênio e flúor.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O lítio (Z=3) tem um raio atômico grande em relação aos demais elementos do
+        seu período — seu único elétron de valência fica relativamente distante do núcleo e é atraído com
+        pouca força, por isso é removido com facilidade (baixa energia de ionização). Já o flúor (Z=9),
+        estando bem mais à direita no mesmo período, tem um núcleo com muito mais prótons "puxando" a
+        eletrosfera para mais perto, resultando num <strong>raio atômico pequeno</strong> — seus elétrons de
+        valência ficam fortemente presos ao núcleo, o que exige muito mais energia para arrancá-los (alta
+        energia de ionização). Ou seja: <strong>quanto menor o raio atômico, maior a atração do núcleo
+        sobre os elétrons de valência</strong>, e maior a energia necessária para retirá-los — o flúor tem
+        elétrons muito mais fortemente ligados ("maior energia potencial de atração") do que o lítio.</p>
+        <p><strong>b)</strong> A eletronegatividade cresce da esquerda para a direita e de baixo para cima
+        na Tabela Periódica (excluindo os gases nobres). A ordem crescente de eletronegatividade entre os
+        elementos citados é: <strong>C &lt; Br &lt; N &lt; O &lt; F</strong>. O flúor é o elemento mais
+        eletronegativo de toda a tabela periódica; o carbono, por estar mais à esquerda e ter menos elétrons
+        de valência que os demais, é o menos eletronegativo do grupo; o bromo, apesar de estar no mesmo
+        grupo do flúor (halogênios), está bem mais abaixo (período maior, raio atômico maior), o que reduz
+        sua eletronegatividade em relação a N, O e F, que estão no 2º período.</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>
