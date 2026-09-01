@@ -164,7 +164,7 @@ const PROVAS = [
     professores: ["Kamila"],
     ano: "2025",
     bimestre: "AC3 Bio B - 1º semestre",
-    titulo: "Prova AC3 Bio B - 1º semestre — 2025 (ecologia, incompleta)",
+    titulo: "Prova AC3 Bio B - 1º semestre — 2025 (ecologia)",
     arquivo: "arquivos/biologia/2025/ac3-bio-b-1-semestre/prova.html"
   },
   {
