@@ -12,6 +12,9 @@
   .questao h2 { font-size: 1.05rem; margin-bottom: 4px; }
   .fonte { font-size: 0.85rem; font-style: italic; margin: 4px 0 12px; }
   img.figura { max-width: 100%; width: 460px; display: block; margin: 10px 0; border: 1px solid; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -26,7 +29,8 @@
   <div class="aviso">
     Esta é uma transcrição só dos enunciados (com as figuras originais, quando davam pra recortar sem
     nenhuma marca de resposta). As respostas, correções e notas dos alunos que fizeram a prova original
-    não estão aqui. Essa prova ainda não tem a seção "Ver análise" — foi só transcrita por enquanto.
+    não estão aqui. As análises em "Ver análise" foram escritas por IA — úteis pra estudar, mas vale
+    conferir com o professor se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -43,6 +47,16 @@
     avenida com velocidade inicial v₀ = 0,4 m/s e chegando ao outro lado com velocidade final v = 1,2 m/s.
     O pedestre realiza todo o percurso com aceleração constante em um intervalo de tempo de t = 15 s.
     Calcule a largura da avenida com esta nova aceleração.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Usando a equação de Torricelli (v² = v₀² + 2aΔs), com v₀ = 0,5 m/s,
+        v = 1,5 m/s e Δs = 20 m:</p>
+        <p>1,5² = 0,5² + 2×a×20 → 2,25 = 0,25 + 40a → 40a = 2 → <strong>a = 0,05 m/s²</strong>.</p>
+        <p><strong>b)</strong> Como a aceleração é constante, pode-se usar a velocidade média:
+        Δs = [(v₀ + v)/2] × t = [(0,4 + 1,2)/2] × 15 = 0,8 × 15 = <strong>12 m</strong> de largura.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -55,6 +69,22 @@
     <p>c) ( ) O valor da aceleração resultante do projétil no ponto culminante é igual a zero.</p>
     <p>d) ( ) Se o movimento do projétil ocorrer na Lua onde a aceleração da gravidade é menor, o tempo de
     voo será maior do que se ele acontecesse na Terra.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a) Verdadeiro.</strong> No ponto mais alto, a componente vertical da velocidade é zero,
+        mas a componente horizontal permanece igual à velocidade inicial horizontal (não é afetada pela
+        gravidade) — logo, a velocidade vetorial total nesse ponto não é nula.</p>
+        <p><strong>b) Verdadeiro.</strong> No lançamento oblíquo no vácuo, o alcance máximo é obtido com
+        ângulo de 45° em relação à horizontal (é o ângulo que maximiza o produto entre as componentes
+        horizontal e vertical da velocidade inicial).</p>
+        <p><strong>c) Falso.</strong> A aceleração da gravidade (g) atua constantemente durante toda a
+        trajetória, inclusive no ponto mais alto — é justamente essa aceleração, sempre presente e
+        apontando para baixo, que faz a velocidade vertical se anular ali e depois inverter de sentido.</p>
+        <p><strong>d) Verdadeiro.</strong> O tempo de voo é inversamente proporcional a g (t = 2·v₀y/g).
+        Como a gravidade lunar é menor que a terrestre, o tempo de voo do projétil seria maior na Lua.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -62,6 +92,17 @@
     <p>Uma ambulância, para chegar a determinada região, considerando o fluxo do trânsito, deve percorrer
     2 km ao norte, 3 km ao leste, 3 km ao norte, 1 km ao oeste, 2 km ao norte e mais 4 km ao leste, até
     chegar ao local de atendimento. Calcule o deslocamento vetorial da ambulância.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Somando separadamente os deslocamentos na direção Norte-Sul e na direção Leste-Oeste:</p>
+        <p>Norte: 2 + 3 + 2 = <strong>7 km</strong> (não há deslocamento ao sul a descontar).</p>
+        <p>Leste: 3 − 1 + 4 = <strong>6 km</strong> (o "1 km ao oeste" entra subtraindo).</p>
+        <p>O deslocamento vetorial resultante é a diagonal do triângulo retângulo formado por esses dois
+        catetos (7 km e 6 km): |d| = √(7² + 6²) = √(49+36) = √85 ≈ <strong>9,2 km</strong>, numa direção a
+        nordeste (aproximadamente 41° a leste do norte, já que tan θ = 6/7).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -73,6 +114,18 @@
     <img class="figura" src="imagens/q06-bombardeiro.jpg" alt="Avião bombardeiro voando a 100 m/s e 500 m de altitude sobre um canhão antiaéreo fixo no solo">
     <p>Quantos metros antes da vertical que passa pelo canhão o piloto do avião deve abandonar uma bomba
     para acertá-lo no solo?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>A bomba, ao ser abandonada, mantém a velocidade horizontal do avião (100 m/s) e cai em queda
+        livre na vertical (lançamento horizontal). Primeiro, calcula-se o tempo de queda até os 500 m:</p>
+        <p>Δs = (g·t²)/2 → 500 = (10·t²)/2 → t² = 100 → <strong>t = 10 s</strong>.</p>
+        <p>Nesse tempo, a bomba percorre horizontalmente: Δx = v·t = 100 × 10 =
+        <strong>1000 m</strong>.</p>
+        <p>Portanto, o piloto deve abandonar a bomba quando estiver <strong>1000 m antes</strong> da
+        vertical que passa pelo canhão, para que ela caia exatamente sobre ele.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -83,6 +136,23 @@
     em que o carro teve que parar nos três semáforos.</p>
     <img class="figura" src="imagens/q07-grafico.jpg" alt="Gráfico da velocidade (m/s) em função do tempo (s), mostrando o carro acelerando e freando em três semáforos entre 0 e 70 segundos">
     <p>Determine o deslocamento entre o primeiro e o terceiro semáforo.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O deslocamento, num gráfico de velocidade × tempo, é dado pela <strong>área sob a curva</strong>.
+        O trecho entre o 1º e o 3º semáforo é composto por dois "trapézios" de velocidade (duas
+        acelerações-e-freadas separadas por um período parado no 2º semáforo, cuja contribuição à área é
+        nula):</p>
+        <p><strong>Primeiro trapézio</strong> (entre 5 s e 25 s, subindo a 10 m/s entre 5-10s, mantendo
+        10 m/s entre 10-20s, e descendo a 0 entre 20-25s): área = [(20 + 10)/2] × 10 =
+        <strong>150 m</strong>.</p>
+        <p><strong>Segundo trapézio</strong> (entre 45 s e 65 s, subindo a 12 m/s entre 45-50s, mantendo
+        12 m/s entre 50-60s, e descendo a 0 entre 60-65s): área = [(20 + 10)/2] × 12 =
+        <strong>180 m</strong>.</p>
+        <p>Deslocamento total entre o primeiro e o terceiro semáforo: 150 + 180 =
+        <strong>330 m</strong>.</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>

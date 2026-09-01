@@ -10,6 +10,9 @@
   .questao { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid; }
   .questao h2 { font-size: 1.05rem; margin-bottom: 4px; }
   .fonte { font-size: 0.85rem; font-style: italic; margin: 4px 0 12px; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -21,8 +24,10 @@
     raios de luz — nas fotos originais, esses desenhos foram feitos pelos próprios alunos por cima do
     enunciado, então nenhuma figura foi incluída aqui (pra não publicar nada desenhado por aluno). Os
     dados numéricos de cada questão foram mantidos no texto. As respostas, correções e notas dos alunos
-    que fizeram a prova original não estão aqui. Essa prova ainda não tem a seção "Ver análise" — foi só
-    transcrita por enquanto.
+    que fizeram a prova original não estão aqui. As análises em "Ver análise" foram escritas por IA —
+    úteis pra estudar, mas vale conferir com o professor se tiver dúvida numa resposta específica (a da
+    Questão 03 depende de detalhes da figura original que não temos mais acesso, então trate como uma
+    aproximação do método, não como gabarito fechado).
   </div>
 
   <div class="questao">
@@ -37,6 +42,19 @@
     imagem do objeto mostrando todas as distâncias envolvidas.</p>
     <p>b) Determine a distância entre os olhos da pessoa e a posição da imagem do objeto produzida pelo
     espelho.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O desenho deve mostrar, da esquerda para a direita: os olhos da pessoa, um
+        espaço de 40 cm até o objeto (já que ela segura o objeto à sua frente, mais perto do espelho), o
+        objeto a 10 cm do espelho, o próprio espelho, e a imagem virtual formada simetricamente a 10 cm
+        <em>atrás</em> do espelho.</p>
+        <p><strong>b)</strong> A imagem de um espelho plano se forma sempre atrás do espelho, à mesma
+        distância que o objeto está na frente — nesse caso, a 10 cm atrás do espelho. A distância entre os
+        olhos da pessoa e essa imagem é, então, a soma da distância dos olhos até o espelho (50 cm) com a
+        distância do espelho até a imagem (10 cm): 50 + 10 = <strong>60 cm</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -47,6 +65,21 @@
     atinge o ponto B.</p>
     <p>b) Determine a distância entre a imagem virtual da lanterna A e o ponto B. Considere AD = 2 m,
     BE = 3 m e DE = 5 m.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> O raio sai de A, incide no espelho DE em algum ponto entre D e E, e é
+        refletido até atingir B — de forma que o ângulo de incidência seja igual ao ângulo de reflexão em
+        relação à normal do espelho nesse ponto (é equivalente a traçar uma reta ligando a imagem virtual
+        A' até B, e ver onde essa reta cruza o espelho).</p>
+        <p><strong>b)</strong> A imagem virtual de A (chamada A') se forma "abaixo" do espelho horizontal,
+        na mesma vertical de D, a uma profundidade igual a AD = 2 m. Tomando D como origem (0,0) do
+        espelho, A' fica em (0, −2) e B fica em (5, 3) (5 m ao longo do espelho, 3 m acima dele, já que
+        BE = 3 m). A distância entre A' e B é:</p>
+        <p style="text-align:center">d = √[(5−0)² + (3−(−2))²] = √(25 + 25) = √50 = 5√2 ≈
+        <strong>7,07 m</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -63,6 +96,21 @@
     <p>a) a largura (L) da janela.</p>
     <p>b) a largura mínima (x) do espelho E para que o observador possa ver por inteiro a imagem da placa
     conjugada por ele.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Usando as medidas indicadas na figura: L = 4,4 − 2×1,2 =
+        <strong>2,0 m</strong>.</p>
+        <p><strong>b)</strong> O raciocínio segue o mesmo princípio da lei da reflexão (ângulo de
+        incidência = ângulo de reflexão) combinado com semelhança de triângulos entre os raios que saem das
+        extremidades da placa e chegam aos olhos do observador — a largura mínima do espelho é a projeção,
+        sobre o plano do espelho, da região por onde precisam passar os raios refletidos vindos das duas
+        bordas da placa até o observador. Sem o desenho original à mão não é possível conferir o valor
+        numérico final com segurança — o mais seguro é refazer esse cálculo com a figura impressa da sua
+        prova, aplicando semelhança de triângulos entre os segmentos formados pelos raios de luz e a
+        distância informada de 0,6 m.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -76,6 +124,24 @@
     curvatura do espelho, observaremos uma imagem virtual e direita do objeto.</p>
     <p>d) ( ) Toda imagem de um objeto real fornecida por um espelho esférico convexo é menor que esse
     objeto, independentemente de sua distância ao espelho.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a) Verdadeiro.</strong> É uma propriedade fundamental do espelho plano: a imagem de
+        qualquer objeto real é sempre virtual, direita e de mesmo tamanho que o objeto.</p>
+        <p><strong>b) Falso.</strong> A propriedade de "passar pelo foco após a reflexão" vale para o raio
+        que incide <strong>paralelamente ao eixo principal</strong>, não para o raio que incide sobre o
+        vértice. O raio que incide no vértice reflete simetricamente em relação ao eixo principal (ângulo
+        de incidência = ângulo de reflexão, medidos a partir do eixo), sem relação obrigatória com o foco.</p>
+        <p><strong>c) Falso.</strong> Um objeto real posicionado exatamente no centro de curvatura de um
+        espelho côncavo gera uma imagem <strong>real, invertida e de mesmo tamanho</strong> que o objeto
+        (não virtual e direita) — essa é justamente uma das posições notáveis do espelho côncavo.</p>
+        <p><strong>d) Verdadeiro.</strong> Essa é uma propriedade importante e exclusiva dos espelhos
+        convexos: para qualquer posição de um objeto real, a imagem formada é sempre virtual, direita e
+        menor que o objeto — diferente do espelho côncavo, cujas características de imagem variam conforme
+        a posição do objeto.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -84,6 +150,20 @@
     objeto. Indique as características em cada caso (virtual/real, direita/invertida, maior/menor/igual).</p>
     <p>a) Espelho esférico côncavo, com o objeto posicionado entre o centro de curvatura (C) e o foco (F).</p>
     <p>b) Espelho esférico côncavo, com o objeto posicionado entre o foco (F) e o vértice (V).</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Para construir essas imagens, usam-se dois "raios notáveis": o raio que incide paralelo ao eixo
+        principal (reflete passando pelo foco F) e o raio que passa pelo centro de curvatura C (reflete
+        sobre si mesmo, já que incide perpendicularmente ao espelho nesse ponto).</p>
+        <p><strong>a)</strong> Com o objeto entre C e F, a imagem se forma além de C (mais longe do
+        espelho que o próprio objeto), e é <strong>real, invertida e maior</strong> que o objeto.</p>
+        <p><strong>b)</strong> Com o objeto entre F e o vértice V, os raios refletidos divergem e só se
+        encontram (aparentemente) atrás do espelho — a imagem é <strong>virtual, direita e maior</strong>
+        que o objeto (é o princípio de funcionamento de espelhos usados, por exemplo, em maquiagem/barbear,
+        que ampliam o rosto quando ele está bem próximo do espelho).</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -93,6 +173,24 @@
     diante do espelho e o objeto AB está a 1,5 m atrás si. Determine o tamanho mínimo do espelho para que
     isso seja possível. Efetue a construção da figura correspondente ao objeto, o espelho, os raios de luz
     incidentes e refletidos e a imagem formada neste espelho.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O objeto está a 0,5 + 1,5 = 2,0 m do espelho (o observador está entre o espelho e o objeto). A
+        imagem virtual A'B' se forma a 2,0 m atrás do espelho — ou seja, a distância total entre o
+        observador e a imagem é 0,5 (observador até o espelho) + 2,0 (espelho até a imagem) =
+        <strong>2,5 m</strong>.</p>
+        <p>Pela semelhança de triângulos entre o segmento que liga o observador ao topo da imagem (2 m de
+        altura) e o segmento correspondente que essa reta forma ao cruzar o plano do espelho, o tamanho
+        mínimo do espelho é:</p>
+        <p style="text-align:center">x / 0,5 = 2 / 2,5 → x = (0,5 × 2) / 2,5 =
+        <strong>0,4 m</strong>.</p>
+        <p>Ou seja, um espelho de apenas 0,4 m de altura já é suficiente para o observador ver a imagem
+        completa do objeto de 2 m, graças à distância entre eles — esse é o mesmo princípio que explica por
+        que um espelho de corpo inteiro não precisa ter o dobro da sua altura para você se ver por
+        completo.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -102,6 +200,17 @@
     motorista vê por meio do espelho a palavra escrita corretamente.</p>
     <p>a) Reproduza a palavra AMBULÂNCIA da forma como deve ser escrita na perua.</p>
     <p>b) A que distância está a imagem do espelho retrovisor?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Como o espelho plano inverte a imagem lateralmente (efeito de enantiomorfismo),
+        para que a palavra apareça corretamente ("AMBULÂNCIA") quando vista pelo retrovisor, ela precisa
+        estar escrita ao contrário na própria perua: <strong>AICNÂLUBMA</strong>.</p>
+        <p><strong>b)</strong> Em um espelho plano, a imagem se forma sempre à mesma distância atrás do
+        espelho em que o objeto está na frente. Como o letreiro está a 10 m do espelho retrovisor, a
+        imagem também está a <strong>10 m</strong> (atrás do espelho, do ponto de vista do motorista).</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>
