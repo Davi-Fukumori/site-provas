@@ -108,15 +108,15 @@ const PROVAS = [
     professores: ["Michele"],
     ano: "2025",
     bimestre: "AC1 - 1º semestre",
-    titulo: "Prova AC1 - 1º semestre — 2025",
-    arquivo: "arquivos/sociologia/2025/ac1-1-semestre/prova.html"
+    titulo: "Prova AC1 - 1º semestre — 2025 (junto com Filosofia)",
+    arquivo: "arquivos/filosofia/2025/ac1-1-semestre/prova.html"
   },
   {
     materia: "Filosofia",
     professores: ["José Carlos"],
     ano: "2025",
     bimestre: "AC1 - 1º semestre",
-    titulo: "Prova AC1 - 1º semestre — 2025",
+    titulo: "Prova AC1 - 1º semestre — 2025 (junto com Sociologia)",
     arquivo: "arquivos/filosofia/2025/ac1-1-semestre/prova.html"
   },
   {
@@ -239,15 +239,15 @@ const PROVAS = [
     professores: ["Michele"],
     ano: "2026",
     bimestre: "Avaliação Dissertativa 1 - 2º semestre",
-    titulo: "Avaliação Dissertativa 1 - 2º semestre — 2026",
-    arquivo: "arquivos/sociologia/2026/avaliacao-dissertativa-1-2-semestre/prova.html"
+    titulo: "Avaliação Dissertativa 1 - 2º semestre — 2026 (junto com Filosofia)",
+    arquivo: "arquivos/filosofia/2026/avaliacao-dissertativa-1-2-semestre/prova.html"
   },
   {
     materia: "Filosofia",
     professores: ["José Carlos"],
     ano: "2026",
     bimestre: "Avaliação Dissertativa 1 - 2º semestre",
-    titulo: "Avaliação Dissertativa 1 - 2º semestre — 2026",
+    titulo: "Avaliação Dissertativa 1 - 2º semestre — 2026 (junto com Sociologia)",
     arquivo: "arquivos/filosofia/2026/avaliacao-dissertativa-1-2-semestre/prova.html"
   }
 ];
