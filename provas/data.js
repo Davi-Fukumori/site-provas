@@ -108,7 +108,7 @@ const PROVAS = [
     professores: ["Michele"],
     ano: "2025",
     bimestre: "AC1 - 1º semestre",
-    titulo: "Prova AC1 - 1º semestre — 2025 (incompleta)",
+    titulo: "Prova AC1 - 1º semestre — 2025",
     arquivo: "arquivos/sociologia/2025/ac1-1-semestre/prova.html"
   },
   {
@@ -129,7 +129,7 @@ const PROVAS = [
   },
   {
     materia: "Química",
-    professores: ["Paulo", "Eduardo"],
+    professores: ["Paulo"],
     ano: "2025",
     bimestre: "AC3 Química A - 1º semestre",
     titulo: "Prova AC3 Química A - 1º semestre — 2025",
