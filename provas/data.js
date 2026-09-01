@@ -59,5 +59,176 @@ const PROVAS = [
     bimestre: "AC1 - 2º semestre",
     titulo: "Prova AC1 - 2º semestre — 2025",
     arquivo: "arquivos/portugues/2025/prova-2-semestre-2025.html"
+  },
+
+  // --- Lote de agosto/2025 (24 provas enviadas de uma vez, 21 cadastradas — 3 eram duplicatas) ---
+
+  {
+    materia: "Geografia",
+    professores: ["Leonardo"],
+    ano: "2025",
+    bimestre: "AC1 - 1º semestre",
+    titulo: "Prova AC1 - 1º semestre — 2025",
+    arquivo: "arquivos/geografia/2025/ac1-1-semestre/prova.html"
+  },
+  {
+    materia: "Geografia",
+    professores: ["Leonardo"],
+    ano: "2025",
+    bimestre: "AC3 GEO A - 1º semestre",
+    titulo: "Prova AC3 GEO A - 1º semestre — 2025",
+    arquivo: "arquivos/geografia/2025/ac3-geo-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Geografia",
+    professores: ["Leonardo"],
+    ano: "2025",
+    bimestre: "AC3 GEO B - 1º semestre",
+    titulo: "Prova AC3 GEO B - 1º semestre — 2025",
+    arquivo: "arquivos/geografia/2025/ac3-geo-b-1-semestre/prova.html"
+  },
+  {
+    materia: "História",
+    professores: ["Bruna"],
+    ano: "2025",
+    bimestre: "AC3 A - 1º semestre",
+    titulo: "Prova AC3 A - 1º semestre — 2025",
+    arquivo: "arquivos/historia/2025/ac3-a-1-semestre/prova.html"
+  },
+  {
+    materia: "História",
+    professores: ["Bruna"],
+    ano: "2025",
+    bimestre: "AC3 B - 1º semestre",
+    titulo: "Prova AC3 B - 1º semestre — 2025",
+    arquivo: "arquivos/historia/2025/ac3-b-1-semestre/prova.html"
+  },
+  {
+    materia: "Sociologia",
+    professores: ["Michele"],
+    ano: "2025",
+    bimestre: "AC1 - 1º semestre",
+    titulo: "Prova AC1 - 1º semestre — 2025 (incompleta)",
+    arquivo: "arquivos/sociologia/2025/ac1-1-semestre/prova.html"
+  },
+  {
+    materia: "Filosofia",
+    professores: ["José Carlos"],
+    ano: "2025",
+    bimestre: "AC1 - 1º semestre",
+    titulo: "Prova AC1 - 1º semestre — 2025",
+    arquivo: "arquivos/filosofia/2025/ac1-1-semestre/prova.html"
+  },
+  {
+    materia: "Química",
+    professores: ["Paulo", "Eduardo"],
+    ano: "2025",
+    bimestre: "AC1 - 1º semestre",
+    titulo: "Prova AC1 - 1º semestre — 2025",
+    arquivo: "arquivos/quimica/2025/ac1-1-semestre/prova.html"
+  },
+  {
+    materia: "Química",
+    professores: ["Paulo", "Eduardo"],
+    ano: "2025",
+    bimestre: "AC3 Química A - 1º semestre",
+    titulo: "Prova AC3 Química A - 1º semestre — 2025",
+    arquivo: "arquivos/quimica/2025/ac3-quimica-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Química",
+    professores: ["Eduardo"],
+    ano: "2025",
+    bimestre: "AC3 Química B - 1º semestre",
+    titulo: "Prova AC3 Química B - 1º semestre — 2025",
+    arquivo: "arquivos/quimica/2025/ac3-quimica-b-1-semestre/prova.html"
+  },
+  {
+    materia: "Biologia",
+    professores: ["Kamila"],
+    ano: "2025",
+    bimestre: "AC1 - 1º semestre (Vitaminas)",
+    titulo: "Prova AC1 - 1º semestre — 2025 (Vitaminas)",
+    arquivo: "arquivos/biologia/2025/ac1-1-semestre-vitaminas/prova.html"
+  },
+  {
+    materia: "Biologia",
+    professores: ["Kamila"],
+    ano: "2025",
+    bimestre: "AC3 Bio A - 1º semestre",
+    titulo: "Prova AC3 Bio A - 1º semestre — 2025 (biomoléculas e genética)",
+    arquivo: "arquivos/biologia/2025/ac3-bio-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Biologia",
+    professores: ["Kamila"],
+    ano: "2025",
+    bimestre: "AC3 Bio B - 1º semestre",
+    titulo: "Prova AC3 Bio B - 1º semestre — 2025 (ecologia, incompleta)",
+    arquivo: "arquivos/biologia/2025/ac3-bio-b-1-semestre/prova.html"
+  },
+  {
+    materia: "Física",
+    professores: ["Jefferson", "Fred"],
+    ano: "2025",
+    bimestre: "AC3 A - 1º semestre",
+    titulo: "Prova AC3 A - 1º semestre — 2025 (incompleta)",
+    arquivo: "arquivos/fisica/2025/ac3-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Física",
+    professores: ["Jefferson", "Fred"],
+    ano: "2025",
+    bimestre: "AC3 B - 1º semestre",
+    titulo: "Prova AC3 B - 1º semestre — 2025",
+    arquivo: "arquivos/fisica/2025/ac3-b-1-semestre/prova.html"
+  },
+  {
+    materia: "Português",
+    professores: ["Matheus", "Maria Teresa"],
+    ano: "2025",
+    bimestre: "AC1 - 1º semestre",
+    titulo: "Prova AC1 - 1º semestre — 2025",
+    arquivo: "arquivos/portugues/2025/ac1-1-semestre/prova.html"
+  },
+  {
+    materia: "Português",
+    professores: ["Matheus", "Maria Teresa"],
+    ano: "2025",
+    bimestre: "AC3 PORT A - 1º semestre",
+    titulo: "Prova AC3 PORT A - 1º semestre — 2025",
+    arquivo: "arquivos/portugues/2025/ac3-port-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Português",
+    professores: ["Matheus", "Maria Teresa"],
+    ano: "2025",
+    bimestre: "AC3 PORT B - 1º semestre",
+    titulo: "Prova AC3 PORT B - 1º semestre — 2025",
+    arquivo: "arquivos/portugues/2025/ac3-port-b-1-semestre/prova.html"
+  },
+  {
+    materia: "Matemática",
+    professores: ["Ruben", "Juliana"],
+    ano: "2025",
+    bimestre: "AC2 - 1º semestre",
+    titulo: "Prova AC2 - 1º semestre — 2025",
+    arquivo: "arquivos/matematica/2025/ac2-1-semestre/prova.html"
+  },
+  {
+    materia: "Matemática",
+    professores: ["Ruben", "Juliana"],
+    ano: "2025",
+    bimestre: "AC3 Matemática A - 1º semestre",
+    titulo: "Prova AC3 Matemática A - 1º semestre — 2025 (incompleta)",
+    arquivo: "arquivos/matematica/2025/ac3-matematica-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Matemática",
+    professores: ["Ruben", "Juliana"],
+    ano: "2025",
+    bimestre: "AC3 Matemática B - 1º semestre",
+    titulo: "Prova AC3 Matemática B - 1º semestre — 2025",
+    arquivo: "arquivos/matematica/2025/ac3-matematica-b-1-semestre/prova.html"
   }
 ];
