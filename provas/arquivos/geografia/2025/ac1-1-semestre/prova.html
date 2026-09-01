@@ -13,6 +13,9 @@
   img.figura { max-width: 100%; width: 480px; display: block; margin: 10px 0; border: 1px solid; }
   table.dados { border-collapse: collapse; margin: 10px 0; font-size: 0.9rem; }
   table.dados th, table.dados td { border: 1px solid; padding: 4px 10px; text-align: left; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
 </style>
 </head>
 <body>
@@ -21,8 +24,8 @@
 
   <div class="aviso">
     Esta é uma transcrição só dos enunciados (com as figuras originais). As respostas, correções e notas
-    dos alunos que fizeram a prova original não estão aqui. Essa prova ainda não tem a seção "Ver análise"
-    — foi só transcrita por enquanto.
+    dos alunos que fizeram a prova original não estão aqui. As análises em "Ver análise" foram escritas por
+    IA — úteis pra estudar, mas vale conferir com o professor se tiver dúvida numa resposta específica.
   </div>
 
   <div class="questao">
@@ -40,6 +43,19 @@
     <p>A partir das informações expostas, explique quais foram os primeiros referenciais considerados
     pelas antigas civilizações para criar seus sistemas de localização, considerando outros exemplos que
     servem à mesma função.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>As civilizações antigas usavam principalmente <strong>referenciais celestes</strong> — a
+        posição do Sol (nascente/poente, altura ao meio-dia) e de estrelas e constelações fixas (como a
+        Estrela Polar, usada para indicar o norte) — para se orientar antes de existir qualquer sistema
+        matemático de coordenadas. Esses referenciais naturais também incluíam elementos da paisagem
+        (rios, montanhas, costa) usados como pontos de referência locais. É esse tipo de observação
+        astronômica empírica que, mais tarde, os gregos (como Hiparco) sistematizaram em latitude e
+        longitude — um sistema abstrato baseado em ângulos, mas que herda a lógica de usar o Sol e os
+        astros como referência.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -55,6 +71,24 @@
     <p>A partir do texto e com base no entendimento dos movimentos realizados pelo planeta Terra, explique:</p>
     <p>a) Quais são os mecanismos que geram a variação do fotoperíodo ao longo do ano?</p>
     <p>b) Quais são as regiões do planeta em que essa variação é mais intensa?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> A variação do fotoperíodo ao longo do ano é gerada pela combinação de dois
+        movimentos da Terra: a <strong>translação</strong> (o percurso anual em torno do Sol) e,
+        principalmente, a <strong>inclinação do eixo terrestre</strong> (cerca de 23,5° em relação ao
+        plano da órbita). Por causa dessa inclinação, ao longo do ano cada hemisfério recebe luz solar de
+        forma desigual — em determinados períodos um hemisfério fica mais voltado para o Sol (dias mais
+        longos, verão) e no período oposto do ano fica menos voltado (dias mais curtos, inverno). É essa
+        combinação inclinação + translação que produz as estações do ano e, com elas, a variação na
+        duração do dia.</p>
+        <p><strong>b)</strong> Essa variação é <strong>mais intensa nas altas latitudes</strong> (regiões
+        polares), onde em certos períodos do ano o Sol não se põe (dia polar) ou não nasce (noite polar)
+        durante semanas ou meses. Na linha do <strong>Equador</strong>, ao contrário, a duração do dia e da
+        noite se mantém praticamente constante (~12h cada) ao longo de todo o ano, já que essa região é a
+        menos afetada pela inclinação do eixo.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -65,6 +99,19 @@
     Rússia, localizada em 45° Leste.</p>
     <p>Considerando que a Europa adotava, no período em questão, o horário de verão, indique o dia e o
     horário de chegada à cidade de destino, pelo fuso horário local. Apresente seus cálculos na resolução.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>A diferença de longitude entre Cuiabá (60°O) e Moscou (45°L) é de 60° + 45° = <strong>105°</strong>.
+        Como cada fuso horário corresponde a 15°, a diferença de horário é 105° ÷ 15° = <strong>7 horas</strong>,
+        com Moscou sempre à frente de Cuiabá (por estar a leste).</p>
+        <p>No instante da partida (08:00 em Cuiabá, dia 05/07), em Moscou já são 08:00 + 7h =
+        <strong>15:00 do dia 05/07</strong>. Somando as 17 horas de voo: 15:00 + 17h = 32:00, ou seja,
+        08:00 do dia seguinte — <strong>08:00 do dia 06/07</strong> (horário padrão de Moscou).</p>
+        <p>Como a Europa adotava horário de verão (+1h) no período, o horário final de chegada é
+        <strong>09:00 do dia 06/07/2025</strong>.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -76,6 +123,16 @@
     verificou que a distância total percorrida durante os vários dias de estudo foi de 120 km.</p>
     <p>Com base nos dados fornecidos, calcule a escala numérica do mapa utilizado. Apresente seus cálculos
     na resolução.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Escala = distância no mapa ÷ distância real, nas mesmas unidades. Convertendo 120 km para
+        centímetros: 120 km = 120.000 m = <strong>12.000.000 cm</strong>.</p>
+        <p>Escala = 15 cm : 12.000.000 cm. Dividindo os dois lados por 15: 1 : 800.000.</p>
+        <p>A escala numérica do mapa é <strong>1:800.000</strong> — cada 1 cm no mapa representa 800.000 cm
+        (ou 8 km) na realidade.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -85,6 +142,23 @@
     <p>A partir da interpretação dos mapas, responda:</p>
     <p>a) Qual é o tipo de distorção que cada mapa apresenta?</p>
     <p>b) Qual dos mapas pode ser considerado eurocêntrico? Justifique sua resposta.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> A projeção de <strong>Mercator</strong> é conforme: preserva os ângulos e a
+        forma dos continentes (por isso é usada em navegação), mas distorce fortemente as
+        <strong>áreas</strong> nas altas latitudes — países próximos aos polos (como a Groenlândia ou a
+        Rússia) aparecem desproporcionalmente maiores do que realmente são. A projeção de
+        <strong>Peters</strong> é equivalente (equal-area): preserva as áreas reais dos continentes, mas
+        distorce fortemente as <strong>formas</strong>, alongando verticalmente os países próximos à linha
+        do Equador (como os da África e América do Sul).</p>
+        <p><strong>b)</strong> O mapa de Mercator é o que costuma ser apontado como <strong>eurocêntrico</strong>,
+        porque, ao ampliar visualmente os países de latitudes mais altas (onde ficam a Europa e a América
+        do Norte) em relação aos países próximos ao Equador (como os da África e América do Sul, que na
+        realidade são maiores), ele reforça uma percepção de mundo em que a Europa parece
+        proporcionalmente mais importante/extensa do que de fato é.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -108,6 +182,20 @@
     <p>a) Diferencie os conceitos de populoso e povoado.</p>
     <p>b) Dentre os países apresentados, qual pode ser considerado o mais povoado e o menos povoado?
     Justifique sua resposta.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> <strong>Populoso</strong> se refere à população absoluta de um lugar — o
+        número total de habitantes, independentemente do tamanho do território. <strong>Povoado</strong>
+        se refere à densidade demográfica — a relação entre o número de habitantes e a área do território
+        (hab/km²), ou seja, o quanto as pessoas estão concentradas no espaço.</p>
+        <p><strong>b)</strong> Calculando a densidade (população ÷ área) de cada país, o
+        <strong>Bangladesh</strong> é o mais povoado, com aproximadamente 1.113 hab/km² — mesmo não sendo o
+        mais populoso, tem um território pequeno e uma população concentrada. A <strong>Rússia</strong> é a
+        menos povoada, com aproximadamente 8,4 hab/km² — apesar de ter uma população numerosa (~144
+        milhões), seu território é o maior do mundo, o que resulta numa densidade muito baixa.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -116,6 +204,21 @@
     <p>O mapa apresenta a distribuição populacional no território brasileiro. A partir da interpretação
     das informações apresentadas, quais fatores humanos (políticos, históricos, sociais, econômicos)
     podem ser considerados para explicar o quadro observado?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>A distribuição populacional brasileira é marcada por uma forte concentração no litoral e no
+        Sudeste, e uma ocupação rarefeita no interior/Centro-Oeste e na Amazônia. Isso se explica por
+        fatores como: o processo <strong>histórico de colonização</strong>, voltado para o litoral (cana,
+        café, atividade portuária), que criou polos populacionais antigos na costa; a
+        <strong>concentração econômica e industrial</strong> no Sudeste (principalmente São Paulo e Rio de
+        Janeiro), que atraiu migrações internas ao longo do século XX; <strong>políticas públicas de
+        interiorização</strong> mais tardias e limitadas (como a construção de Brasília e programas de
+        ocupação da Amazônia); e a <strong>desigualdade regional</strong> de infraestrutura, emprego e
+        serviços, que reforça o esvaziamento de áreas menos desenvolvidas em favor dos grandes centros
+        urbanos.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -127,6 +230,20 @@
     <p>a) A qual fase da transição demográfica a pirâmide etária apresentada corresponde?</p>
     <p>b) A julgar pela composição do gráfico, como pode ser descrito o comportamento das taxas de
     natalidade e mortalidade no período em questão?</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p><strong>a)</strong> Uma pirâmide etária com base bem larga e topo estreito, como a do Brasil em
+        1950, é típica da <strong>fase inicial/intermediária da transição demográfica</strong> — um momento
+        de crescimento populacional acelerado, anterior à queda mais expressiva da natalidade.</p>
+        <p><strong>b)</strong> O formato indica <strong>taxas de natalidade altas</strong> (base larga, com
+        muitas crianças nascendo) e <strong>taxas de mortalidade em queda</strong> (principalmente a
+        mortalidade infantil, graças a melhorias sanitárias e médicas), mas ainda relativamente altas em
+        comparação com padrões atuais — o topo estreito mostra que poucas pessoas alcançavam idades
+        avançadas. Esse descompasso entre natalidade alta e mortalidade em declínio é o que gera o
+        crescimento populacional acelerado dessa fase.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao">
@@ -138,6 +255,21 @@
     <p class="fonte">Disponível em https://oglobo.globo.com/economia/noticia/2023/10/27/censo-2022-o-que-e-bonus-demografico-e-como-esta-o-brasil-neste-quesito.ghtml. Acesso em 24/02/2025.</p>
     <p>A partir dos dados expostos, indique a qual fase da transição demográfica o fenômeno corresponde,
     apresentado possíveis vantagens econômicas resultantes da condição descrita.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O bônus demográfico corresponde a uma <strong>fase avançada da transição demográfica</strong>,
+        posterior à grande queda das taxas de natalidade, mas anterior ao envelhecimento acentuado da
+        população — um momento de "equilíbrio" em que a proporção de pessoas em idade ativa (15-64 anos) é
+        proporcionalmente maior do que a de dependentes (crianças e idosos).</p>
+        <p>Entre as vantagens econômicas possíveis estão: maior <strong>força de trabalho disponível</strong>
+        em relação ao número de dependentes, o que reduz a carga sobre cada trabalhador; potencial de
+        <strong>maior poupança e investimento</strong> por parte das famílias e do Estado (menos gasto
+        proporcional com crianças e idosos); e, se acompanhado de políticas adequadas de emprego,
+        educação e qualificação profissional, potencial de <strong>aceleração do crescimento econômico</strong>
+        — é uma "janela de oportunidade" que tende a se fechar quando a população começa a envelhecer.</p>
+      </div>
+    </details>
   </div>
 
   <div class="questao" style="border-bottom:none">
@@ -154,6 +286,19 @@
     <p class="fonte">Disponível em https://blogdoibre.fgv.br/posts/maternidade-e-participacao-feminina-no-mercado-de-trabalho. Acesso em 24/02/2025.</p>
     <p>A partir dos dados expostos, apresente uma possível consequência do fenômeno descrito nas taxas de
     natalidade. Justifique sua resposta.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Uma consequência provável do aumento da participação feminina no mercado de trabalho é a
+        <strong>queda das taxas de natalidade</strong>. Isso acontece porque mulheres inseridas no mercado
+        de trabalho tendem a adiar a maternidade (priorizando estudos e carreira), a ter um planejamento
+        familiar mais criterioso e a ter, em média, um número menor de filhos — em parte pelo custo de
+        oportunidade de conciliar trabalho remunerado com a criação dos filhos, e em parte pelo maior
+        acesso à educação e a métodos contraceptivos que costuma acompanhar essa inserção. Esse fenômeno é
+        um dos fatores que explicam a redução das taxas de fecundidade observada no Brasil nas últimas
+        décadas, empurrando o país para as fases mais avançadas da transição demográfica.</p>
+      </div>
+    </details>
   </div>
 </body>
 </html>
