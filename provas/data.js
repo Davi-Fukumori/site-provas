@@ -230,5 +230,24 @@ const PROVAS = [
     bimestre: "AC3 Matemática B - 1º semestre",
     titulo: "Prova AC3 Matemática B - 1º semestre — 2025",
     arquivo: "arquivos/matematica/2025/ac3-matematica-b-1-semestre/prova.html"
+  },
+
+  // --- 2026 ---
+
+  {
+    materia: "Sociologia",
+    professores: ["Michele"],
+    ano: "2026",
+    bimestre: "Avaliação Dissertativa 1 - 2º semestre",
+    titulo: "Avaliação Dissertativa 1 - 2º semestre — 2026",
+    arquivo: "arquivos/sociologia/2026/avaliacao-dissertativa-1-2-semestre/prova.html"
+  },
+  {
+    materia: "Filosofia",
+    professores: ["José Carlos"],
+    ano: "2026",
+    bimestre: "Avaliação Dissertativa 1 - 2º semestre",
+    titulo: "Avaliação Dissertativa 1 - 2º semestre — 2026",
+    arquivo: "arquivos/filosofia/2026/avaliacao-dissertativa-1-2-semestre/prova.html"
   }
 ];
