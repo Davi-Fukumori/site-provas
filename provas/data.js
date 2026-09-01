@@ -169,7 +169,7 @@ const PROVAS = [
   },
   {
     materia: "Física",
-    professores: ["Jefferson", "Fred"],
+    professores: ["Jefferson"],
     ano: "2025",
     bimestre: "AC3 A - 1º semestre",
     titulo: "Prova AC3 A - 1º semestre — 2025 (incompleta)",
@@ -177,7 +177,7 @@ const PROVAS = [
   },
   {
     materia: "Física",
-    professores: ["Jefferson", "Fred"],
+    professores: ["Fred"],
     ano: "2025",
     bimestre: "AC3 B - 1º semestre",
     titulo: "Prova AC3 B - 1º semestre — 2025",
@@ -193,7 +193,7 @@ const PROVAS = [
   },
   {
     materia: "Português",
-    professores: ["Matheus", "Maria Teresa"],
+    professores: ["Matheus"],
     ano: "2025",
     bimestre: "AC3 PORT A - 1º semestre",
     titulo: "Prova AC3 PORT A - 1º semestre — 2025",
@@ -201,7 +201,7 @@ const PROVAS = [
   },
   {
     materia: "Português",
-    professores: ["Matheus", "Maria Teresa"],
+    professores: ["Maria Teresa"],
     ano: "2025",
     bimestre: "AC3 PORT B - 1º semestre",
     titulo: "Prova AC3 PORT B - 1º semestre — 2025",
@@ -217,7 +217,7 @@ const PROVAS = [
   },
   {
     materia: "Matemática",
-    professores: ["Ruben", "Juliana"],
+    professores: ["Ruben"],
     ano: "2025",
     bimestre: "AC3 Matemática A - 1º semestre",
     titulo: "Prova AC3 Matemática A - 1º semestre — 2025 (incompleta)",
@@ -225,7 +225,7 @@ const PROVAS = [
   },
   {
     materia: "Matemática",
-    professores: ["Ruben", "Juliana"],
+    professores: ["Juliana"],
     ano: "2025",
     bimestre: "AC3 Matemática B - 1º semestre",
     titulo: "Prova AC3 Matemática B - 1º semestre — 2025",
