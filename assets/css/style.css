@@ -525,3 +525,130 @@ footer {
   font-size: 0.85rem;
   padding: 24px 16px;
 }
+
+/* ===== Perguntas (login, pergunta do dia, ranking) ===== */
+.bloco-login {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.erro-formulario {
+  color: var(--cor-erro);
+  font-size: 0.9rem;
+  margin: 10px 0 0;
+}
+
+.erro-formulario:empty {
+  display: none;
+}
+
+.barra-perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 12px 16px;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  font-size: 0.9rem;
+}
+
+.bloco-pergunta {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 20px;
+}
+
+.bloco-pergunta h2 {
+  margin: 4px 0 16px;
+  font-size: 1.15rem;
+}
+
+.lista-alternativas {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.alternativa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.alternativa:hover {
+  border-color: var(--cor-primaria);
+}
+
+.alternativa input {
+  accent-color: var(--cor-primaria);
+}
+
+.bloco-resultado-pergunta {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 20px;
+}
+
+.bloco-resultado-pergunta.aprovado {
+  background: var(--cor-sucesso-fundo);
+  border-color: var(--cor-sucesso);
+}
+
+.bloco-resultado-pergunta.reprovado {
+  background: var(--cor-erro-fundo);
+  border-color: var(--cor-erro);
+}
+
+.bloco-resultado-pergunta p {
+  margin: 0 0 8px;
+}
+
+.bloco-resultado-pergunta p:last-child {
+  margin-bottom: 0;
+}
+
+.lista-ranking {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.item-ranking {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 10px 14px;
+}
+
+.posicao-ranking {
+  font-weight: 700;
+  color: var(--cor-primaria);
+  min-width: 28px;
+}
+
+.nome-ranking {
+  flex: 1;
+}
+
+.pontos-ranking {
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perguntas — Colégio Vital Brasil</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Colégio Vital Brasil</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../provas/index.html">Provas</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+        <li><a href="index.html" aria-current="page">Perguntas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Pergunta do dia</h1>
+    <p>Entre com sua conta Google, responda a pergunta de hoje e ganhe pontos pra sua matéria. Confira o <a href="ranking.html">ranking do mês</a>.</p>
+
+    <div id="bloco-login" class="bloco-login">
+      <button id="botao-login" class="botao">Entrar com Google</button>
+      <p id="erro-login" class="erro-formulario"></p>
+    </div>
+
+    <div id="bloco-jogo" hidden>
+      <div class="barra-perfil">
+        <span id="perfil-usuario"></span>
+        <button id="botao-logout" class="botao botao-secundario">Sair</button>
+      </div>
+
+      <p id="carregando-pergunta" class="mensagem-vazia">Carregando pergunta de hoje...</p>
+      <p id="erro-jogo" class="erro-formulario"></p>
+
+      <div id="bloco-pergunta" class="bloco-pergunta" hidden>
+        <p class="subtitulo-materia" id="pergunta-materia"></p>
+        <h2 id="pergunta-texto"></h2>
+        <div id="pergunta-alternativas" class="lista-alternativas"></div>
+        <button id="botao-enviar-resposta" class="botao" disabled>Responder</button>
+      </div>
+
+      <div id="bloco-resultado" class="bloco-resultado-pergunta" hidden></div>
+    </div>
+  </main>
+
+  <footer>
+    Não tem pergunta nova há um tempo? Peça pra quem cuida do site adicionar mais no banco — veja o <a href="../README.md">README</a>.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../assets/js/firebase-init.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/perguntas.js"></script>
+</body>
+</html>

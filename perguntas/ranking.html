@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ranking — Colégio Vital Brasil</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Colégio Vital Brasil</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../provas/index.html">Provas</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+        <li><a href="index.html" aria-current="page">Perguntas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ranking</h1>
+    <p><a href="index.html">← Voltar pra pergunta do dia</a></p>
+
+    <div id="bloco-login" class="bloco-login">
+      <p>Entre com sua conta Google pra ver o ranking.</p>
+      <button id="botao-login" class="botao">Entrar com Google</button>
+    </div>
+
+    <div id="conteudo-ranking" hidden>
+      <section class="bloco-areas">
+        <h2>Ranking de <span id="nome-mes-atual"></span></h2>
+        <p>Soma dos pontos ganhos nas perguntas diárias deste mês. Reseta todo mês.</p>
+        <p id="erro-ranking" class="erro-formulario"></p>
+        <ol id="lista-ranking-mes" class="lista-ranking"></ol>
+      </section>
+
+      <section class="bloco-areas">
+        <h2>Seus pontos por matéria</h2>
+        <p>Acumulados pra sempre, não resetam — quanto mais você responde, mais sobem.</p>
+        <ul id="lista-pontos-materia" class="lista-ranking"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Medalhas de 1º/2º/3º lugar e comentários na pergunta do dia entram numa próxima etapa.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../assets/js/firebase-init.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ranking.js"></script>
+</body>
+</html>
