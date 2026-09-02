@@ -80,6 +80,12 @@ A calculadora tem uma fórmula própria por matéria, configurada em
 `calculadora/materias.js`. Se a escola mudar os pesos, edite só esse arquivo —
 não precisa mexer no HTML nem no `calculadora.js`.
 
+**Login obrigatório:** desde que a seção "Perguntas" foi adicionada (veja mais abaixo),
+a calculadora também pede login com Google — assim as notas digitadas ficam salvas na
+conta do aluno (documento `usuarios/{uid}`, campo `calculadora`) e aparecem iguais em
+qualquer aparelho, em vez de sumir ao recarregar a página. O salvamento é automático
+(alguns segundos depois de parar de digitar), não tem botão de "Salvar".
+
 **Simulado Vital por área:** o topo da página pede 4 notas (Exatas, Linguagens,
 Humanas, Biológicas). A média das 4 é o "Simulado Vital" — funciona como uma 3ª
 nota contínua (C3) e vale 20% da média de *todas* as matérias.
@@ -233,7 +239,7 @@ quem está mais perto de continuar cuidando dele.
 ## Personalizações pendentes
 
 - A nota mínima de aprovação na calculadora vem com `6` por padrão — dá pra
-  mudar direto na página, o valor não fica salvo entre visitas.
+  mudar direto na página (fica salva junto com o resto das notas, se estiver logado).
 
 ## Possíveis melhorias futuras (fora do escopo por agora)
 

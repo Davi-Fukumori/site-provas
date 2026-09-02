@@ -12,14 +12,17 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // --- Perfil de cada aluno (nome/foto exibidos no ranking) ---
+    // --- Perfil de cada aluno (nome/foto exibidos no ranking + notas da Calculadora) ---
     match /usuarios/{uid} {
       allow read: if request.auth != null;
-      // Só o próprio dono cria/atualiza o próprio perfil, e só os campos de perfil —
-      // nenhum ponto é guardado aqui (os pontos são somados a partir de "respostas",
-      // pra não ter como um aluno se dar pontos direto escrevendo nesse documento).
+      // Só o próprio dono cria/atualiza o próprio perfil. "calculadora" guarda as notas
+      // digitadas por esse aluno na Calculadora de média (dado pessoal, sem relação com
+      // o ranking de Perguntas) — nenhum ponto de Perguntas é guardado aqui, esses vêm
+      // sempre da soma de "respostas", pra não ter como um aluno se dar pontos direto
+      // escrevendo nesse documento.
       allow write: if request.auth != null && request.auth.uid == uid
-        && request.resource.data.keys().hasOnly(['nome', 'foto', 'email', 'criadoEm']);
+        && request.resource.data.keys().hasOnly(['nome', 'foto', 'email', 'criadoEm', 'calculadora'])
+        && (!('calculadora' in request.resource.data) || request.resource.data.calculadora is map);
     }
 
     // --- Banco de perguntas (cadastradas manualmente pelo Console, uma a uma) ---

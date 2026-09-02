@@ -1,8 +1,17 @@
 // Depende de MATERIAS, GRUPOS, AREAS_LABEL, PESO_PORTUGUES_NORMAL e PESO_REDACAO,
-// definidos em calculadora/materias.js
+// definidos em calculadora/materias.js, e de `auth`/`db`, definidos em
+// assets/js/firebase-init.js (carregado antes deste arquivo).
 document.addEventListener("DOMContentLoaded", function () {
   var container = document.getElementById("lista-materias");
   if (!container || typeof MATERIAS === "undefined") return;
+
+  var elLogin = document.getElementById("bloco-login");
+  var elBotaoLogin = document.getElementById("botao-login");
+  var elErroLogin = document.getElementById("erro-login");
+  var elCalculadora = document.getElementById("bloco-calculadora");
+  var elPerfil = document.getElementById("perfil-usuario");
+  var elBotaoLogout = document.getElementById("botao-logout");
+  var elStatusSalvamento = document.getElementById("status-salvamento");
 
   var areaInputs = {
     exatas: document.getElementById("area-exatas"),
@@ -267,12 +276,103 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  Object.keys(areaInputs).forEach(function (chave) {
-    areaInputs[chave].addEventListener("input", recalcularTudo);
+  // --- Login e salvamento das notas na conta Google ---
+  // Junta o valor de todo campo numérico habilitado (ou seja, digitado pelo aluno —
+  // os campos de AC2 ficam desabilitados porque são calculados, não digitados) num
+  // objeto simples { "id-do-campo": "valor" }. Isso não depende da lista de matérias
+  // específica, então continua funcionando mesmo se `materias.js` mudar depois.
+  function coletarValoresParaSalvar() {
+    var valores = {};
+    document.querySelectorAll("main input[type=number]:not(:disabled)").forEach(function (input) {
+      if (input.id) valores[input.id] = input.value;
+    });
+    return valores;
+  }
+
+  function aplicarValoresSalvos(valores) {
+    Object.keys(valores || {}).forEach(function (id) {
+      var input = document.getElementById(id);
+      if (input && !input.disabled) input.value = valores[id];
+    });
+  }
+
+  var salvarTimeout = null;
+  function agendarSalvar() {
+    if (!auth.currentUser) return;
+    elStatusSalvamento.textContent = "Salvando...";
+    clearTimeout(salvarTimeout);
+    salvarTimeout = setTimeout(function () {
+      db.collection("usuarios").doc(auth.currentUser.uid).set({
+        calculadora: coletarValoresParaSalvar()
+      }, { merge: true }).then(function () {
+        elStatusSalvamento.textContent = "Notas salvas.";
+      }).catch(function (erro) {
+        elStatusSalvamento.textContent = "Não deu pra salvar: " + erro.message;
+      });
+    }, 800);
+  }
+
+  elBotaoLogin.addEventListener("click", function () {
+    elErroLogin.textContent = "";
+    var provedor = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provedor).catch(function (erro) {
+      elErroLogin.textContent = "Não deu pra entrar: " + erro.message;
+    });
   });
-  elBernoulli.addEventListener("input", recalcularTudo);
-  notaMinima.addEventListener("input", recalcularTudo);
-  container.addEventListener("input", recalcularTudo);
+
+  elBotaoLogout.addEventListener("click", function () {
+    auth.signOut();
+  });
+
+  auth.onAuthStateChanged(function (usuario) {
+    if (!usuario) {
+      elLogin.hidden = false;
+      elCalculadora.hidden = true;
+      return;
+    }
+    elLogin.hidden = true;
+    elCalculadora.hidden = false;
+    elPerfil.textContent = "Logado como " + (usuario.displayName || usuario.email);
+    elStatusSalvamento.textContent = "Carregando suas notas...";
+
+    db.collection("usuarios").doc(usuario.uid).set({
+      nome: usuario.displayName || "",
+      foto: usuario.photoURL || "",
+      email: usuario.email || "",
+      criadoEm: firebase.firestore.FieldValue.serverTimestamp()
+    }, { merge: true }).catch(function () {});
+
+    db.collection("usuarios").doc(usuario.uid).get().then(function (snap) {
+      var dados = snap.exists ? snap.data() : null;
+      if (dados && dados.calculadora) {
+        aplicarValoresSalvos(dados.calculadora);
+      }
+      elStatusSalvamento.textContent = dados && dados.calculadora ? "Notas carregadas." : "";
+      recalcularTudo();
+    }).catch(function (erro) {
+      elStatusSalvamento.textContent = "Não deu pra carregar suas notas: " + erro.message;
+      recalcularTudo();
+    });
+  });
+
+  Object.keys(areaInputs).forEach(function (chave) {
+    areaInputs[chave].addEventListener("input", function () {
+      recalcularTudo();
+      agendarSalvar();
+    });
+  });
+  elBernoulli.addEventListener("input", function () {
+    recalcularTudo();
+    agendarSalvar();
+  });
+  notaMinima.addEventListener("input", function () {
+    recalcularTudo();
+    agendarSalvar();
+  });
+  container.addEventListener("input", function () {
+    recalcularTudo();
+    agendarSalvar();
+  });
 
   recalcularTudo();
 });
