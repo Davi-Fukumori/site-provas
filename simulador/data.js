@@ -1,6 +1,10 @@
-// Cursos do simulador ENEM/SISU. Etapa 1: só SISU (UFSCar), que ingressa 100% pelo
-// SISU sem vestibular próprio. Fuvest, Comvest, Vunesp e vestibulares de particulares
-// ficam pra próximas etapas — são sistemas de cálculo diferentes.
+// Cursos que usam a nota do ENEM com peso por área — SISU e também o Enem-USP (forma
+// de entrar na USP sem fazer a Fuvest, com ampla concorrência de verdade e o mesmo tipo
+// de cálculo do SISU). Comvest (Unicamp) e Unesp-Enem existem mas são bem mais
+// restritos (Unicamp: só quem cursou o ensino médio inteiro em escola pública; Unesp:
+// pelo menos metade das vagas reservada pra escola pública) e usam pesos por área
+// agrupada diferente (Biológicas/Exatas/Humanas, não as 5 áreas do ENEM) — ainda não
+// entraram aqui. Fuvest (1ª fase) tem simulador próprio em simulador/fuvest.html.
 //
 // Para adicionar um curso novo:
 // 1. Pegue a nota de corte real e atualizada em sisu.mec.gov.br ou nos editais das
@@ -169,5 +173,27 @@ const CURSOS_SISU = [
     notaCorte: 807.5,
     edicao: "SISU 2025",
     fonte: "conexao.ufrj.br / blogdoenem.com.br — SISU 2025"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo",
+    curso: "Astronomia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 3, matematica: 4, redacao: 1 }, // ilustrativo
+    notaCorte: 876.56,
+    edicao: "Enem-USP 2026",
+    fonte: "vestibulares.estrategia.com — maior nota de corte do Enem-USP 2026 (1ª chamada)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Carlos (EESC)",
+    curso: "Engenharia Mecânica",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 844.86,
+    edicao: "Enem-USP 2026",
+    fonte: "vestibulares.estrategia.com — Enem-USP 2026 (1ª chamada)"
   }
 ];

@@ -132,25 +132,34 @@ porque `0` conta como nota mesmo). Esse cálculo assume que a AC2 e o Simulado
 Vital já são valores fechados (vindos dos campos de área/Bernoulli no topo da
 página) — ele não tenta adivinhar Bernoulli/Simulado que ainda não saíram.
 
-## Como funciona o Simulador (ENEM/SISU)
+## Como funciona o Simulador (ENEM/SISU/Enem-USP)
 
 Página `simulador/index.html`, sem login e sem Firebase — funciona igual a Provas e
 Literatura (`simulador/data.js`, um `const CURSOS_SISU = [...]` que o `simulador.js` lê
 e calcula na hora). Abre por duplo-clique, sem precisar de servidor.
 
-**Etapa 1:** cobre o **SISU** (nota do ENEM), o sistema mais padronizado. **Etapa 2:**
-`simulador/fuvest.html`, cobre a **1ª fase da Fuvest** (USP) — veja a seção própria
-logo abaixo. Comvest (Unicamp), Vunesp (Unesp) e os vestibulares de Mackenzie/PUC-SP/FGV
-ainda não entraram.
+**Etapa 1:** cobre o **SISU** (nota do ENEM), o sistema mais padronizado, e também o
+**Enem-USP** (forma de entrar na USP com a nota do ENEM sem fazer a Fuvest — usa o
+mesmo tipo de cálculo do SISU, por peso de área, e tem ampla concorrência de verdade,
+por isso entrou no mesmo arquivo/página). **Etapa 2:** `simulador/fuvest.html`, cobre a
+**1ª fase da Fuvest** — veja a seção própria logo abaixo.
 
-**Como adicionar um curso novo:**
-1. Pegue a nota de corte **atualizada** direto em [sisu.mec.gov.br](https://sisu.mec.gov.br)
-   ou no edital da universidade — ela muda a cada edição do SISU, então não reaproveite
-   um valor antigo sem conferir.
+**Por que Comvest (Unicamp) e Unesp-Enem não entraram:** as duas também aceitam nota
+do ENEM, mas são bem mais restritas — o Enem-Unicamp é só pra quem cursou o ensino
+médio inteiro em escola pública (nem tem ampla concorrência), e o Unesp-Enem reserva
+pelo menos metade das vagas pra escola pública. As duas também agrupam as notas em só
+3 blocos (Biológicas/Exatas/Humanas) em vez das 5 áreas do ENEM, o que exigiria uma
+conta diferente da já usada aqui. Os vestibulares de Mackenzie/PUC-SP/FGV também ainda
+não entraram.
+
+**Como adicionar um curso novo (SISU ou Enem-USP):**
+1. Pegue a nota de corte **atualizada** direto em [sisu.mec.gov.br](https://sisu.mec.gov.br),
+   [fuvest.br/enem-usp](https://www.fuvest.br/enem-usp/) ou no edital da universidade —
+   ela muda a cada edição, então não reaproveite um valor antigo sem conferir.
 2. Veja no mesmo edital o **peso de cada área** (Linguagens, Humanas, Natureza,
    Matemática, Redação) pra aquele curso específico.
 3. Copie um dos blocos de `simulador/data.js` e edite os campos, incluindo a fonte e a
-   edição (ex: "SISU 2026") nos comentários.
+   edição (ex: "SISU 2026" ou "Enem-USP 2026") nos comentários.
 
 Os cursos já cadastrados (em várias universidades federais que participam do SISU) usam
 notas de corte reais do SISU 2025 — veja a lista completa em `simulador/data.js`, cada
