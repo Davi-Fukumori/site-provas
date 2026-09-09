@@ -335,15 +335,21 @@ document.addEventListener("DOMContentLoaded", function () {
     elPerfil.textContent = "Logado como " + (usuario.displayName || usuario.email);
     elStatusSalvamento.textContent = "Carregando suas notas...";
 
-    db.collection("usuarios").doc(usuario.uid).set({
-      nome: usuario.displayName || "",
-      foto: usuario.photoURL || "",
-      email: usuario.email || "",
-      criadoEm: firebase.firestore.FieldValue.serverTimestamp()
-    }, { merge: true }).catch(function () {});
-
-    db.collection("usuarios").doc(usuario.uid).get().then(function (snap) {
+    var refUsuario = db.collection("usuarios").doc(usuario.uid);
+    refUsuario.get().then(function (snap) {
       var dados = snap.exists ? snap.data() : null;
+
+      // "criadoEm" só é gravado na primeira vez (aqui ou em outra página do site).
+      var perfil = {
+        nome: usuario.displayName || "",
+        foto: usuario.photoURL || "",
+        email: usuario.email || ""
+      };
+      if (!snap.exists) {
+        perfil.criadoEm = firebase.firestore.FieldValue.serverTimestamp();
+      }
+      refUsuario.set(perfil, { merge: true });
+
       if (dados && dados.calculadora) {
         aplicarValoresSalvos(dados.calculadora);
       }

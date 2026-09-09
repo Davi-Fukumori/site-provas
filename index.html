@@ -28,23 +28,37 @@
       cobrados em Literatura e uma calculadora de média — feito por alunos, para alunos.
     </p>
 
-    <div class="grade-cartoes">
-      <a class="cartao" href="provas/index.html">
-        <h2>📄 Provas</h2>
-        <p>Busque provas antigas por matéria, professor e ano.</p>
-      </a>
-      <a class="cartao" href="literatura/index.html">
-        <h2>📚 Literatura</h2>
-        <p>Veja os livros cobrados em cada ano e bimestre.</p>
-      </a>
-      <a class="cartao" href="calculadora/index.html">
-        <h2>🧮 Calculadora de média</h2>
-        <p>Calcule sua média ponderada e veja se está aprovado.</p>
-      </a>
-      <a class="cartao" href="perguntas/index.html">
-        <h2>🎯 Perguntas</h2>
-        <p>Responda a pergunta do dia, ganhe pontos e dispute o ranking do mês.</p>
-      </a>
+    <div id="bloco-login" class="bloco-login">
+      <p>Entre com sua conta Google pra continuar — assim você não precisa logar de
+      novo depois na Calculadora ou em Perguntas.</p>
+      <button id="botao-login" class="botao">Entrar com Google</button>
+      <p id="erro-login" class="erro-formulario"></p>
+    </div>
+
+    <div id="bloco-home" hidden>
+      <div class="barra-perfil">
+        <span id="perfil-usuario"></span>
+        <button id="botao-logout" class="botao botao-secundario">Sair</button>
+      </div>
+
+      <div class="grade-cartoes">
+        <a class="cartao" href="provas/index.html">
+          <h2>📄 Provas</h2>
+          <p>Busque provas antigas por matéria, professor e ano.</p>
+        </a>
+        <a class="cartao" href="literatura/index.html">
+          <h2>📚 Literatura</h2>
+          <p>Veja os livros cobrados em cada ano e bimestre.</p>
+        </a>
+        <a class="cartao" href="calculadora/index.html">
+          <h2>🧮 Calculadora de média</h2>
+          <p>Calcule sua média ponderada e veja se está aprovado.</p>
+        </a>
+        <a class="cartao" href="perguntas/index.html">
+          <h2>🎯 Perguntas</h2>
+          <p>Responda a pergunta do dia, ganhe pontos e dispute o ranking do mês.</p>
+        </a>
+      </div>
     </div>
   </main>
 
@@ -52,6 +66,11 @@
     Site mantido por alunos. Veja o <a href="README.md">README</a> para saber como contribuir ou repassar a manutenção.
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="assets/js/firebase-init.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 </html>

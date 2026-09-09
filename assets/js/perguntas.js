@@ -53,15 +53,22 @@ document.addEventListener("DOMContentLoaded", function () {
     elPerfil.textContent = "Logado como " + (usuario.displayName || usuario.email);
 
     // Garante que existe um documento de perfil (pra aparecer no ranking com nome/foto).
-    db.collection("usuarios").doc(usuario.uid).set({
-      nome: usuario.displayName || "",
-      foto: usuario.photoURL || "",
-      email: usuario.email || "",
-      criadoEm: firebase.firestore.FieldValue.serverTimestamp()
-    }, { merge: true }).catch(function () {
-      // Se a conta já tinha "criadoEm" antigo, tudo bem — merge não sobrescreve o que
-      // não foi mandado de novo, então na prática isso raramente falha.
-    });
+    // "criadoEm" só é gravado na primeira vez, pra continuar valendo como "data do
+    // primeiro login" mesmo depois de logar de novo em outras páginas do site.
+    (function () {
+      var ref = db.collection("usuarios").doc(usuario.uid);
+      ref.get().then(function (snap) {
+        var dados = {
+          nome: usuario.displayName || "",
+          foto: usuario.photoURL || "",
+          email: usuario.email || ""
+        };
+        if (!snap.exists) {
+          dados.criadoEm = firebase.firestore.FieldValue.serverTimestamp();
+        }
+        ref.set(dados, { merge: true });
+      });
+    })();
 
     carregarPerguntaDoDia();
   });

@@ -86,6 +86,16 @@ conta do aluno (documento `usuarios/{uid}`, campo `calculadora`) e aparecem igua
 qualquer aparelho, em vez de sumir ao recarregar a página. O salvamento é automático
 (alguns segundos depois de parar de digitar), não tem botão de "Salvar".
 
+O login em si acontece já na **página inicial** (`index.html`) — quem loga lá não
+precisa logar de novo na Calculadora nem em Perguntas, porque é a mesma sessão do
+Firebase valendo pro site inteiro (mesmo domínio). Provas e Literatura continuam
+abrindo sem pedir login, já que são só consulta.
+
+**Pra ver quem já logou no site:** não tem uma página dedicada pra isso — é só abrir o
+Console do Firebase → Firestore Database → coleção `usuarios` e ver a lista de
+documentos (cada um é um aluno que já logou, com nome, e-mail e a data do primeiro
+login em `criadoEm`).
+
 **Simulado Vital por área:** o topo da página pede 4 notas (Exatas, Linguagens,
 Humanas, Biológicas). A média das 4 é o "Simulado Vital" — funciona como uma 3ª
 nota contínua (C3) e vale 20% da média de *todas* as matérias.
