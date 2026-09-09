@@ -349,5 +349,38 @@ const CURSOS_SISU = [
     notaCorte: 806.88,
     edicao: "SISU 2025",
     fonte: "vestibulandoweb.com.br — maior nota de corte da UFPE no SISU 2025"
+  },
+  {
+    universidade: "UFABC",
+    campus: "Santo André/São Bernardo",
+    curso: "Bacharelado em Ciência e Tecnologia (BC&T)",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 3, redacao: 2 }, // ilustrativo
+    notaCorte: 734.15,
+    edicao: "SISU 2025",
+    fonte: "vestibulandoweb.com.br — maior nota de corte da UFABC no SISU 2025"
+  },
+  {
+    universidade: "UNIFESP",
+    campus: "São Paulo",
+    curso: "Biomedicina",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 793.37,
+    edicao: "SISU 2025",
+    fonte: "fiibrasil.com — maior nota de corte da UNIFESP no SISU 2025"
+  },
+  {
+    universidade: "UNIFESP",
+    campus: "São Paulo",
+    curso: "Medicina",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 2, redacao: 3 }, // ilustrativo
+    notaCorte: 722.92,
+    edicao: "SISU 2025",
+    fonte: "vestibulares.estrategia.com — média divulgada pro SISU 2025"
   }
 ];
