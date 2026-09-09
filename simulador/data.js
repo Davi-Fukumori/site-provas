@@ -305,5 +305,49 @@ const CURSOS_SISU = [
     notaCorte: 813.10,
     edicao: "SISU 2025",
     fonte: "vestibulares.estrategia.com — SISU 2025"
+  },
+  {
+    universidade: "UFMG",
+    campus: "Belo Horizonte",
+    curso: "Farmácia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 701,
+    edicao: "SISU 2025",
+    fonte: "querobolsa.com.br — SISU 2025"
+  },
+  {
+    universidade: "UFMG",
+    campus: "Belo Horizonte",
+    curso: "Educação Física",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 2, natureza: 2, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 642,
+    edicao: "SISU 2025",
+    fonte: "querobolsa.com.br — SISU 2025"
+  },
+  {
+    universidade: "UFMG",
+    campus: "Belo Horizonte",
+    curso: "Fonoaudiologia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 1, natureza: 3, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 693,
+    edicao: "SISU 2025",
+    fonte: "querobolsa.com.br — SISU 2025"
+  },
+  {
+    universidade: "UFPE",
+    campus: "Recife",
+    curso: "Ciência da Computação",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 806.88,
+    edicao: "SISU 2025",
+    fonte: "vestibulandoweb.com.br — maior nota de corte da UFPE no SISU 2025"
   }
 ];
