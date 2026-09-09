@@ -92,5 +92,82 @@ const CURSOS_SISU = [
     notaCorte: 693.12,
     edicao: "SISU 2025",
     fonte: "studymaps.com.br — média entre turnos/campi divulgada pro SISU 2025"
+  },
+  {
+    universidade: "UFRJ",
+    campus: "Rio de Janeiro",
+    curso: "Direito",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 3, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 772.23,
+    edicao: "SISU 2025",
+    fonte: "guia.ufrj.br / passoenem.com.br — turno integral, SISU 2025"
+  },
+  {
+    universidade: "UFBA",
+    campus: "Salvador",
+    curso: "Direito",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 3, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 720.67,
+    edicao: "SISU 2025",
+    fonte: "blogdoenem.com.br — turno integral, SISU 2025"
+  },
+  {
+    universidade: "UFPE",
+    campus: "Recife",
+    curso: "Psicologia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 3, natureza: 2, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 495.63,
+    edicao: "SISU 2025",
+    fonte: "cursoenemgratuito.com.br — SISU 2025"
+  },
+  {
+    universidade: "UFRGS",
+    campus: "Porto Alegre",
+    curso: "Psicologia",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 3, natureza: 2, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 761.62,
+    edicao: "SISU 2025",
+    fonte: "blogdoenem.com.br — turno integral, SISU 2025"
+  },
+  {
+    universidade: "UFPE",
+    campus: "Recife",
+    curso: "Odontologia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 747.96,
+    edicao: "SISU 2025",
+    fonte: "studymaps.com.br — média divulgada pro SISU 2025"
+  },
+  {
+    universidade: "UFRJ",
+    campus: "Rio de Janeiro",
+    curso: "Arquitetura e Urbanismo",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 1, natureza: 1, matematica: 2, redacao: 2 }, // ilustrativo
+    notaCorte: 742.41,
+    edicao: "SISU 2025",
+    fonte: "guia.ufrj.br — SISU 2025"
+  },
+  {
+    universidade: "UFRJ",
+    campus: "Rio de Janeiro",
+    curso: "Engenharia de Computação e Informação",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 807.5,
+    edicao: "SISU 2025",
+    fonte: "conexao.ufrj.br / blogdoenem.com.br — SISU 2025"
   }
 ];
