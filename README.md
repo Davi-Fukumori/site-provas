@@ -138,10 +138,10 @@ Página `simulador/index.html`, sem login e sem Firebase — funciona igual a Pr
 Literatura (`simulador/data.js`, um `const CURSOS_SISU = [...]` que o `simulador.js` lê
 e calcula na hora). Abre por duplo-clique, sem precisar de servidor.
 
-**Etapa 1 (a que existe hoje):** só cobre o **SISU** (nota do ENEM), porque é o sistema
-mais padronizado e a UFSCar ingressa 100% por ele. Fuvest (USP), Comvest (Unicamp),
-Vunesp (Unesp) e os vestibulares de Mackenzie/PUC-SP/FGV usam cálculos bem diferentes
-entre si e ainda não entraram — cada um precisa de uma lógica própria numa etapa futura.
+**Etapa 1:** cobre o **SISU** (nota do ENEM), o sistema mais padronizado. **Etapa 2:**
+`simulador/fuvest.html`, cobre a **1ª fase da Fuvest** (USP) — veja a seção própria
+logo abaixo. Comvest (Unicamp), Vunesp (Unesp) e os vestibulares de Mackenzie/PUC-SP/FGV
+ainda não entraram.
 
 **Como adicionar um curso novo:**
 1. Pegue a nota de corte **atualizada** direto em [sisu.mec.gov.br](https://sisu.mec.gov.br)
@@ -162,6 +162,24 @@ o peso exato do curso que te interessa antes.
 Os filtros de "Universidade" e "Curso" na página só ficam realmente úteis à medida que
 mais universidades forem cadastradas pro mesmo curso (ex: já dá pra comparar Medicina na
 UFSCar vs. na UFMG) — vale ir adicionando mais opções do SISU aos poucos.
+
+## Como funciona o Simulador Fuvest (1ª fase)
+
+Página `simulador/fuvest.html` — mesmo padrão estático dos outros simuladores, sem
+login. **Só simula a 1ª fase**, não o resultado final da Fuvest: a nota final depende da
+2ª fase inteira, calculada comparando sua prova com a de todo mundo naquele ano (uma
+normalização que só existe depois da prova acontecer) — não tem como um aluno prever
+isso com antecedência. Já a 1ª fase é só número de acertos em 90 questões, igual pra
+todo mundo, e a Fuvest divulga o corte de acertos por curso — isso sim dá pra simular.
+
+Por esse mesmo motivo, **Comvest (Unicamp) e Vunesp (Unesp) não entraram**: a fórmula
+delas usa nota padronizada pela média/desvio-padrão de todos os candidatos daquele ano
+em vez de nota de corte fixa em pontos — não existe "nota bruta" do aluno pra comparar
+com um corte publicado antes da prova.
+
+**Como adicionar um curso novo:** pegue a nota de corte da 1ª fase (em número de
+acertos, ex: "79 de 90") direto em [fuvest.br](https://fuvest.br) quando for divulgada,
+e copie um bloco de `simulador/data-fuvest.js`.
 
 ## Como funciona a seção "Perguntas" (login, pontos, ranking)
 
@@ -293,6 +311,8 @@ quem está mais perto de continuar cuidando dele.
 - **Perguntas — Etapa 3:** mural/fórum livre onde qualquer aluno cria post — precisa de
   um desenho próprio de moderação (denúncia, exclusão) antes de existir, já que é
   conteúdo aberto entre menores de idade.
-- **Simulador — próximas etapas:** Fuvest (USP), Comvest (Unicamp), Vunesp (Unesp) e os
-  vestibulares de Mackenzie, PUC-SP e FGV — cada um com sistema de cálculo próprio,
-  precisa de pesquisa e lógica separadas (não é só adicionar linha em `data.js`).
+- **Simulador — próximas etapas:** Mackenzie, PUC-SP e FGV, cada um com sistema de
+  cálculo próprio (precisa de pesquisa e lógica separadas). Comvest e Vunesp não estão
+  planejados — o cálculo delas (nota padronizada pela média/desvio-padrão de todos os
+  candidatos daquele ano) não dá pra simular com antecedência, como explicado na seção
+  do Simulador Fuvest.
