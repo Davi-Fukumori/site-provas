@@ -199,6 +199,34 @@ header {
   color: var(--cor-erro);
 }
 
+/* ===== Abas (Universidades) ===== */
+.abas-nav {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--cor-borda);
+  margin: 20px 0 24px;
+}
+
+.aba-botao {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+}
+
+.aba-botao:hover {
+  color: var(--cor-texto);
+}
+
+.aba-botao.ativa {
+  color: var(--cor-primaria);
+  border-bottom-color: var(--cor-primaria);
+  font-weight: 600;
+}
+
 /* ===== Filtros ===== */
 .filtros {
   display: grid;

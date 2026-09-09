@@ -135,21 +135,24 @@ página) — ele não tenta adivinhar Bernoulli/Simulado que ainda não saíram.
 ## Como funciona a seção "Universidades" (simuladores)
 
 Na navegação, os dois simuladores ficam agrupados atrás de um item só, **"Universidades"**
-(`universidades/index.html`) — uma página só com cards linkando pra
-`simulador/index.html` (ENEM/SISU/Enem-USP) e `simulador/fuvest.html` (Fuvest), no mesmo
-padrão da Home. Se adicionar um simulador novo no futuro (Mackenzie, PUC-SP etc.), o
-jeito mais simples é criar a página dentro de `simulador/` e adicionar um card aqui.
+(`universidades/index.html`) — uma página só, com **abas** ("ENEM/SISU" e "Fuvest") que
+trocam de conteúdo sem recarregar a página (`assets/js/universidades.js` cuida da troca).
+Os dados e a lógica de cálculo de cada aba continuam em arquivos separados dentro de
+`simulador/` (`data.js`/`data-fuvest.js`) e `assets/js/` (`simulador.js`/
+`simulador-fuvest.js`) — a página de Universidades só carrega os dois conjuntos de
+scripts e alterna qual bloco de HTML fica visível. Se adicionar um simulador novo no
+futuro (Mackenzie, PUC-SP etc.), o jeito mais simples é criar mais uma aba seguindo o
+mesmo padrão (um botão em `.abas-nav` + um `<div class="aba-conteudo" hidden>` novo).
 
-### Simulador ENEM/SISU/Enem-USP
+### Aba ENEM/SISU/Enem-USP
 
-Página `simulador/index.html`, sem login e sem Firebase — funciona igual a Provas e
-Literatura (`simulador/data.js`, um `const CURSOS_SISU = [...]` que o `simulador.js` lê
-e calcula na hora). Abre por duplo-clique, sem precisar de servidor.
+Sem login e sem Firebase — funciona igual a Provas e Literatura (`simulador/data.js`,
+um `const CURSOS_SISU = [...]` que o `simulador.js` lê e calcula na hora).
 
 **Etapa 1:** cobre o **SISU** (nota do ENEM), o sistema mais padronizado, e também o
 **Enem-USP** (forma de entrar na USP com a nota do ENEM sem fazer a Fuvest — usa o
 mesmo tipo de cálculo do SISU, por peso de área, e tem ampla concorrência de verdade,
-por isso entrou no mesmo arquivo/página). **Etapa 2:** `simulador/fuvest.html`, cobre a
+por isso entrou no mesmo arquivo/aba). **Etapa 2:** aba **Fuvest**, cobre a
 **1ª fase da Fuvest** — veja a seção própria logo abaixo.
 
 **Por que Comvest (Unicamp) e Unesp-Enem não entraram:** as duas também aceitam nota
@@ -180,10 +183,10 @@ Os filtros de "Universidade" e "Curso" na página só ficam realmente úteis à 
 mais universidades forem cadastradas pro mesmo curso (ex: já dá pra comparar Medicina na
 UFSCar vs. na UFMG) — vale ir adicionando mais opções do SISU aos poucos.
 
-### Simulador Fuvest (1ª fase)
+### Aba Fuvest (1ª fase)
 
-Página `simulador/fuvest.html` — mesmo padrão estático dos outros simuladores, sem
-login. **Só simula a 1ª fase**, não o resultado final da Fuvest: a nota final depende da
+Mesmo padrão estático da outra aba, sem login. **Só simula a 1ª fase**, não o
+resultado final da Fuvest: a nota final depende da
 2ª fase inteira, calculada comparando sua prova com a de todo mundo naquele ano (uma
 normalização que só existe depois da prova acontecer) — não tem como um aluno prever
 isso com antecedência. Já a 1ª fase é só número de acertos em 90 questões, igual pra

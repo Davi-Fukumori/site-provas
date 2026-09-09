@@ -26,15 +26,91 @@
     <h1>Universidades</h1>
     <p>Simuladores pra comparar sua nota com notas de corte de edições anteriores dos vestibulares.</p>
 
-    <div class="grade-cartoes">
-      <a class="cartao" href="../simulador/index.html">
-        <h2>🎓 Simulador ENEM/SISU</h2>
-        <p>Compare sua nota do ENEM com notas de corte do SISU e do Enem-USP.</p>
-      </a>
-      <a class="cartao" href="../simulador/fuvest.html">
-        <h2>🎓 Simulador Fuvest</h2>
-        <p>Veja se seus acertos na 1ª fase avançariam pro curso que você quer.</p>
-      </a>
+    <div class="abas-nav">
+      <button class="aba-botao ativa" data-aba="sisu">ENEM/SISU</button>
+      <button class="aba-botao" data-aba="fuvest">Fuvest</button>
+    </div>
+
+    <div id="aba-sisu" class="aba-conteudo">
+      <p>Digite suas notas do ENEM por área e veja como elas se comparam com notas de corte de edições anteriores do SISU e do Enem-USP.</p>
+
+      <div class="aviso">
+        <strong>Isso é só uma estimativa, não uma garantia de aprovação.</strong> A nota
+        de corte muda a cada edição, dependendo de quantas pessoas concorrem naquele ano
+        — os valores aqui são de edições passadas. Cobre cursos que entram pelo
+        <strong>SISU</strong> e pelo <strong>Enem-USP</strong> (forma de entrar na USP com
+        a nota do ENEM, sem fazer a Fuvest). Comvest (Unicamp) e Unesp-Enem também aceitam
+        nota do ENEM, mas são bem mais restritos (em grande parte só pra quem cursou o
+        ensino médio em escola pública) e usam pesos por área agrupada diferentes — ainda
+        não estão aqui.
+      </div>
+
+      <section class="bloco-areas">
+        <h2>Suas notas do ENEM</h2>
+        <div class="filtros">
+          <div class="campo">
+            <label for="nota-linguagens">Linguagens</label>
+            <input type="number" id="nota-linguagens" min="0" max="1000" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="nota-humanas">Ciências Humanas</label>
+            <input type="number" id="nota-humanas" min="0" max="1000" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="nota-natureza">Ciências da Natureza</label>
+            <input type="number" id="nota-natureza" min="0" max="1000" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="nota-matematica">Matemática</label>
+            <input type="number" id="nota-matematica" min="0" max="1000" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="nota-redacao">Redação</label>
+            <input type="number" id="nota-redacao" min="0" max="1000" step="0.1">
+          </div>
+        </div>
+      </section>
+
+      <h2>Resultado por curso</h2>
+      <p>Filtre se quiser ver só um curso ou universidade específica — deixe em "Todos" pra ver onde mais você passaria.</p>
+      <div class="filtros">
+        <div class="campo">
+          <label for="filtro-universidade">Universidade</label>
+          <select id="filtro-universidade"></select>
+        </div>
+        <div class="campo">
+          <label for="filtro-curso">Curso</label>
+          <select id="filtro-curso"></select>
+        </div>
+      </div>
+      <div id="lista-resultados" class="lista-provas"></div>
+    </div>
+
+    <div id="aba-fuvest" class="aba-conteudo" hidden>
+      <p>Veja se seu número de acertos na 1ª fase seria suficiente pra avançar pro curso que você quer.</p>
+
+      <div class="aviso">
+        <strong>Isso só simula a 1ª fase, não o resultado final da Fuvest.</strong> A nota
+        final da Fuvest depende da 2ª fase inteira, calculada de um jeito que compara sua
+        prova com a de todo mundo naquele ano — não dá pra prever isso antes da prova
+        acontecer. O que dá pra saber com antecedência é o corte da 1ª fase (que é só
+        número de acertos), e é só isso que esse simulador mostra. Os valores aqui também
+        são de uma edição passada — o corte muda todo ano.
+      </div>
+
+      <section class="bloco-areas">
+        <h2>Seus acertos na 1ª fase</h2>
+        <p>A 1ª fase tem 90 questões de múltipla escolha, iguais pra todo mundo (não muda por curso).</p>
+        <div class="filtros">
+          <div class="campo">
+            <label for="acertos-fuvest">Quantas você acertou (de 90)</label>
+            <input type="number" id="acertos-fuvest" min="0" max="90" step="1">
+          </div>
+        </div>
+      </section>
+
+      <h2>Resultado por curso</h2>
+      <div id="lista-resultados-fuvest" class="lista-provas"></div>
     </div>
   </main>
 
@@ -42,6 +118,11 @@
     Quer mais universidades ou vestibulares aqui? Veja o <a href="../README.md">README</a> pra saber como adicionar.
   </footer>
 
+  <script src="../simulador/data.js"></script>
+  <script src="../simulador/data-fuvest.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/simulador.js"></script>
+  <script src="../assets/js/simulador-fuvest.js"></script>
+  <script src="../assets/js/universidades.js"></script>
 </body>
 </html>

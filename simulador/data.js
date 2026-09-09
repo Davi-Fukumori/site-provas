@@ -4,7 +4,7 @@
 // restritos (Unicamp: só quem cursou o ensino médio inteiro em escola pública; Unesp:
 // pelo menos metade das vagas reservada pra escola pública) e usam pesos por área
 // agrupada diferente (Biológicas/Exatas/Humanas, não as 5 áreas do ENEM) — ainda não
-// entraram aqui. Fuvest (1ª fase) tem simulador próprio em simulador/fuvest.html.
+// entraram aqui. Fuvest (1ª fase) tem sua própria aba em universidades/index.html.
 //
 // Para adicionar um curso novo:
 // 1. Pegue a nota de corte real e atualizada em sisu.mec.gov.br ou nos editais das
