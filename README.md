@@ -7,6 +7,8 @@ Site estático (sem servidor, sem banco de dados) com:
 - **Provas** antigas organizadas por matéria/professor/ano
 - **Literatura**: lista dos livros cobrados por ano/bimestre
 - **Calculadora de média** ponderada
+- **Perguntas**: pergunta diária com login, pontos e ranking (usa Firebase — veja a seção própria mais abaixo)
+- **Simulador**: compara sua nota do ENEM com notas de corte do SISU
 
 A ideia é que esse site seja passado de aluno pra aluno até a formatura. Este README
 existe pra quem herdar o site conseguir mantê-lo mesmo sem muita experiência técnica.
@@ -129,6 +131,32 @@ mínima — é só deixar os campos que você ainda não tem vazios (não digite
 porque `0` conta como nota mesmo). Esse cálculo assume que a AC2 e o Simulado
 Vital já são valores fechados (vindos dos campos de área/Bernoulli no topo da
 página) — ele não tenta adivinhar Bernoulli/Simulado que ainda não saíram.
+
+## Como funciona o Simulador (ENEM/SISU)
+
+Página `simulador/index.html`, sem login e sem Firebase — funciona igual a Provas e
+Literatura (`simulador/data.js`, um `const CURSOS_SISU = [...]` que o `simulador.js` lê
+e calcula na hora). Abre por duplo-clique, sem precisar de servidor.
+
+**Etapa 1 (a que existe hoje):** só cobre o **SISU** (nota do ENEM), porque é o sistema
+mais padronizado e a UFSCar ingressa 100% por ele. Fuvest (USP), Comvest (Unicamp),
+Vunesp (Unesp) e os vestibulares de Mackenzie/PUC-SP/FGV usam cálculos bem diferentes
+entre si e ainda não entraram — cada um precisa de uma lógica própria numa etapa futura.
+
+**Como adicionar um curso novo:**
+1. Pegue a nota de corte **atualizada** direto em [sisu.mec.gov.br](https://sisu.mec.gov.br)
+   ou no edital da universidade — ela muda a cada edição do SISU, então não reaproveite
+   um valor antigo sem conferir.
+2. Veja no mesmo edital o **peso de cada área** (Linguagens, Humanas, Natureza,
+   Matemática, Redação) pra aquele curso específico.
+3. Copie um dos blocos de `simulador/data.js` e edite os campos, incluindo a fonte e a
+   edição (ex: "SISU 2026") nos comentários.
+
+Os 4 cursos que já estão cadastrados (todos da UFSCar) usam notas de corte reais do
+SISU 2025, mas os **pesos por área foram estimados** com base no padrão comum desse tipo
+de curso (ex: Medicina pesa mais em Ciências da Natureza) — não foram conferidos um a um
+no edital oficial. Se for usar pra decisão de verdade, confira o peso exato do curso que
+te interessa antes.
 
 ## Como funciona a seção "Perguntas" (login, pontos, ranking)
 
@@ -260,3 +288,6 @@ quem está mais perto de continuar cuidando dele.
 - **Perguntas — Etapa 3:** mural/fórum livre onde qualquer aluno cria post — precisa de
   um desenho próprio de moderação (denúncia, exclusão) antes de existir, já que é
   conteúdo aberto entre menores de idade.
+- **Simulador — próximas etapas:** Fuvest (USP), Comvest (Unicamp), Vunesp (Unesp) e os
+  vestibulares de Mackenzie, PUC-SP e FGV — cada um com sistema de cálculo próprio,
+  precisa de pesquisa e lógica separadas (não é só adicionar linha em `data.js`).

@@ -185,6 +185,20 @@ header {
   font-size: 0.95rem;
 }
 
+/* ===== Avisos ===== */
+.aviso {
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-superficie);
+  border-radius: var(--raio);
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  margin: 16px 0 24px;
+}
+
+.aviso strong {
+  color: var(--cor-erro);
+}
+
 /* ===== Filtros ===== */
 .filtros {
   display: grid;

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador ENEM/SISU — Colégio Vital Brasil</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Colégio Vital Brasil</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../provas/index.html">Provas</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+        <li><a href="../perguntas/index.html">Perguntas</a></li>
+        <li><a href="index.html" aria-current="page">Simulador</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Simulador de aprovação (ENEM/SISU)</h1>
+    <p>Digite suas notas do ENEM por área e veja como elas se comparam com notas de corte de edições anteriores do SISU.</p>
+
+    <div class="aviso">
+      <strong>Isso é só uma estimativa, não uma garantia de aprovação.</strong> A nota
+      de corte muda a cada edição do SISU, dependendo de quantas pessoas concorrem
+      naquele ano — os valores aqui são de edições passadas. Ainda cobre só a UFSCar
+      (que ingressa 100% pelo SISU); Fuvest, Comvest, Unesp e vestibulares de
+      particulares usam outro tipo de cálculo e ainda não estão aqui.
+    </div>
+
+    <section class="bloco-areas">
+      <h2>Suas notas do ENEM</h2>
+      <div class="filtros">
+        <div class="campo">
+          <label for="nota-linguagens">Linguagens</label>
+          <input type="number" id="nota-linguagens" min="0" max="1000" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="nota-humanas">Ciências Humanas</label>
+          <input type="number" id="nota-humanas" min="0" max="1000" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="nota-natureza">Ciências da Natureza</label>
+          <input type="number" id="nota-natureza" min="0" max="1000" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="nota-matematica">Matemática</label>
+          <input type="number" id="nota-matematica" min="0" max="1000" step="0.1">
+        </div>
+        <div class="campo">
+          <label for="nota-redacao">Redação</label>
+          <input type="number" id="nota-redacao" min="0" max="1000" step="0.1">
+        </div>
+      </div>
+    </section>
+
+    <h2>Resultado por curso</h2>
+    <div id="lista-resultados" class="lista-provas"></div>
+  </main>
+
+  <footer>
+    Quer mais cursos ou universidades no simulador? Veja o <a href="../README.md">README</a> pra saber como adicionar.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/simulador.js"></script>
+</body>
+</html>
