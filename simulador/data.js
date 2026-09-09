@@ -59,5 +59,38 @@ const CURSOS_SISU = [
     notaCorte: 225.97,
     edicao: "SISU 2025",
     fonte: "blogdoenem.com.br / vestibulandoweb.com.br — menor nota de corte da UFSCar no SISU 2025"
+  },
+  {
+    universidade: "UFMG",
+    campus: "Belo Horizonte (Campus Saúde)",
+    curso: "Medicina",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 2, redacao: 3 }, // ilustrativo
+    notaCorte: 812.48,
+    edicao: "SISU 2025",
+    fonte: "vemmed.com.br / querobolsa.com.br — maior nota de corte da UFMG no SISU 2025"
+  },
+  {
+    universidade: "UFSC",
+    campus: "Florianópolis",
+    curso: "Ciência da Computação",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 811.61,
+    edicao: "SISU 2025",
+    fonte: "querobolsa.com.br — maior nota de corte de Ciência da Computação no SISU 2025"
+  },
+  {
+    universidade: "UFPR",
+    campus: "Curitiba",
+    curso: "Pedagogia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 2, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 693.12,
+    edicao: "SISU 2025",
+    fonte: "studymaps.com.br — média entre turnos/campi divulgada pro SISU 2025"
   }
 ];

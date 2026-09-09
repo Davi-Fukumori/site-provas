@@ -152,11 +152,15 @@ entre si e ainda não entraram — cada um precisa de uma lógica própria numa 
 3. Copie um dos blocos de `simulador/data.js` e edite os campos, incluindo a fonte e a
    edição (ex: "SISU 2026") nos comentários.
 
-Os 4 cursos que já estão cadastrados (todos da UFSCar) usam notas de corte reais do
+Os cursos já cadastrados (UFSCar, UFMG, UFSC e UFPR) usam notas de corte reais do
 SISU 2025, mas os **pesos por área foram estimados** com base no padrão comum desse tipo
 de curso (ex: Medicina pesa mais em Ciências da Natureza) — não foram conferidos um a um
 no edital oficial. Se for usar pra decisão de verdade, confira o peso exato do curso que
 te interessa antes.
+
+Os filtros de "Universidade" e "Curso" na página só ficam realmente úteis à medida que
+mais universidades forem cadastradas pro mesmo curso (ex: já dá pra comparar Medicina na
+UFSCar vs. na UFMG) — vale ir adicionando mais opções do SISU aos poucos.
 
 ## Como funciona a seção "Perguntas" (login, pontos, ranking)
 
