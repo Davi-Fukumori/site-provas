@@ -261,5 +261,49 @@ const CURSOS_SISU = [
     notaCorte: 767.39,
     edicao: "SISU 2025",
     fonte: "blogdoenem.com.br — SISU 2025"
+  },
+  {
+    universidade: "USP",
+    campus: "Bauru (FOB)",
+    curso: "Medicina",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 2, redacao: 3 }, // ilustrativo
+    notaCorte: 834.31,
+    edicao: "Enem-USP 2026",
+    fonte: "querobolsa.com.br — Enem-USP 2026"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (Faculdade de Direito)",
+    curso: "Direito",
+    turno: "Noturno",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 3, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 798.81,
+    edicao: "Enem-USP 2026",
+    fonte: "querobolsa.com.br — Enem-USP 2026"
+  },
+  {
+    universidade: "UFRJ",
+    campus: "Rio de Janeiro",
+    curso: "Administração",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 2, natureza: 1, matematica: 2, redacao: 2 }, // ilustrativo
+    notaCorte: 824.22,
+    edicao: "SISU 2025",
+    fonte: "vestibulares.estrategia.com — SISU 2025"
+  },
+  {
+    universidade: "UFMG",
+    campus: "Belo Horizonte",
+    curso: "Administração",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 2, natureza: 1, matematica: 2, redacao: 2 }, // ilustrativo
+    notaCorte: 813.10,
+    edicao: "SISU 2025",
+    fonte: "vestibulares.estrategia.com — SISU 2025"
   }
 ];
