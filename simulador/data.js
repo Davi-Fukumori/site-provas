@@ -195,5 +195,71 @@ const CURSOS_SISU = [
     notaCorte: 844.86,
     edicao: "Enem-USP 2026",
     fonte: "vestibulares.estrategia.com — Enem-USP 2026 (1ª chamada)"
+  },
+  {
+    universidade: "UFMS",
+    campus: "Campo Grande",
+    curso: "Enfermagem",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 3, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 782.16,
+    edicao: "SISU 2025",
+    fonte: "cursoenemgratuito.com.br / blogdoenem.com.br — maior nota de corte de Enfermagem no SISU 2025"
+  },
+  {
+    universidade: "UFRGS",
+    campus: "Porto Alegre",
+    curso: "Economia",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 2, natureza: 1, matematica: 3, redacao: 2 }, // ilustrativo
+    notaCorte: 738.42,
+    edicao: "SISU 2025",
+    fonte: "studymaps.com.br — média divulgada pro SISU 2025"
+  },
+  {
+    universidade: "UFRGS",
+    campus: "Porto Alegre",
+    curso: "Ciências Contábeis",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 1, matematica: 3, redacao: 2 }, // ilustrativo
+    notaCorte: 690.62,
+    edicao: "SISU 2025",
+    fonte: "studymaps.com.br — SISU 2025"
+  },
+  {
+    universidade: "UFPR",
+    campus: "Curitiba",
+    curso: "Jornalismo",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 3, humanas: 2, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 770.94,
+    edicao: "SISU 2025",
+    fonte: "querobolsa.com.br — maior nota de corte de Jornalismo no SISU 2025"
+  },
+  {
+    universidade: "UFRPE",
+    campus: "Recife",
+    curso: "Medicina Veterinária",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 690.97,
+    edicao: "SISU 2025",
+    fonte: "studymaps.com.br / fiibrasil.com — SISU 2025"
+  },
+  {
+    universidade: "UFRJ",
+    campus: "Rio de Janeiro",
+    curso: "Nutrição",
+    turno: "Não informado",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 3, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 767.39,
+    edicao: "SISU 2025",
+    fonte: "blogdoenem.com.br — SISU 2025"
   }
 ];
