@@ -178,23 +178,23 @@ const CURSOS_SISU = [
     universidade: "USP",
     campus: "São Paulo",
     curso: "Astronomia",
-    turno: "Não informado",
+    turno: "Integral",
     modalidade: "Ampla concorrência",
     pesos: { linguagens: 1, humanas: 1, natureza: 3, matematica: 4, redacao: 1 }, // ilustrativo
-    notaCorte: 876.56,
+    notaCorte: 841.78,
     edicao: "Enem-USP 2026",
-    fonte: "vestibulares.estrategia.com — maior nota de corte do Enem-USP 2026 (1ª chamada)"
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Instituto de Astronomia, Geofísica e Ciências Atmosféricas)"
   },
   {
     universidade: "USP",
     campus: "São Carlos (EESC)",
     curso: "Engenharia Mecânica",
-    turno: "Não informado",
+    turno: "Integral",
     modalidade: "Ampla concorrência",
     pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
-    notaCorte: 844.86,
+    notaCorte: 837.50,
     edicao: "Enem-USP 2026",
-    fonte: "vestibulares.estrategia.com — Enem-USP 2026 (1ª chamada)"
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Escola de Engenharia de São Carlos)"
   },
   {
     universidade: "UFMS",
@@ -264,25 +264,25 @@ const CURSOS_SISU = [
   },
   {
     universidade: "USP",
-    campus: "Bauru (FOB)",
+    campus: "Bauru",
     curso: "Medicina",
     turno: "Integral",
     modalidade: "Ampla concorrência",
     pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 2, redacao: 3 }, // ilustrativo
-    notaCorte: 834.31,
+    notaCorte: 839.55,
     edicao: "Enem-USP 2026",
-    fonte: "querobolsa.com.br — Enem-USP 2026"
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Faculdade de Medicina de Bauru)"
   },
   {
     universidade: "USP",
-    campus: "São Paulo (Faculdade de Direito)",
+    campus: "São Paulo",
     curso: "Direito",
-    turno: "Noturno",
+    turno: "Matutino",
     modalidade: "Ampla concorrência",
     pesos: { linguagens: 2, humanas: 3, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
-    notaCorte: 798.81,
+    notaCorte: 811.11,
     edicao: "Enem-USP 2026",
-    fonte: "querobolsa.com.br — Enem-USP 2026"
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Faculdade de Direito)"
   },
   {
     universidade: "UFRJ",
@@ -382,5 +382,115 @@ const CURSOS_SISU = [
     notaCorte: 722.92,
     edicao: "SISU 2025",
     fonte: "vestibulares.estrategia.com — média divulgada pro SISU 2025"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (IME)",
+    curso: "Ciência da Computação",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 843.01,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Instituto de Matemática e Estatística)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (IME)",
+    curso: "Estatística",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 1, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 855.92,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada — maior nota de corte geral do Enem-USP 2026"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo",
+    curso: "Odontologia",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 844.85,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Faculdade de Odontologia)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (Instituto de Psicologia)",
+    curso: "Psicologia",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 3, natureza: 2, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 816.58,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada"
+  },
+  {
+    universidade: "USP",
+    campus: "São Carlos (EESC)",
+    curso: "Engenharia Civil",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 3, redacao: 2 }, // ilustrativo
+    notaCorte: 833.92,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Escola de Engenharia de São Carlos)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (FAU)",
+    curso: "Arquitetura e Urbanismo",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 2, humanas: 1, natureza: 1, matematica: 2, redacao: 2 }, // ilustrativo
+    notaCorte: 814.70,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Faculdade de Arquitetura e Urbanismo)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (Escola Politécnica)",
+    curso: "Engenharia Elétrica",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 2, matematica: 4, redacao: 2 }, // ilustrativo
+    notaCorte: 819.03,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (Butantã)",
+    curso: "Farmácia",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 811.82,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Faculdade de Ciências Farmacêuticas)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo",
+    curso: "Medicina Veterinária",
+    turno: "Integral",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 1, humanas: 1, natureza: 4, matematica: 1, redacao: 2 }, // ilustrativo
+    notaCorte: 820.55,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Faculdade de Medicina Veterinária e Zootecnia)"
+  },
+  {
+    universidade: "USP",
+    campus: "São Paulo (ECA)",
+    curso: "Jornalismo",
+    turno: "Matutino",
+    modalidade: "Ampla concorrência",
+    pesos: { linguagens: 3, humanas: 2, natureza: 1, matematica: 1, redacao: 3 }, // ilustrativo
+    notaCorte: 811.28,
+    edicao: "Enem-USP 2026",
+    fonte: "PDF oficial Fuvest — Enem-USP 2026, 1ª chamada (Escola de Comunicações e Artes)"
   }
 ];
