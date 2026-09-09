@@ -132,7 +132,15 @@ porque `0` conta como nota mesmo). Esse cálculo assume que a AC2 e o Simulado
 Vital já são valores fechados (vindos dos campos de área/Bernoulli no topo da
 página) — ele não tenta adivinhar Bernoulli/Simulado que ainda não saíram.
 
-## Como funciona o Simulador (ENEM/SISU/Enem-USP)
+## Como funciona a seção "Universidades" (simuladores)
+
+Na navegação, os dois simuladores ficam agrupados atrás de um item só, **"Universidades"**
+(`universidades/index.html`) — uma página só com cards linkando pra
+`simulador/index.html` (ENEM/SISU/Enem-USP) e `simulador/fuvest.html` (Fuvest), no mesmo
+padrão da Home. Se adicionar um simulador novo no futuro (Mackenzie, PUC-SP etc.), o
+jeito mais simples é criar a página dentro de `simulador/` e adicionar um card aqui.
+
+### Simulador ENEM/SISU/Enem-USP
 
 Página `simulador/index.html`, sem login e sem Firebase — funciona igual a Provas e
 Literatura (`simulador/data.js`, um `const CURSOS_SISU = [...]` que o `simulador.js` lê
@@ -172,7 +180,7 @@ Os filtros de "Universidade" e "Curso" na página só ficam realmente úteis à 
 mais universidades forem cadastradas pro mesmo curso (ex: já dá pra comparar Medicina na
 UFSCar vs. na UFMG) — vale ir adicionando mais opções do SISU aos poucos.
 
-## Como funciona o Simulador Fuvest (1ª fase)
+### Simulador Fuvest (1ª fase)
 
 Página `simulador/fuvest.html` — mesmo padrão estático dos outros simuladores, sem
 login. **Só simula a 1ª fase**, não o resultado final da Fuvest: a nota final depende da
