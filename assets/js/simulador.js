@@ -11,6 +11,38 @@ document.addEventListener("DOMContentLoaded", function () {
     redacao: document.getElementById("nota-redacao")
   };
 
+  var elFiltroUniversidade = document.getElementById("filtro-universidade");
+  var elFiltroCurso = document.getElementById("filtro-curso");
+
+  function valoresUnicos(campo) {
+    var vistos = {};
+    var resultado = [];
+    CURSOS_SISU.forEach(function (curso) {
+      if (curso[campo] && !vistos[curso[campo]]) {
+        vistos[curso[campo]] = true;
+        resultado.push(curso[campo]);
+      }
+    });
+    return resultado.sort();
+  }
+
+  function popularFiltro(select, valores, rotuloTodos) {
+    var opcaoTodos = document.createElement("option");
+    opcaoTodos.value = "";
+    opcaoTodos.textContent = rotuloTodos;
+    select.appendChild(opcaoTodos);
+
+    valores.forEach(function (valor) {
+      var opcao = document.createElement("option");
+      opcao.value = valor;
+      opcao.textContent = valor;
+      select.appendChild(opcao);
+    });
+  }
+
+  popularFiltro(elFiltroUniversidade, valoresUnicos("universidade"), "Todas as universidades");
+  popularFiltro(elFiltroCurso, valoresUnicos("curso"), "Todos os cursos");
+
   function numero(input) {
     var valor = parseFloat(input.value);
     return isNaN(valor) ? null : valor;
@@ -57,7 +89,21 @@ document.addEventListener("DOMContentLoaded", function () {
       redacao: notas.redacao || 0
     };
 
-    CURSOS_SISU.forEach(function (curso) {
+    var universidade = elFiltroUniversidade.value;
+    var cursoEscolhido = elFiltroCurso.value;
+
+    var cursosFiltrados = CURSOS_SISU.filter(function (curso) {
+      if (universidade && curso.universidade !== universidade) return false;
+      if (cursoEscolhido && curso.curso !== cursoEscolhido) return false;
+      return true;
+    });
+
+    if (cursosFiltrados.length === 0) {
+      container.innerHTML = "<p class=\"mensagem-vazia\">Nenhum curso encontrado com esses filtros.</p>";
+      return;
+    }
+
+    cursosFiltrados.forEach(function (curso) {
       var notaFinal = calcularNotaFinal(notasCompletas, curso.pesos);
       var diferenca = notaFinal - curso.notaCorte;
 
@@ -93,6 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
   Object.keys(campos).forEach(function (chave) {
     campos[chave].addEventListener("input", renderizar);
   });
+  elFiltroUniversidade.addEventListener("change", renderizar);
+  elFiltroCurso.addEventListener("change", renderizar);
 
   renderizar();
 });
