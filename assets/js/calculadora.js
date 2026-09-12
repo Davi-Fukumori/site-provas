@@ -116,6 +116,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         entradas.redacao = { ac1: ac1r.input, ac2: ac2r.input, ac3: ac3r.input };
       }
+    } else if (materia.grupo === "C") {
+      var ac1C = criarCampoNumero("mat-" + slug + "-ac1", "AC1");
+      var ac3C = criarCampoNumero("mat-" + slug + "-ac3", "AC3");
+      var c1C = criarCampoNumero("mat-" + slug + "-c1", "C1");
+      var c2C = criarCampoNumero("mat-" + slug + "-c2", "C2");
+      var c3C = criarCampoNumero("mat-" + slug + "-c3", "C3");
+      [ac1C, ac3C, c1C, c2C, c3C].forEach(function (campo) {
+        campos.appendChild(campo.wrapper);
+      });
+      entradas.ac1 = ac1C.input;
+      entradas.ac3 = ac3C.input;
+      entradas.c1 = c1C.input;
+      entradas.c2 = c2C.input;
+      entradas.c3 = c3C.input;
     } else {
       var c1Especial = criarCampoNumero("mat-" + slug + "-c1", "C1");
       var c2Especial = criarCampoNumero("mat-" + slug + "-c2", "C2");
@@ -169,6 +183,12 @@ document.addEventListener("DOMContentLoaded", function () {
         componentes.push({ nome: "AC2 (redação)", input: cartao.entradas.redacao.ac2, peso: pesoRedacaoCada });
         componentes.push({ nome: "AC3 (redação)", input: cartao.entradas.redacao.ac3, peso: pesoRedacaoCada });
       }
+    } else if (materia.grupo === "C") {
+      componentes.push({ nome: "AC1", input: cartao.entradas.ac1, peso: pesos.ac1 });
+      componentes.push({ nome: "AC3", input: cartao.entradas.ac3, peso: pesos.ac3 });
+      componentes.push({ nome: "C1", input: cartao.entradas.c1, peso: pesos.c1 });
+      componentes.push({ nome: "C2", input: cartao.entradas.c2, peso: pesos.c2 });
+      componentes.push({ nome: "C3", input: cartao.entradas.c3, peso: pesos.c3 });
     } else {
       componentes.push({ nome: "C1", input: cartao.entradas.c1, peso: pesos.c1 });
       componentes.push({ nome: "C2", input: cartao.entradas.c2, peso: pesos.c2 });

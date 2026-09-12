@@ -134,10 +134,16 @@ Os outros 40% vêm da **Redação**, que é a média simples entre 3 notas digit
 à parte (AC1, AC2 e AC3 de redação) — essas notas não têm relação com o
 Bônus/simulado, são só as notas de redação mesmo.
 
-**Matérias "especiais"** (Filosofia, Sociologia, Educação Física, Artes): AC2 50%
-+ média(C1, C2) 50% — sem AC1, sem AC3 e sem o Simulado Vital como termo separado
-(ele já entra indiretamente porque compõe a AC2). Filosofia e Sociologia usam a
-AC2 de Humanas; Educação Física e Artes usam a de Linguagens.
+**Educação Física e Artes** (Grupo B): AC2 50% + média(C1, C2) 50% — sem AC1, sem AC3 e
+sem o Simulado Vital como termo separado (ele já entra indiretamente porque compõe a
+AC2). Usam a AC2 de Linguagens.
+
+**Filosofia e Sociologia** (Grupo C): média(AC1, AC2, AC3) × 50% + média(C1, C2, C3) ×
+50% — como cada média é de 3 notas, isso equivale a AC1, AC2, AC3, C1, C2 e C3 pesando
+1/6 (≈16,67%) cada um, sem Simulado Vital como termo separado (idem acima, já entra
+via AC2). Diferente do Grupo A, aqui AC3 é um campo único (não dividido em AC3a/AC3b),
+e C1/C2/C3 também são campos únicos, cada um contando ponto por ponto. Usam a AC2 de
+Humanas.
 
 **Quanto falta pra passar:** cada cartão de matéria também mostra quanto você
 precisa tirar (em média) nas notas que ainda estão em branco pra alcançar a nota

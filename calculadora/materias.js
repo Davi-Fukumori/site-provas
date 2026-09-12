@@ -5,15 +5,19 @@
 //
 // GRUPOS: cada matéria pertence a um grupo, que define os pesos usados.
 //   Grupo A (matérias "normais"): AC1 20% + AC2 20% + AC3 20% + C1 10% + C2 10% + Simulado 20%
-//   Grupo B (Filo/Socio, Ed. Física, Artes): AC2 50% + média(C1, C2) 50%
+//   Grupo B (Ed. Física, Artes): AC2 50% + média(C1, C2) 50%
+//   Grupo C (Filosofia, Sociologia): média(AC1, AC2, AC3) × 50% + média(C1, C2, C3) × 50%
+//     — como cada média é de 3 notas, isso equivale a AC1, AC2, AC3, C1, C2 e C3
+//     pesando 1/6 (≈16,67%) cada um na nota final, sem peso de Simulado separado.
 //
-// Em ambos os grupos, AC3 (quando existe) é a média entre AC3a e AC3b.
+// Nos grupos A e B, AC3 (quando existe) é a média entre AC3a e AC3b. No grupo C, AC3
+// é um campo único (a prova de Filosofia/Sociologia não é dividida em AC3a/AC3b).
 // A média(C1, C2) do Grupo B é implementada como c1×0.25 + c2×0.25 (equivalente
 // a tirar a média dos dois e multiplicar por 50%).
 //
 // No Grupo A (matérias normais), C1 e C2 também são divididos em dois campos cada:
 // C1a/C1b e C2a/C2b. C1 usado na fórmula = média(C1a, C1b); C2 = média(C2a, C2b).
-// No Grupo B, C1 e C2 continuam sendo um campo único cada.
+// Nos grupos B e C, C1/C2 (e C3, no grupo C) continuam sendo um campo único cada.
 //
 // AC2 nunca é digitada: ela vem do Simulado Vital da área da matéria (Exatas,
 // Línguas, Humanas ou Biológicas) somado a um Bônus, sem passar de 10.
@@ -33,6 +37,9 @@ const GRUPOS = {
   },
   B: {
     pesos: { ac2: 0.50, c1: 0.25, c2: 0.25 }
+  },
+  C: {
+    pesos: { ac1: 1 / 6, ac2: 1 / 6, ac3: 1 / 6, c1: 1 / 6, c2: 1 / 6, c3: 1 / 6 }
   }
 };
 
@@ -55,8 +62,8 @@ const MATERIAS = [
   { nome: "Biologia", slug: "biologia", grupo: "A", area: "biologicas" },
   { nome: "História", slug: "historia", grupo: "A", area: "humanas" },
   { nome: "Geografia", slug: "geografia", grupo: "A", area: "humanas" },
-  { nome: "Filosofia", slug: "filosofia", grupo: "B", area: "humanas" },
-  { nome: "Sociologia", slug: "sociologia", grupo: "B", area: "humanas" },
+  { nome: "Filosofia", slug: "filosofia", grupo: "C", area: "humanas" },
+  { nome: "Sociologia", slug: "sociologia", grupo: "C", area: "humanas" },
   { nome: "Educação Física", slug: "educacao-fisica", grupo: "B", area: "linguas" },
   { nome: "Artes", slug: "artes", grupo: "B", area: "linguas" }
 ];
