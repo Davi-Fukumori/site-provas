@@ -231,6 +231,14 @@ const PROVAS = [
     titulo: "Prova AC3 Matemática B - 1º semestre — 2025",
     arquivo: "arquivos/matematica/2025/ac3-matematica-b-1-semestre/prova.html"
   },
+  {
+    materia: "Literatura",
+    professores: ["Maria Teresa"],
+    ano: "2025",
+    bimestre: "AC3 - 1º semestre",
+    titulo: "Prova AC3 - 1º semestre — 2025",
+    arquivo: "arquivos/literatura/2025/ac3-1-semestre/prova.html"
+  },
 
   // --- 2026 ---
 
