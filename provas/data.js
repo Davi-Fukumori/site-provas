@@ -234,10 +234,10 @@ const PROVAS = [
   {
     materia: "Literatura",
     professores: ["Maria Teresa"],
-    ano: "2025",
+    ano: "2023",
     bimestre: "AC3 - 1º semestre",
-    titulo: "Prova AC3 - 1º semestre — 2025",
-    arquivo: "arquivos/literatura/2025/ac3-1-semestre/prova.html"
+    titulo: "Prova AC3 - 1º semestre — 2023",
+    arquivo: "arquivos/literatura/2023/ac3-1-semestre/prova.html"
   },
 
   // --- 2026 ---
