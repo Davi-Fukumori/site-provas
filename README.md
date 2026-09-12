@@ -29,17 +29,35 @@ Basta dar duplo-clique no `index.html` — ele abre no navegador e tudo funciona
    {
      materia: "Matemática",
      professores: ["Nome do Professor"],
+     avaliacao: "AC1",
+     semestre: "1º semestre",
      ano: "2024",
-     bimestre: "3",
-     titulo: "Prova Bimestral 3",
      arquivo: "arquivos/matematica/2024/prova-bim3.pdf"
    }
    ```
-   Se a prova tiver mais de um professor (ex: aula conjunta), coloque os dois nomes
-   na lista: `professores: ["Fulano", "Ciclana"]` — assim dá pra filtrar por
-   qualquer um dos dois na página de provas.
+   - `materia`: só uma destas frentes — **Matemática, Português, História, Geografia,
+     Física, Biologia, Química, Sociologia, Filosofia** — com duas exceções já
+     estabelecidas: **"Conhecimentos Linguísticos"** (frente A de Português, dada pelo
+     Matheus) e **"Filosofia e Sociologia"** (quando é uma prova única das duas
+     matérias juntas — nesse caso é **uma entrada só**, não duas).
+   - `frente` (opcional): `"A"` ou `"B"`, só quando a matéria tem essa divisão (ex:
+     Física A/B, Química A/B). Em Português, A virou sua própria matéria
+     ("Conhecimentos Linguísticos", sem precisar do campo `frente`); B continua sendo
+     `materia: "Português", frente: "B"` (Maria Teresa, inclusive as provas de
+     Literatura, que contam como Português · B).
+   - `avaliacao`: identificador da prova em si — `"AC1"`, `"AC2"`, `"AC3"`, ou um nome
+     livre tipo `"Avaliação Dissertativa 1"`.
+   - `semestre`: `"1º semestre"` ou `"2º semestre"`.
+   - Se a prova tiver mais de um professor (ex: aula conjunta), coloque os dois nomes
+     na lista: `professores: ["Fulano", "Ciclana"]` — assim dá pra filtrar por
+     qualquer um dos dois na página de provas.
 4. Não esqueça da vírgula entre os blocos.
 5. Salve e recarregue a página `provas/index.html` no navegador pra conferir.
+
+Cada prova aparece na lista com **"Matéria · Frente"** em cima e
+**"Professor(es) · Avaliação · Semestre · Ano"** embaixo — esse formato é sempre gerado
+automaticamente a partir desses campos, não precisa (nem dá pra) escrever um título à
+mão.
 
 Cada prova também pode ter uma seção de **análise** por questão — veja "Análise das
 questões" logo abaixo.

@@ -52,6 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Linha de cima do cartão: "Matéria" sozinha, ou "Matéria · Frente" quando a prova
+  // tem uma versão A/B (mesma matéria, turma ou período diferente).
+  function tituloPrincipal(prova) {
+    return prova.frente ? prova.materia + " · " + prova.frente : prova.materia;
+  }
+
   function renderizar() {
     var termo = elBusca.value.trim().toLowerCase();
     var materia = elMateria.value;
@@ -63,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (ano && prova.ano !== ano) return false;
       if (professor && prova.professores.indexOf(professor) === -1) return false;
       if (termo) {
-        var alvo = (prova.titulo + " " + prova.materia + " " + prova.professores.join(" ")).toLowerCase();
+        var alvo = (tituloPrincipal(prova) + " " + prova.professores.join(" ") + " " + prova.avaliacao).toLowerCase();
         if (alvo.indexOf(termo) === -1) return false;
       }
       return true;
@@ -92,13 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
     info.className = "info";
 
     var titulo = document.createElement("h3");
-    titulo.textContent = prova.titulo;
+    titulo.textContent = tituloPrincipal(prova);
 
     var meta = document.createElement("div");
     meta.className = "meta";
-    // "bimestre" pode ser um número simples ("1") ou um texto livre ("AC1 - 2º semestre").
-    var etapa = /^\d+$/.test(prova.bimestre) ? prova.bimestre + "º bimestre" : prova.bimestre;
-    meta.textContent = prova.materia + " · " + prova.professores.join(" e ") + " · " + prova.ano + " · " + etapa;
+    meta.textContent = prova.professores.join(" e ") + " · " + prova.avaliacao + " · " +
+      prova.semestre + " · " + prova.ano;
 
     info.appendChild(titulo);
     info.appendChild(meta);
