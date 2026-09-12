@@ -332,18 +332,6 @@ header {
 }
 
 /* ===== Literatura ===== */
-.grupo-ano {
-  margin-top: 28px;
-}
-
-.grupo-bimestre h3 {
-  font-size: 0.95rem;
-  color: var(--cor-texto-suave);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: 16px 0 8px;
-}
-
 .lista-livros {
   list-style: none;
   padding: 0;

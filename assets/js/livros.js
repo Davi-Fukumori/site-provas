@@ -1,61 +1,39 @@
 // Depende do array global LIVROS, definido em literatura/data.js
 document.addEventListener("DOMContentLoaded", function () {
+  var elBusca = document.getElementById("busca");
   var container = document.getElementById("lista-livros");
   if (!container || typeof LIVROS === "undefined") return;
 
-  if (LIVROS.length === 0) {
-    var vazio = document.createElement("div");
-    vazio.className = "mensagem-vazia";
-    vazio.textContent = "Nenhum livro cadastrado ainda.";
-    container.appendChild(vazio);
-    return;
+  if (elBusca) {
+    elBusca.addEventListener("input", renderizar);
   }
 
-  var porAno = agrupar(LIVROS, "ano");
-  var anos = Object.keys(porAno).sort().reverse();
+  renderizar();
 
-  anos.forEach(function (ano) {
-    var secaoAno = document.createElement("section");
-    secaoAno.className = "grupo-ano";
+  function renderizar() {
+    var termo = elBusca ? elBusca.value.trim().toLowerCase() : "";
 
-    var tituloAno = document.createElement("h2");
-    tituloAno.textContent = ano;
-    secaoAno.appendChild(tituloAno);
-
-    var porBimestre = agrupar(porAno[ano], "bimestre");
-    var bimestres = Object.keys(porBimestre).sort();
-
-    bimestres.forEach(function (bimestre) {
-      var secaoBimestre = document.createElement("div");
-      secaoBimestre.className = "grupo-bimestre";
-
-      var tituloBimestre = document.createElement("h3");
-      // "bimestre" pode ser um número simples ("1") ou um texto livre/vazio.
-      tituloBimestre.textContent = /^\d+$/.test(bimestre) ? bimestre + "º bimestre" : bimestre;
-      secaoBimestre.appendChild(tituloBimestre);
-
-      var lista = document.createElement("ul");
-      lista.className = "lista-livros";
-
-      porBimestre[bimestre].forEach(function (livro) {
-        lista.appendChild(criarItem(livro));
-      });
-
-      secaoBimestre.appendChild(lista);
-      secaoAno.appendChild(secaoBimestre);
+    var filtrados = LIVROS.filter(function (livro) {
+      if (!termo) return true;
+      var alvo = (livro.titulo + " " + livro.autor).toLowerCase();
+      return alvo.indexOf(termo) !== -1;
     });
 
-    container.appendChild(secaoAno);
-  });
+    container.innerHTML = "";
 
-  function agrupar(lista, campo) {
-    var grupos = {};
-    lista.forEach(function (item) {
-      var chave = item[campo] || "Sem informação";
-      if (!grupos[chave]) grupos[chave] = [];
-      grupos[chave].push(item);
+    if (filtrados.length === 0) {
+      var vazio = document.createElement("li");
+      vazio.className = "mensagem-vazia";
+      vazio.textContent = LIVROS.length === 0
+        ? "Nenhum livro cadastrado ainda."
+        : "Nenhum livro encontrado com essa busca.";
+      container.appendChild(vazio);
+      return;
+    }
+
+    filtrados.forEach(function (livro) {
+      container.appendChild(criarItem(livro));
     });
-    return grupos;
   }
 
   function criarItem(livro) {

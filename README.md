@@ -36,15 +36,12 @@ Basta dar duplo-clique no `index.html` — ele abre no navegador e tudo funciona
    }
    ```
    - `materia`: só uma destas frentes — **Matemática, Português, História, Geografia,
-     Física, Biologia, Química, Sociologia, Filosofia** — com duas exceções já
-     estabelecidas: **"Conhecimentos Linguísticos"** (frente A de Português, dada pelo
-     Matheus) e **"Filosofia e Sociologia"** (quando é uma prova única das duas
+     Física, Biologia, Química, Sociologia, Filosofia** — com uma exceção já
+     estabelecida: **"Filosofia e Sociologia"** (quando é uma prova única das duas
      matérias juntas — nesse caso é **uma entrada só**, não duas).
    - `frente` (opcional): `"A"` ou `"B"`, só quando a matéria tem essa divisão (ex:
-     Física A/B, Química A/B). Em Português, A virou sua própria matéria
-     ("Conhecimentos Linguísticos", sem precisar do campo `frente`); B continua sendo
-     `materia: "Português", frente: "B"` (Maria Teresa, inclusive as provas de
-     Literatura, que contam como Português · B).
+     Física A/B, Química A/B). Em Português, A = Matheus e B = Maria Teresa (inclusive
+     as provas de Literatura, que contam como Português · B).
    - `avaliacao`: identificador da prova em si — `"AC1"`, `"AC2"`, `"AC3"`, ou um nome
      livre tipo `"Avaliação Dissertativa 1"`.
    - `semestre`: `"1º semestre"` ou `"2º semestre"`.
@@ -82,14 +79,13 @@ resto do site — funciona em qualquer página nova que você criar do mesmo jei
 
 ## Como adicionar um livro de Literatura
 
-Mesma lógica, só que em `literatura/data.js`:
+Mesma lógica, só que em `literatura/data.js`. A página é uma lista só (com busca por
+título/autor), sem separar por ano ou bimestre:
 
 ```js
 {
   titulo: "Título do livro",
   autor: "Nome do autor",
-  ano: "2024",
-  bimestre: "2",
   observacoes: "Opcional — deixe '' se não tiver nada a dizer"
 }
 ```

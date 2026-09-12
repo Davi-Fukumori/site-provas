@@ -1,6 +1,5 @@
 // Depende do array global PROVAS, definido em provas/data.js
 document.addEventListener("DOMContentLoaded", function () {
-  var elBusca = document.getElementById("busca");
   var elMateria = document.getElementById("filtro-materia");
   var elAno = document.getElementById("filtro-ano");
   var elProfessor = document.getElementById("filtro-professor");
@@ -12,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   popularFiltro(elAno, valoresUnicos(PROVAS, "ano").sort().reverse(), "Todos os anos");
   popularFiltro(elProfessor, valoresUnicos(PROVAS, "professores"), "Todos os professores");
 
-  [elBusca, elMateria, elAno, elProfessor].forEach(function (el) {
-    el.addEventListener("input", renderizar);
+  [elMateria, elAno, elProfessor].forEach(function (el) {
     el.addEventListener("change", renderizar);
   });
 
@@ -59,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderizar() {
-    var termo = elBusca.value.trim().toLowerCase();
     var materia = elMateria.value;
     var ano = elAno.value;
     var professor = elProfessor.value;
@@ -68,10 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (materia && prova.materia !== materia) return false;
       if (ano && prova.ano !== ano) return false;
       if (professor && prova.professores.indexOf(professor) === -1) return false;
-      if (termo) {
-        var alvo = (tituloPrincipal(prova) + " " + prova.professores.join(" ") + " " + prova.avaliacao).toLowerCase();
-        if (alvo.indexOf(termo) === -1) return false;
-      }
       return true;
     });
 

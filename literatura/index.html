@@ -24,9 +24,16 @@
 
   <main>
     <h1>Livros de Literatura</h1>
-    <p>Livros cobrados em cada ano e bimestre, agrupados abaixo.</p>
+    <p>Livros cobrados em Literatura ao longo do curso.</p>
 
-    <div id="lista-livros"></div>
+    <div class="filtros">
+      <div class="campo">
+        <label for="busca">Buscar</label>
+        <input type="text" id="busca" placeholder="Título ou autor...">
+      </div>
+    </div>
+
+    <ul id="lista-livros" class="lista-livros"></ul>
   </main>
 
   <footer>

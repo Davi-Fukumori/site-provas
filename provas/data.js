@@ -8,12 +8,11 @@
 // Campos:
 // - materia: só uma destas frentes — "Matemática", "Português", "História",
 //   "Geografia", "Física", "Biologia", "Química", "Sociologia", "Filosofia" —
-//   com duas exceções: "Conhecimentos Linguísticos" (a frente A de Português, dada
-//   pelo Matheus) e "Filosofia e Sociologia" (prova única, dada em conjunto pelas duas
-//   matérias — não crie duas entradas separadas pra isso, veja o exemplo lá embaixo).
+//   com uma exceção: "Filosofia e Sociologia" (prova única, dada em conjunto pelas
+//   duas matérias — não crie duas entradas separadas pra isso, veja o exemplo lá
+//   embaixo).
 // - frente: "A", "B", ou não escreva o campo se a prova não tiver essa divisão.
-//   Português: A = Matheus (agora "Conhecimentos Linguísticos", sem precisar de frente
-//   já que virou uma matéria própria) e B = Maria Teresa (inclusive Literatura).
+//   Português: A = Matheus, B = Maria Teresa (inclusive Literatura).
 // - professores: sempre uma lista, mesmo com um nome só: ["Nome"].
 // - avaliacao: identificador da prova em si, tipo "AC1", "AC2", "AC3" ou um nome livre
 //   como "Avaliação Dissertativa 1".
@@ -206,7 +205,8 @@ const PROVAS = [
     arquivo: "arquivos/portugues/2025/ac1-1-semestre/prova.html"
   },
   {
-    materia: "Conhecimentos Linguísticos",
+    materia: "Português",
+    frente: "A",
     professores: ["Matheus"],
     avaliacao: "AC3",
     semestre: "1º semestre",

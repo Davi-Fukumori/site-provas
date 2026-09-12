@@ -10,8 +10,6 @@ const LIVROS = [
   {
     titulo: "Memórias Póstumas de Brás Cubas",
     autor: "Machado de Assis",
-    ano: "",
-    bimestre: "",
     observacoes: "Guia com resumo, análise e questões de prova capítulo por capítulo.",
     arquivo: "arquivos/memorias-postumas-bras-cubas/guia-capitulo-a-capitulo.html"
   }
