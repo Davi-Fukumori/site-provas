@@ -50,9 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Linha de cima do cartão: "Matéria" sozinha, ou "Matéria · Frente" quando a prova
-  // tem uma versão A/B (mesma matéria, turma ou período diferente).
+  // "materia" normalmente é uma string só, mas nos Simulados Vital (AC2 por área, tipo
+  // "Ciências da Natureza") o mesmo caderno cobre várias matérias de uma vez — nesse
+  // caso "materia" é uma lista (ex: ["Biologia", "Física", "Química"]).
+  function materiasDaProva(prova) {
+    return Array.isArray(prova.materia) ? prova.materia : [prova.materia];
+  }
+
+  // Linha de cima do cartão: "Matéria" sozinha, "Matéria · Frente" quando a prova tem
+  // uma versão A/B, ou "Matéria1 · Matéria2 · ..." quando é um Simulado Vital multi-matéria.
   function tituloPrincipal(prova) {
+    if (Array.isArray(prova.materia)) return prova.materia.join(" · ");
     return prova.frente ? prova.materia + " · " + prova.frente : prova.materia;
   }
 
@@ -62,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var professor = elProfessor.value;
 
     var filtradas = PROVAS.filter(function (prova) {
-      if (materia && prova.materia !== materia) return false;
+      if (materia && materiasDaProva(prova).indexOf(materia) === -1) return false;
       if (ano && prova.ano !== ano) return false;
       if (professor && prova.professores.indexOf(professor) === -1) return false;
       return true;

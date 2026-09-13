@@ -11,6 +11,13 @@
 //   com uma exceção: "Filosofia e Sociologia" (prova única, dada em conjunto pelas
 //   duas matérias — não crie duas entradas separadas pra isso, veja o exemplo lá
 //   embaixo).
+//   Exceção 2 — Simulado Vital (AC2 por área): esse caderno é sempre multi-matéria
+//   (ex: "Ciências da Natureza" = Biologia+Física+Química, "Ciências Humanas" =
+//   História+Geografia+Filosofia e Sociologia). Nesse caso "materia" vira uma LISTA,
+//   ex: ["Biologia", "Física", "Química"], e as questões de cada matéria ficam juntas
+//   no mesmo arquivo prova.html (uma seção por matéria). Não separe em várias entradas
+//   — é assim que a AC2 funciona pra toda série, então isso evitaria dezenas de provas
+//   repetidas por ano. O filtro de matéria do site já entende lista automaticamente.
 // - frente: "A", "B", ou não escreva o campo se a prova não tiver essa divisão.
 //   Português: A = Mateus, B = Maria Teresa (inclusive Literatura).
 // - professores: sempre uma lista, mesmo com um nome só: ["Nome"].
@@ -269,5 +276,45 @@ const PROVAS = [
     semestre: "2º semestre",
     ano: "2026",
     arquivo: "arquivos/filosofia/2026/avaliacao-dissertativa-1-2-semestre/prova.html"
+  },
+
+  // --- Lote de setembro/2026 (Simulado Vital / AC2 e AC3 de 2024, mais uma de 2023) ---
+
+  {
+    materia: "Matemática",
+    professores: ["Ruben", "Juliana"],
+    avaliacao: "AC2",
+    semestre: "2º semestre",
+    ano: "2024",
+    arquivo: "arquivos/matematica/2024/ac2-2-semestre/prova.html"
+  },
+  {
+    // Conhecimentos Linguísticos era o antigo nome — pela regra geral (Mateus = frente A),
+    // essa prova entra como Português · A.
+    materia: "Português",
+    frente: "A",
+    professores: ["Mateus"],
+    avaliacao: "AC3",
+    semestre: "1º semestre",
+    ano: "2023",
+    arquivo: "arquivos/portugues/2023/ac3-conhecimentos-linguisticos-1-semestre/prova.html"
+  },
+  {
+    materia: "Biologia",
+    frente: "A",
+    professores: ["Saulo"],
+    avaliacao: "AC3",
+    semestre: "1º semestre",
+    ano: "2024",
+    arquivo: "arquivos/biologia/2024/ac3-bio-a-1-semestre/prova.html"
+  },
+  {
+    materia: "Biologia",
+    frente: "B",
+    professores: ["Saulo"],
+    avaliacao: "AC3",
+    semestre: "1º semestre",
+    ano: "2024",
+    arquivo: "arquivos/biologia/2024/ac3-bio-b-1-semestre/prova.html"
   }
 ];

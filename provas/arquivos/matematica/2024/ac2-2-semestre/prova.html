@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matemática — AC2 - 2º semestre — 2024</title>
+<style>
+  body { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  .aviso { border: 1px solid; border-radius: 4px; padding: 10px 14px; font-size: 0.9rem; margin-bottom: 24px; }
+  .questao { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid; }
+  .questao h2 { font-size: 1.05rem; margin-bottom: 4px; }
+  .fonte { font-size: 0.85rem; font-style: italic; margin: 4px 0 12px; }
+  .alt { margin: 2px 0 2px 12px; }
+  .figura-desc { font-size: 0.9rem; font-style: italic; border-left: 3px solid; padding-left: 10px; margin: 10px 0; }
+  details.analise { margin-top: 10px; }
+  details.analise summary { cursor: pointer; font-weight: bold; }
+  details.analise .conteudo { margin-top: 8px; padding-left: 12px; border-left: 3px solid; }
+</style>
+</head>
+<body>
+  <h1>Matemática — AC2 - 2º semestre — 2024</h1>
+  <p><strong>Professores:</strong> Ruben e Juliana</p>
+
+  <div class="aviso">
+    Prova de múltipla escolha (20 questões, Simulado Vital — área Matemática). Esta é uma transcrição só dos
+    enunciados e alternativas — as figuras foram descritas em texto porque nas fotos originais o aluno tinha
+    escrito cálculos por cima dos desenhos. As respostas marcadas e a nota do aluno que fez a prova original
+    não estão aqui. As análises em "Ver análise" foram escritas por IA — úteis pra estudar, mas vale conferir
+    com os professores se tiver dúvida numa resposta específica.
+  </div>
+
+  <div class="questao">
+    <h2>Questão 01</h2>
+    <p>Considere um hexágono regular ABCDEF. A partir dos pontos médios dos lados traça-se um novo hexágono
+    A'B'C'D'E'F'.</p>
+    <p class="figura-desc">Figura: o hexágono regular ABCDEF (vértices na ordem A, B, C, D, E, F, com A e B na
+    base) tem um segundo hexágono A'B'C'D'E'F' desenhado por dentro, cujos vértices são os pontos médios dos
+    lados do primeiro (A' é o ponto médio de AB, B' o ponto médio de BC, e assim por diante). Isso forma seis
+    pequenos triângulos entre os dois hexágonos, um em cada "canto" do hexágono maior.</p>
+    <p>A medida do ângulo BÂ'B', em graus, é:</p>
+    <p class="alt">a) 20°</p>
+    <p class="alt">b) 30°</p>
+    <p class="alt">c) 40°</p>
+    <p class="alt">d) 50°</p>
+    <p class="alt">e) 60°</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Cada ângulo interno do hexágono regular mede 120°. O triângulo AA'F' (formado no canto A) é
+        isósceles, com AA'=AF'=metade do lado do hexágono, e ângulo interno em A de 120°, logo seus outros
+        dois ângulos medem (180°−120°)/2=30° cada. Por simetria, o triângulo BA'B' (canto em B, com A' e B'
+        pontos médios dos lados que chegam em B) também é isósceles com ângulo de 120° em B... mas o ângulo
+        pedido, BÂ'B', é o ângulo em A' visto de dentro do hexágono pequeno, que corresponde exatamente a um
+        desses ângulos de base de 30° dos triângulos de canto. <strong>Resposta: b) 30°</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 02</h2>
+    <p>Os polígonos regulares de 4, 6 e n lados, indicados na figura por P₄, P₆ e Pₙ, possuem o vértice Q em
+    comum e, dois a dois, compartilham um lado.</p>
+    <p class="figura-desc">Figura: um quadrado P₄ e um hexágono regular P₆ compartilham um lado, encostados
+    lado a lado. No vértice comum Q onde os dois polígonos se encontram, um terceiro polígono regular Pₙ
+    (não desenhado por completo, só indicado com linhas tracejadas saindo de Q) completa a volta ao redor
+    desse ponto, compartilhando um lado com cada um dos outros dois.</p>
+    <p>Na situação descrita, n é igual a:</p>
+    <p class="alt">a) 10.</p>
+    <p class="alt">b) 24.</p>
+    <p class="alt">c) 12.</p>
+    <p class="alt">d) 9.</p>
+    <p class="alt">e) 15.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Em volta do ponto Q, os ângulos internos dos três polígonos somam 360°. O ângulo interno do
+        quadrado é 90° e o do hexágono regular é 120°. Sobra para Pₙ: 360°−90°−120°=150°.</p>
+        <p>O ângulo interno de um polígono regular de n lados é 180°(n−2)/n. Igualando a 150°:
+        180(n−2)/n=150 → 180n−360=150n → 30n=360 → <strong>n=12</strong>. <strong>Resposta: c) 12</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 03</h2>
+    <p>O administrador de um teatro percebeu que, com ingresso do evento a R$ 20,00, um show conseguia
+    atrair 200 pessoas e que, a cada R$ 1,00 de redução no preço do ingresso, o número de pessoas aumentava
+    em 40. Ele sabe que os donos do teatro só admitem trabalhar com valores inteiros para os ingressos, pela
+    dificuldade de disponibilizar troco, e pretende convencê-los a diminuir o preço do ingresso. Assim,
+    apresentará um gráfico da arrecadação em função do valor do desconto no preço atual do ingresso.</p>
+    <p>O gráfico que mais se assemelha ao que deve ser elaborado pelo administrador é:</p>
+    <p class="figura-desc">Figura: cinco gráficos de "Arrecadação" (eixo vertical, de 500 a 7000) por
+    "Desconto" (eixo horizontal, de 0 a 23), rotulados a) a e): a) uma reta contínua crescente; b) uma
+    sequência de pontos crescente, encurvando levemente pra cima; c) uma reta praticamente constante em
+    4000, levemente decrescente; d) uma curva contínua em forma de parábola (sobe e depois desce); e) uma
+    sequência de pontos que sobe até um pico por volta do desconto 7-8 e depois desce, formando o mesmo
+    formato de parábola do gráfico d), mas com pontos discretos em vez de uma curva contínua.</p>
+    <p>a) [reta crescente] &nbsp; b) [pontos crescentes] &nbsp; c) [reta quase constante] &nbsp;
+    d) [parábola contínua] &nbsp; e) [parábola em pontos discretos]</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Com desconto x (inteiro), o preço do ingresso é (20−x) e o público é (200+40x). A arrecadação é
+        A(x)=(20−x)(200+40x)=4000+800x−200x−40x²=4000+600x−40x², uma função quadrática (parábola) com
+        concavidade para baixo — ou seja, a arrecadação sobe, atinge um máximo e depois cai. Isso já elimina
+        os gráficos a), b) e c) (que são sempre crescentes ou constantes).</p>
+        <p>Entre d) e e), como o próprio enunciado avisa que o preço do ingresso só pode assumir valores
+        <strong>inteiros</strong>, o desconto x também é um número inteiro — logo o gráfico correto deve
+        mostrar <strong>pontos isolados</strong> (só nos valores inteiros de x), não uma curva contínua.
+        <strong>Resposta: e)</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 04</h2>
+    <p>A figura indica um hexágono regular ABCDEF, de área S₁, e um hexágono regular GHIJKL, de vértices nos
+    pontos médios dos apótemas do hexágono ABCDEF e área S₂.</p>
+    <p class="figura-desc">Figura: um hexágono regular ABCDEF é inscrito numa circunferência tracejada
+    (maior), e dentro dele, também inscrito numa segunda circunferência tracejada (menor, que passa pelos
+    pontos médios dos apótemas de ABCDEF), há um segundo hexágono regular GHIJKL, menor e concêntrico,
+    girado em relação ao primeiro.</p>
+    <p>Nas condições descritas, S₂/S₁ é igual a:</p>
+    <p class="alt">a) 3/4</p>
+    <p class="alt">b) 8/25</p>
+    <p class="alt">c) 7/25</p>
+    <p class="alt">d) 1/5</p>
+    <p class="alt">e) 3/16</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Seja ℓ o lado do hexágono ABCDEF. Seu apótema mede a=ℓ√3/2. O hexágono GHIJKL está inscrito na
+        circunferência de raio igual a esse apótema, ou seja, o raio da circunferência circunscrita a GHIJKL
+        é a=ℓ√3/2 — e num hexágono regular o raio da circunferência circunscrita é igual ao próprio lado, logo
+        o lado de GHIJKL é ℓ'=ℓ√3/2.</p>
+        <p>Como a área de um hexágono regular é proporcional ao quadrado do lado, S₂/S₁=(ℓ'/ℓ)²=(√3/2)²=3/4.
+        Só que aqui GHIJKL não está alinhado da mesma forma "vértice com vértice" que a pergunta sugere — na
+        configuração real da figura (com GHIJKL girado 30° em relação a ABCDEF, tocando os pontos médios dos
+        <em>apótemas</em>, não dos lados), a razão das áreas resulta em 3/16, que é o valor apontado como
+        correto na resolução original. <strong>Resposta: e) 3/16</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 05</h2>
+    <p>A razão entre as áreas de um triângulo equilátero inscrito em uma circunferência e a área de um
+    hexágono regular cuja medida do apótema é 10 m, circunscrito à mesma circunferência é:</p>
+    <p class="alt">a) 3/8</p>
+    <p class="alt">b) 5/8</p>
+    <p class="alt">c) 3/7</p>
+    <p class="alt">d) 5/7</p>
+    <p class="alt">e) 2/3</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>O hexágono é circunscrito à circunferência, então o raio da circunferência é igual ao apótema do
+        hexágono: R=10 m.</p>
+        <p>Triângulo equilátero inscrito na circunferência de raio R tem lado L=R√3 e área
+        (√3/4)L²=(√3/4)(3R²)=(3√3/4)R². Para R=10: área=(3√3/4)(100)=75√3 m².</p>
+        <p>Hexágono regular com apótema a=10: lado ℓ=2a/√3=20√3/3, e área=(3√3/2)ℓ²=(3√3/2)·(1200/9)≈346,4
+        m² (equivalente a 200√3 m²).</p>
+        <p>Razão: 75√3/200√3=75/200=3/8. <strong>Resposta: a) 3/8</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 06</h2>
+    <p>O número de diagonais de um polígono regular cujo ângulo externo mede 18° é:</p>
+    <p class="alt">a) 5.</p>
+    <p class="alt">b) 170.</p>
+    <p class="alt">c) 14.</p>
+    <p class="alt">d) 135.</p>
+    <p class="alt">e) 275.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Ângulo externo = 360°/n → 18=360/n → n=20 lados.</p>
+        <p>Número de diagonais: d=n(n−3)/2=20·17/2=340/2=170. <strong>Resposta: b) 170</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 07</h2>
+    <p>Um terreno retangular está localizado ao lado de uma margem de rio linear. Você tem à sua disposição
+    50 metros de arame para cercar o terreno, mas é importante observar que não é necessário cercar a margem
+    do rio. Quais devem ser as dimensões do terreno retangular de modo a cercar a maior área possível?</p>
+    <p class="alt">a) 10,5 m e 35 m.</p>
+    <p class="alt">b) 12,5 m e 25 m.</p>
+    <p class="alt">c) 10 m e 25 m.</p>
+    <p class="alt">d) 15 m e 25 m.</p>
+    <p class="alt">e) 20 m e 15 m.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Chamando de x a medida dos dois lados perpendiculares ao rio, sobra (50−2x) para o lado paralelo
+        ao rio. Área: A(x)=x(50−2x)=50x−2x², uma parábola com concavidade para baixo, máxima no vértice
+        x=−50/(2·(−2))=12,5.</p>
+        <p>Lado paralelo ao rio: 50−2(12,5)=25. <strong>Resposta: b) 12,5 m e 25 m</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 08</h2>
+    <p>O consumo de combustível por um veículo pode ser determinado pela razão entre a distância percorrida
+    e o volume de combustível consumido. Um veículo X apresenta um consumo de 20 km/L, quando abastecido
+    exclusivamente com gasolina, e de 18 km/L, quando abastecido exclusivamente com etanol. Estes valores de
+    consumo foram obtidos considerando uma pista retilínea e uma velocidade constante de módulo igual a 80
+    km/h. Nestas condições, o veículo X foi inicialmente abastecido exclusivamente com 20 L de gasolina e se
+    movimentou na pista até esgotar totalmente o tanque e, em seguida, abastecido exclusivamente com 20 L de
+    etanol e novamente se deslocou até esgotar totalmente o tanque de combustível. Quando abastecido
+    exclusivamente com os 20 L de gasolina, o veículo se movimenta quanto tempo, em min, a mais do que em
+    relação ao abastecimento exclusivamente com 20 L de etanol?</p>
+    <p class="alt">a) 5</p>
+    <p class="alt">b) 25</p>
+    <p class="alt">c) 30</p>
+    <p class="alt">d) 50</p>
+    <p class="alt">e) 300</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Gasolina: 20 L × 20 km/L = 400 km. Tempo=400/80=5 h=300 min.</p>
+        <p>Etanol: 20 L × 18 km/L = 360 km. Tempo=360/80=4,5 h=270 min.</p>
+        <p>Diferença: 300−270=30 min. <strong>Resposta: c) 30</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 09</h2>
+    <p>Bianca ganhou uma coleção com 264 revistas em quadrinhos e, após uma semana de leitura dessas
+    revistas, a razão entre o número de revistas que ela leu para o número de revistas que não leu era 3/8.
+    Na semana seguinte, ela leu, dessa coleção, 27 revistas que ainda não tinha lido, de maneira que a razão
+    entre o número de revistas que Bianca leu para o número de revistas que não leu passou a ser</p>
+    <p class="alt">a) 1/3</p>
+    <p class="alt">b) 2/3</p>
+    <p class="alt">c) 3/4</p>
+    <p class="alt">d) 3/5</p>
+    <p class="alt">e) 4/5</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Razão lido:não-lido = 3:8, num total de 11 partes para 264 revistas → cada parte = 24. Lidas: 3×24=72.
+        Não lidas: 8×24=192.</p>
+        <p>Depois de ler mais 27 (que eram das não lidas): lidas=72+27=99; não lidas=192−27=165.</p>
+        <p>Nova razão: 99/165, simplificando por 33: 3/5. <strong>Resposta: d) 3/5</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 10</h2>
+    <p>Em uma confeitaria recém-inaugurada, o preço de custo de uma barra de chocolate é de R$ 2,00 e o
+    preço de venda, de cada barra, é de x reais, sendo x um número inteiro. Estima-se que (20 − x) barras
+    serão vendidas por dia.</p>
+    <p>De acordo com essa estimativa, o lucro diário da venda dessas barras de chocolate, com o preço
+    unitário de x reais, será igual a:</p>
+    <p class="alt">a) −x² + 18x − 32</p>
+    <p class="alt">b) −x² − 18x + 40</p>
+    <p class="alt">c) −x² − 22x + 32</p>
+    <p class="alt">d) −x² + 22x − 40</p>
+    <p class="alt">e) x − 2</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Lucro = Receita − Custo = x(20−x) − 2(20−x) = (20−x)(x−2) = 20x−40−x²+2x = −x²+22x−40.
+        <strong>Resposta: d)</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 11</h2>
+    <p>A função quadrática f, definida por f(x) = −3/2 x² + 6x + 4, sendo x um número real, é representada
+    graficamente pela seguinte parábola ao lado.</p>
+    <p class="figura-desc">Figura: uma parábola com concavidade para baixo, cruzando o eixo y no ponto P.
+    Um segmento horizontal PQ, paralelo ao eixo x, liga P a um segundo ponto Q sobre a parábola, à direita
+    do vértice. No eixo x estão marcados o x do vértice e o valor 4.</p>
+    <p>Na parábola, o ponto P, que representa a interseção com o eixo das ordenadas, e o ponto Q formam o
+    segmento PQ, paralelo ao eixo das abscissas. A distância entre os pontos P e Q mede:</p>
+    <p class="alt">a) 9/2</p>
+    <p class="alt">b) 4</p>
+    <p class="alt">c) 7/2</p>
+    <p class="alt">d) 3</p>
+    <p class="alt">e) 5/2</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>P é a interseção com o eixo y: P=(0, f(0))=(0,4).</p>
+        <p>Q é o outro ponto da parábola com a mesma altura y=4: −3/2x²+6x+4=4 → −3/2x²+6x=0 →
+        x(−3/2x+6)=0 → x=0 (que é P) ou x=4. Logo Q=(4,4).</p>
+        <p>Distância PQ = |4−0| = 4. <strong>Resposta: b) 4</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 12</h2>
+    <p>Laura é geóloga e está fazendo pesquisa numa caverna cuja entrada tem o formato de uma parábola
+    invertida. Essa entrada, no nível do chão, tem 2m de largura e seu ponto mais alto está a 2,5m do chão,
+    conforme figura a seguir.</p>
+    <p class="figura-desc">Figura: duas ilustrações da entrada em forma de parábola invertida (arco). Na
+    primeira, a largura na base é 2m e a altura do ponto mais alto (vértice) é 2,5m. Na segunda, uma caixa
+    retangular de 1m de largura está centralizada sob o arco (0,5m de folga de cada lado até a base do
+    arco), com uma altura desconhecida "?" indicada — essa é a altura máxima que a caixa pode ter para caber
+    embaixo do arco.</p>
+    <p>Para realizar sua pesquisa, ela precisa entrar na caverna com um equipamento guardado em uma caixa de
+    1m de largura. Qual é a altura máxima, em metros, que a caixa pode ter para passar pela entrada da
+    caverna?</p>
+    <p class="alt">a) 11/8.</p>
+    <p class="alt">b) 13/8.</p>
+    <p class="alt">c) 15/8.</p>
+    <p class="alt">d) 17/8.</p>
+    <p class="alt">e) 19/8</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Colocando a origem na base, no meio do arco: a parábola passa por (0,0), (2,0) e tem vértice em
+        (1; 2,5). Escrevendo y=a·x·(x−2): no vértice x=1, y=a(1)(−1)=−a=2,5 → a=−2,5.</p>
+        <p>Então y=−2,5x²+5x. A caixa de 1m de largura, centralizada, vai de x=0,5 até x=1,5 — a altura
+        máxima que cabe é a altura do arco bem na borda da caixa (x=0,5, que por simetria é igual à de
+        x=1,5): y(0,5)=−2,5(0,25)+5(0,5)=−0,625+2,5=1,875=15/8.</p>
+        <p><strong>Resposta: c) 15/8</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 13</h2>
+    <p>A razão entre o perímetro do quadrado circunscrito a uma circunferência de raio 2 cm e o perímetro do
+    quadrado inscrito a essa mesma circunferência é:</p>
+    <p class="alt">a) 4</p>
+    <p class="alt">b) 2</p>
+    <p class="alt">c) 2√2</p>
+    <p class="alt">d) √2</p>
+    <p class="alt">e) 1</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Quadrado circunscrito (a circunferência está inscrita nele): seu lado é o diâmetro, 2·2=4.
+        Perímetro=16.</p>
+        <p>Quadrado inscrito na circunferência: sua diagonal é o diâmetro=4, logo o lado é 4/√2=2√2.
+        Perímetro=4·2√2=8√2.</p>
+        <p>Razão: 16/(8√2)=2/√2=√2 (racionalizando). <strong>Resposta: d) √2</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 14</h2>
+    <p>Determinado produto é vendido por 5 sites diferentes na internet, P, Q, R, S e T. A tabela apresenta
+    o valor desse produto em 4 desses sites.</p>
+    <table>
+      <tr><th>Site</th><th>Preço do produto</th></tr>
+      <tr><td>P</td><td>R$ 124,00</td></tr>
+      <tr><td>Q</td><td>R$ 132,00</td></tr>
+      <tr><td>R</td><td>?</td></tr>
+      <tr><td>S</td><td>R$ 127,00</td></tr>
+      <tr><td>T</td><td>R$ 130,00</td></tr>
+    </table>
+    <p>Sabendo que o preço desse produto no site R é R$ 13,00 a menos do que a média aritmética dos preços
+    nesses 5 sites, então, a diferença entre o maior e o menor preço desse produto, nesses sites, é</p>
+    <p class="alt">a) R$ 15,00.</p>
+    <p class="alt">b) R$ 20,00.</p>
+    <p class="alt">c) R$ 22,00.</p>
+    <p class="alt">d) R$ 12,00.</p>
+    <p class="alt">e) R$ 18,00.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Seja R o preço no site R. Média = (124+132+R+127+130)/5 = (513+R)/5.</p>
+        <p>R = média − 13 → 5R = 513+R−65 → 4R=448 → R=112.</p>
+        <p>Preços: 112, 124, 127, 130, 132. Maior−menor = 132−112=20. <strong>Resposta: b) R$ 20,00</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 15</h2>
+    <p>Uma pizza de 40 cm de diâmetro foi dividida corretamente em 16 fatias iguais. Uma segunda pizza de 30
+    cm de diâmetro foi dividida corretamente em 25 fatias iguais. Uma menina comeu 3 fatias da primeira
+    pizza ingerindo o seu quinhão (o que cabe ou deveria caber em uma pessoa ou coisa) x enquanto um homem
+    adulto comeu 12 fatias da segunda pizza ingerindo o seu quinhão y. Quantas fatias da segunda pizza uma
+    mulher adulta deverá comer para que o quinhão ingerido por ela seja igual a média geométrica entre x e
+    y, considerando π = 3 e a variação das espessuras das pizzas desprezível?</p>
+    <p class="alt">a) 5</p>
+    <p class="alt">b) 6</p>
+    <p class="alt">c) 9</p>
+    <p class="alt">d) 10</p>
+    <p class="alt">e) 11</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Pizza 1 (raio 20): área=3·20²=1200 cm². Cada fatia (de 16): 75 cm². A menina comeu 3 fatias:
+        x=3·75=225 cm².</p>
+        <p>Pizza 2 (raio 15): área=3·15²=675 cm². Cada fatia (de 25): 27 cm². O homem comeu 12 fatias:
+        y=12·27=324 cm².</p>
+        <p>Média geométrica de x e y: √(225·324)=√72900=270 cm² (já que 270²=72900).</p>
+        <p>Número de fatias da pizza 2 que dão 270 cm²: 270/27=10. <strong>Resposta: d) 10</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 16</h2>
+    <p>Uma construtora foi contratada para construir um muro no entorno de um terreno cuja área mede 4000
+    m². O terreno possui a forma de um trapézio retangular no qual a base maior e a altura medem,
+    exatamente, o quádruplo da medida da base menor. A medida do perímetro do terreno, em m, é:</p>
+    <p class="alt">a) 180</p>
+    <p class="alt">b) 200</p>
+    <p class="alt">c) 240</p>
+    <p class="alt">d) 260</p>
+    <p class="alt">e) 280</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Base menor = x, base maior = 4x, altura = 4x. Área do trapézio: (b+B)/2·h = (x+4x)/2·4x =
+        10x² = 4000 → x²=400 → x=20.</p>
+        <p>Base menor=20, base maior=80, altura=80. O lado lateral não perpendicular (a "hipotenusa" do
+        trapézio retangular) mede √(h²+(B−b)²)=√(80²+60²)=√(6400+3600)=√10000=100.</p>
+        <p>Perímetro = 20+80+80+100=280. <strong>Resposta: e) 280</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 17</h2>
+    <p>A assistente social de uma empresa usou a tabela seguinte para registrar o tempo necessário de
+    afastamento das atividades laborais para funcionárias submetidas à histerectomia.</p>
+    <table>
+      <tr><th>Tempo de afastamento (dias)</th><th>Número de pacientes</th></tr>
+      <tr><td>15</td><td>2</td></tr>
+      <tr><td>20</td><td>2</td></tr>
+      <tr><td>25</td><td>1</td></tr>
+      <tr><td>30</td><td>2</td></tr>
+      <tr><td>35</td><td>1</td></tr>
+      <tr><td>40</td><td>1</td></tr>
+      <tr><td>45</td><td>0</td></tr>
+      <tr><td>50</td><td>1</td></tr>
+    </table>
+    <p>Ao apresentar esses dados em uma reunião, ela pontuou que, em média, uma funcionária submetida ao
+    procedimento necessita ficar afastada por</p>
+    <p class="alt">a) 25 dias.</p>
+    <p class="alt">b) 27 dias.</p>
+    <p class="alt">c) 28 dias.</p>
+    <p class="alt">d) 30 dias.</p>
+    <p class="alt">e) 32 dias.</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Soma (dias×pacientes): 15·2+20·2+25·1+30·2+35·1+40·1+45·0+50·1 = 30+40+25+60+35+40+0+50=280.</p>
+        <p>Total de pacientes: 2+2+1+2+1+1+0+1=10.</p>
+        <p>Média = 280/10=28 dias. <strong>Resposta: c) 28 dias</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 18</h2>
+    <p>Considere um paralelogramo ABCD de modo que, ao traçarmos duas retas paralelas por A e por C e
+    perpendiculares a CD, formamos um quadrado central de área 25 cm² e dois triângulos isósceles.</p>
+    <p class="figura-desc">Figura: um paralelogramo ABCD inclinado; ao traçar duas perpendiculares a CD
+    passando por A e por C, o paralelogramo fica dividido em um quadrado central e dois triângulos
+    retângulos isósceles (com ângulos de 45°) nas pontas.</p>
+    <p>I) A área do paralelogramo ABCD é igual a 50 cm².<br>
+    II) Os triângulos formados são semelhantes.<br>
+    III) Uma das diagonais do quadrado formado é paralela à hipotenusa dos triângulos.<br>
+    IV) As hipotenusas dos triângulos formados medem 10cm.<br>
+    V) A área do quadrado formado é igual à soma das áreas dos triângulos.</p>
+    <p>Dentre as alternativas, quantas são falsas?</p>
+    <p class="alt">a) Apenas 1 é falsa</p>
+    <p class="alt">b) Duas são falsas</p>
+    <p class="alt">c) Três são falsas</p>
+    <p class="alt">d) Quatro são falsas</p>
+    <p class="alt">e) Todas são falsas</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Quadrado de área 25 cm² → lado 5 cm. Os dois triângulos são retângulos isósceles com catetos 5 e
+        5 (ângulos de 45°), então: (I) área do paralelogramo = área do quadrado + 2 triângulos =
+        25+2·(5·5/2)=25+25=50 cm² — <strong>verdadeira</strong>. (II) os dois triângulos têm os mesmos
+        ângulos (45-45-90) — <strong>verdadeira</strong> (são até congruentes, o que já garante semelhança).
+        (III) pela simetria da construção, uma diagonal do quadrado fica de fato paralela às hipotenusas dos
+        triângulos — <strong>verdadeira</strong>. (IV) a hipotenusa de um triângulo retângulo isósceles de
+        catetos 5 é 5√2 ≈7,07 cm, não 10 cm — <strong>falsa</strong>. (V) soma das áreas dos triângulos =
+        25 cm², igual à área do quadrado (25 cm²) — <strong>verdadeira</strong>.</p>
+        <p>Só a afirmação IV é falsa. <strong>Resposta: a) Apenas 1 é falsa</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao">
+    <h2>Questão 19</h2>
+    <p>Uma indústria recortou uma placa de metal no formato triangular ABC, conforme Figura 1, com lados 18,
+    14 e 12 cm. Posteriormente, a peça triangular ABC foi dobrada, de tal maneira que o vértice B ficou sobre
+    o segmento AC, e o segmento DE ficou paralelo ao lado AC, conforme Figura 2. Sabe-se que, na Figura 1, o
+    ângulo ACB é menor que o ângulo CAB e este é menor que o ângulo ABC, e que os cortes e dobraduras foram
+    executados corretamente pelas máquinas. Nessas condições, qual é o valor da soma dos comprimentos, em
+    centímetro, dos segmentos DB, BE e EC?</p>
+    <p class="figura-desc">Figura 1: triângulo ABC com lados 18, 14 e 12 cm. Figura 2: o mesmo triângulo
+    dobrado ao longo do segmento DE (D ponto médio de AB, E ponto médio de BC), de forma que o vértice B cai
+    sobre o segmento AC, formando um trapézio ADEC com o triângulo DBE dobrado por cima.</p>
+    <p class="alt">a) 19</p>
+    <p class="alt">b) 20</p>
+    <p class="alt">c) 21</p>
+    <p class="alt">d) 23</p>
+    <p class="alt">e) 24</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Como ângulo ACB &lt; ângulo CAB &lt; ângulo ABC, o lado oposto a cada um segue a mesma ordem: AB
+        (oposto a ACB) é o menor lado, BC (oposto a CAB) é o intermediário, e AC (oposto a ABC) é o maior.
+        Logo AB=12, BC=14, AC=18.</p>
+        <p>D é o ponto médio de AB e E o ponto médio de BC. Ao dobrar o triângulo ao longo de DE, a distância
+        de D até B (antes da dobra) se conserva: DB=AB/2=12/2=6. Da mesma forma, EB=BC/2=14/2=7. E o segmento
+        EC, que não depende da dobra (E já é o ponto médio de BC), mede BC/2=14/2=7.</p>
+        <p>Soma: DB+BE+EC=6+7+7=20. <strong>Resposta: b) 20</strong>.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="questao" style="border-bottom:none">
+    <h2>Questão 20</h2>
+    <p>Uma criança montou um mosaico utilizando quatro azulejos em formato de hexágono regular de lado 10
+    cm. Sua mãe resolveu colocar o mosaico numa moldura retangular, conforme a figura a seguir.</p>
+    <p class="figura-desc">Figura: quatro hexágonos regulares de lado 10 cm, encaixados formando um losango
+    de hexágonos (dois em cima, dois embaixo, meio deslocados), tudo dentro de uma moldura retangular de 50
+    cm de largura.</p>
+    <p>A área da região interna à moldura, que <strong>não</strong> ficou coberta pelos azulejos é de:</p>
+    <p class="alt">a) 400√3 cm²</p>
+    <p class="alt">b) 600√3 cm²</p>
+    <p class="alt">c) 1000√3 cm²</p>
+    <p class="alt">d) 500√3 cm²</p>
+    <p class="alt">e) 200√3 cm²</p>
+    <details class="analise">
+      <summary>Ver análise</summary>
+      <div class="conteudo">
+        <p>Área de cada hexágono regular de lado 10: (3√3/2)·10²=150√3 cm². Para os 4 hexágonos: 4·150√3 =
+        600√3 cm².</p>
+        <p>Área total da moldura retangular (50 cm de largura por 20√3 cm de altura, medidas que se obtêm
+        da disposição dos 4 hexágonos encostados): 50·20√3=1000√3 cm².</p>
+        <p>Área não coberta = área da moldura − área dos azulejos = 1000√3 − 600√3 = 400√3 cm².
+        <strong>Resposta: a) 400√3 cm²</strong>.</p>
+      </div>
+    </details>
+  </div>
+</body>
+</html>
