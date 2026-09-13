@@ -12,7 +12,7 @@
 //   duas matérias — não crie duas entradas separadas pra isso, veja o exemplo lá
 //   embaixo).
 // - frente: "A", "B", ou não escreva o campo se a prova não tiver essa divisão.
-//   Português: A = Matheus, B = Maria Teresa (inclusive Literatura).
+//   Português: A = Mateus, B = Maria Teresa (inclusive Literatura).
 // - professores: sempre uma lista, mesmo com um nome só: ["Nome"].
 // - avaliacao: identificador da prova em si, tipo "AC1", "AC2", "AC3" ou um nome livre
 //   como "Avaliação Dissertativa 1".
@@ -63,7 +63,7 @@ const PROVAS = [
   },
   {
     materia: "Português",
-    professores: ["Matheus", "Maria Teresa"],
+    professores: ["Mateus", "Maria Teresa"],
     avaliacao: "AC1",
     semestre: "2º semestre",
     ano: "2025",
@@ -198,7 +198,7 @@ const PROVAS = [
   },
   {
     materia: "Português",
-    professores: ["Matheus", "Maria Teresa"],
+    professores: ["Mateus", "Maria Teresa"],
     avaliacao: "AC1",
     semestre: "1º semestre",
     ano: "2025",
@@ -207,7 +207,7 @@ const PROVAS = [
   {
     materia: "Português",
     frente: "A",
-    professores: ["Matheus"],
+    professores: ["Mateus"],
     avaliacao: "AC3",
     semestre: "1º semestre",
     ano: "2025",
@@ -250,7 +250,7 @@ const PROVAS = [
   },
   {
     // Literatura é dada pela Maria Teresa, então entra como Português · B (mesma regra
-    // das provas de Português: Matheus = Conhecimentos Linguísticos, Maria Teresa = B).
+    // das provas de Português: Mateus = Conhecimentos Linguísticos, Maria Teresa = B).
     materia: "Português",
     frente: "B",
     professores: ["Maria Teresa"],

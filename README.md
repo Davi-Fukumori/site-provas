@@ -40,7 +40,7 @@ Basta dar duplo-clique no `index.html` — ele abre no navegador e tudo funciona
      estabelecida: **"Filosofia e Sociologia"** (quando é uma prova única das duas
      matérias juntas — nesse caso é **uma entrada só**, não duas).
    - `frente` (opcional): `"A"` ou `"B"`, só quando a matéria tem essa divisão (ex:
-     Física A/B, Química A/B). Em Português, A = Matheus e B = Maria Teresa (inclusive
+     Física A/B, Química A/B). Em Português, A = Mateus e B = Maria Teresa (inclusive
      as provas de Literatura, que contam como Português · B).
    - `avaliacao`: identificador da prova em si — `"AC1"`, `"AC2"`, `"AC3"`, ou um nome
      livre tipo `"Avaliação Dissertativa 1"`.
