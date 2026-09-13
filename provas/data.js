@@ -316,5 +316,17 @@ const PROVAS = [
     semestre: "1º semestre",
     ano: "2024",
     arquivo: "arquivos/biologia/2024/ac3-bio-b-1-semestre/prova.html"
+  },
+
+  // --- Simulado Vital (AC2 por área — cadernos multi-matéria) ---
+
+  {
+    // Simulado Vital, área Linguagens e Códigos: Português + Artes + Educação Física.
+    materia: ["Português", "Artes", "Educação Física"],
+    professores: ["Mateus", "Maria Teresa", "Ana Carina", "Fábio", "Larissa"],
+    avaliacao: "AC2",
+    semestre: "2º semestre",
+    ano: "2024",
+    arquivo: "arquivos/simulado-vital/2024/ac2-linguagens-2-semestre/prova.html"
   }
 ];
