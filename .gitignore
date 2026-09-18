@@ -1,0 +1,7 @@
+# Seção "Provas" desativada temporariamente (direitos autorais das provas em
+# discussão com a coordenação) — os arquivos continuam na máquina de quem mantém
+# o site, só não vão mais pro Git nem pro site publicado. Pra reativar depois que
+# resolver com a coordenação, apague as linhas abaixo e adicione a navegação de
+# volta (veja o README).
+provas/
+assets/js/provas.js

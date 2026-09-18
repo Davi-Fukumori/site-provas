@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perguntas — Estuda Aí</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Estuda Aí</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../universidades/index.html">Universidades</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+        <li><a href="index.html" aria-current="page">Perguntas</a></li>
+        <li><a href="../simulados/index.html">Simulados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Perguntas do dia</h1>
+    <p>Entre com sua conta Google e responda as 5 perguntas de hoje — uma de Exatas, uma de
+    Linguagens, uma de Humanas, uma de Biológicas e um Desafio extra (mais difícil, vale mais
+    pontos). Responda as 5 pra manter seu streak. Confira o <a href="ranking.html">ranking do mês</a>.</p>
+
+    <div id="bloco-login" class="bloco-login">
+      <p id="aviso-navegador-embutido" class="aviso" hidden>
+        <strong>Atenção:</strong> parece que você abriu esse link dentro de um app de
+        mensagens (WhatsApp, Instagram, etc). O login com Google costuma falhar nesse
+        navegador embutido. Toque em "⋮" ou "..." no topo da tela e escolha "Abrir no
+        navegador" antes de entrar.
+      </p>
+      <div id="botao-login"></div>
+      <p id="erro-login" class="erro-formulario"></p>
+    </div>
+
+    <div id="bloco-jogo" hidden>
+      <div class="barra-perfil">
+        <span id="perfil-usuario"></span>
+        <button id="botao-logout" class="botao botao-secundario">Sair</button>
+      </div>
+
+      <p id="carregando-pergunta" class="mensagem-vazia">Carregando perguntas de hoje...</p>
+      <p id="erro-jogo" class="erro-formulario"></p>
+
+      <div id="bloco-pergunta" class="bloco-pergunta" hidden>
+        <p class="subtitulo-progresso" id="pergunta-progresso"></p>
+        <p class="subtitulo-materia" id="pergunta-materia"></p>
+        <h2 id="pergunta-texto"></h2>
+        <div id="pergunta-alternativas" class="lista-alternativas"></div>
+        <button id="botao-enviar-resposta" class="botao" disabled>Responder</button>
+      </div>
+
+      <div id="bloco-resultado" class="bloco-resultado-pergunta" hidden></div>
+    </div>
+  </main>
+
+  <footer>
+    Não tem pergunta nova há um tempo? Peça pra quem cuida do site adicionar mais no banco — veja o <a href="../README.md">README</a>.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="../assets/js/firebase-init.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/perguntas.js"></script>
+</body>
+</html>

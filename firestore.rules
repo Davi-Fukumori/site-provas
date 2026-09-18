@@ -1,0 +1,110 @@
+// Regras de segurança do Firestore — seção "Perguntas" do site.
+//
+// Como usar: Console do Firebase > Firestore Database > Regras > cole este arquivo
+// inteiro por cima do que estiver lá > Publicar.
+//
+// Ideia geral: o site nunca decide sozinho "você acertou" ou "você ganhou X pontos" —
+// quem decide é sempre essa regra, comparando com o gabarito guardado no banco (que o
+// navegador de ninguém consegue ler). Comentários em cada bloco explicam o porquê.
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --- Perfil de cada aluno (nome/foto exibidos no ranking + notas da Calculadora) ---
+    match /usuarios/{uid} {
+      allow read: if request.auth != null;
+      // Só o próprio dono cria/atualiza o próprio perfil. "calculadora" guarda as notas
+      // digitadas por esse aluno na Calculadora de média (dado pessoal, sem relação com
+      // o ranking de Perguntas) — nenhum ponto de Perguntas é guardado aqui, esses vêm
+      // sempre da soma de "respostas", pra não ter como um aluno se dar pontos direto
+      // escrevendo nesse documento.
+      allow write: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['nome', 'foto', 'email', 'criadoEm', 'calculadora'])
+        && (!('calculadora' in request.resource.data) || request.resource.data.calculadora is map);
+    }
+
+    // --- Banco de perguntas (cadastradas manualmente pelo Console, uma a uma) ---
+    match /perguntas/{id} {
+      allow read: if request.auth != null;
+      // Criar/apagar pergunta é só pelo Console do Firebase (que usa acesso de dono,
+      // não passa pelas regras) — daqui do site ninguém cria pergunta nova.
+      allow create, delete: if false;
+      // A única alteração permitida pelo site é marcar "usada: true" quando a pergunta
+      // vira a pergunta do dia de sua frente — e só isso, o resto do conteúdo (inclusive
+      // a "frente") não pode mudar junto.
+      allow update: if request.auth != null
+        && resource.data.usada == false
+        && request.resource.data.usada == true
+        && request.resource.data.materia == resource.data.materia
+        && request.resource.data.frente == resource.data.frente
+        && request.resource.data.texto == resource.data.texto
+        && request.resource.data.pontos == resource.data.pontos
+        && request.resource.data.alternativas == resource.data.alternativas;
+    }
+
+    // --- Gabarito de cada pergunta (a resposta certa em si) ---
+    // Ninguém nunca lê isso pelo navegador — só as próprias regras, através do
+    // get() usado mais abaixo pra conferir uma resposta enviada.
+    match /gabaritos/{id} {
+      allow read, write: if false;
+    }
+
+    // --- Pergunta do dia, uma por frente (ex: perguntaDoDia/2026-09-01/frentes/Exatas) ---
+    // Agora são 5 perguntas por dia (Exatas, Linguagens, Humanas, Biológicas e Desafio),
+    // cada uma no seu próprio documento dentro da subcoleção "frentes" — por isso o
+    // documento "pai" (perguntaDoDia/{dia}) nunca precisa existir sozinho.
+    match /perguntaDoDia/{dia}/frentes/{frente} {
+      allow read: if request.auth != null;
+      // Só pode ser criada 1 vez por frente/dia (documento ainda não existe — é o que
+      // "create" já garante) e só copiando os dados de uma pergunta real, ainda não
+      // usada, dessa mesma frente.
+      allow create: if request.auth != null
+        && frente in ['Exatas', 'Linguagens', 'Humanas', 'Biológicas', 'Desafio']
+        && request.resource.data.keys().hasOnly(['perguntaId', 'materia', 'texto', 'alternativas', 'pontos'])
+        && get(/databases/$(database)/documents/perguntas/$(request.resource.data.perguntaId)).data.usada == false
+        && get(/databases/$(database)/documents/perguntas/$(request.resource.data.perguntaId)).data.frente == frente
+        && get(/databases/$(database)/documents/perguntas/$(request.resource.data.perguntaId)).data.materia == request.resource.data.materia
+        && get(/databases/$(database)/documents/perguntas/$(request.resource.data.perguntaId)).data.texto == request.resource.data.texto
+        && get(/databases/$(database)/documents/perguntas/$(request.resource.data.perguntaId)).data.pontos == request.resource.data.pontos;
+      allow update, delete: if false;
+    }
+
+    // --- Resposta de cada aluno a cada pergunta do dia (uma por frente) ---
+    // Id fixo "uid_data_frente" (ex: "abc123_2026-09-01_Exatas") — como só dá pra
+    // "create" (nunca sobrescrever), isso já impede responder a mesma frente duas vezes
+    // no mesmo dia. O streak (dias seguidos respondendo as 5) não é um campo guardado em
+    // lugar nenhum — é sempre recalculado no navegador contando, dia a dia pra trás,
+    // quantas dessas 5 respostas existem: como são só leituras de documentos já
+    // protegidos por esta mesma regra, não tem como fraudar o streak escrevendo direto.
+    match /respostas/{respostaId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.frente in ['Exatas', 'Linguagens', 'Humanas', 'Biológicas', 'Desafio']
+        && respostaId == request.auth.uid + '_' + request.resource.data.data + '_' + request.resource.data.frente
+        && request.resource.data.nome == request.auth.token.name
+        && request.resource.data.perguntaId ==
+             get(/databases/$(database)/documents/perguntaDoDia/$(request.resource.data.data)/frentes/$(request.resource.data.frente)).data.perguntaId
+        && request.resource.data.materia ==
+             get(/databases/$(database)/documents/perguntaDoDia/$(request.resource.data.data)/frentes/$(request.resource.data.frente)).data.materia
+        // "acertou" não vem do cliente escolhendo true/false — é sempre recalculado
+        // aqui comparando com o gabarito real.
+        && request.resource.data.acertou ==
+             (request.resource.data.alternativaEscolhida ==
+               get(/databases/$(database)/documents/gabaritos/$(request.resource.data.perguntaId)).data.correta)
+        && request.resource.data.pontosGanhos ==
+             (request.resource.data.acertou
+               ? get(/databases/$(database)/documents/perguntaDoDia/$(request.resource.data.data)/frentes/$(request.resource.data.frente)).data.pontos
+               : 0);
+      allow update, delete: if false;
+    }
+  }
+}
+
+// Limite conhecido (aceitável pro tamanho do projeto, documentado no README): como o
+// Firestore não tem como essa regra confirmar sozinho "hoje é realmente essa data", um
+// aluno logando pela 1ª vez consegue responder de uma vez várias "perguntaDoDia" de dias
+// passados que ainda não tinha respondido (não dá vantagem sobre quem já joga todo dia,
+// só deixa alguém novo recuperar pontos — e streak — de dias que perdeu).

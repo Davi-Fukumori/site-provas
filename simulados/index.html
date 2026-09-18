@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulados — Estuda Aí</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Estuda Aí</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../universidades/index.html">Universidades</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="../calculadora/index.html">Calculadora de média</a></li>
+        <li><a href="../perguntas/index.html">Perguntas</a></li>
+        <li><a href="index.html" aria-current="page">Simulados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Simulados</h1>
+    <p>Gere um simulado com 20 questões variadas — de matérias diferentes a cada
+    sorteio, incluindo questões interdisciplinares — pra treinar sozinho.</p>
+
+    <p class="aviso">
+      <strong>Atenção:</strong> isso é só pra treinar — as questões foram reunidas de
+      fontes variadas encontradas online, não são provas oficiais nem do vestibular. Não
+      tem login nem pontuação, e nada fica salvo: se você recarregar a página no meio de
+      um simulado, perde o progresso.
+    </p>
+
+    <div id="bloco-config">
+      <button id="botao-gerar-simulado" class="botao">Gerar simulado</button>
+    </div>
+
+    <div id="bloco-pergunta" class="bloco-pergunta" hidden>
+      <p class="subtitulo-progresso" id="simulado-progresso"></p>
+      <p class="subtitulo-materia" id="simulado-materia"></p>
+      <h2 id="simulado-texto"></h2>
+      <div id="simulado-alternativas" class="lista-alternativas"></div>
+      <button id="botao-responder-simulado" class="botao" disabled>Responder</button>
+    </div>
+
+    <div id="bloco-resultado" class="bloco-resultado-pergunta" hidden></div>
+  </main>
+
+  <footer>
+    Sem questão nova há um tempo? Peça pra quem cuida do site adicionar mais no banco —
+    veja o <a href="../README.md">README</a>.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/simulados.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de média — Estuda Aí</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="barra-nav">
+      <a class="logo" href="../index.html">Estuda Aí</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul id="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../universidades/index.html">Universidades</a></li>
+        <li><a href="../literatura/index.html">Literatura</a></li>
+        <li><a href="index.html" aria-current="page">Calculadora de média</a></li>
+        <li><a href="../perguntas/index.html">Perguntas</a></li>
+        <li><a href="../simulados/index.html">Simulados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Calculadora de média</h1>
+    <p>
+      Entre com sua conta Google pra usar a calculadora — assim as notas ficam salvas
+      na sua conta e aparecem iguais em qualquer aparelho que você abrir o site.
+    </p>
+
+    <div id="bloco-login" class="bloco-login">
+      <p id="aviso-navegador-embutido" class="aviso" hidden>
+        <strong>Atenção:</strong> parece que você abriu esse link dentro de um app de
+        mensagens (WhatsApp, Instagram, etc). O login com Google costuma falhar nesse
+        navegador embutido. Toque em "⋮" ou "..." no topo da tela e escolha "Abrir no
+        navegador" antes de entrar.
+      </p>
+      <div id="botao-login"></div>
+      <p id="erro-login" class="erro-formulario"></p>
+    </div>
+
+    <div id="bloco-calculadora" hidden>
+      <div class="barra-perfil">
+        <span id="perfil-usuario"></span>
+        <button id="botao-logout" class="botao botao-secundario">Sair</button>
+      </div>
+      <p id="status-salvamento" class="status-salvamento"></p>
+
+      <p>
+        Primeiro preencha os Simulados (AC2) por área e a nota extra — eles valem
+        igual para todas as matérias. Depois preencha as notas de cada matéria.
+      </p>
+
+      <section class="bloco-areas">
+        <h2>Simulados (AC2) por área</h2>
+        <p>Conta como uma 3ª nota contínua (C3) na fórmula de cada matéria.</p>
+        <div class="filtros">
+          <div class="campo">
+            <label for="area-exatas">Exatas</label>
+            <input type="number" id="area-exatas" min="0" max="10" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="area-linguas">Linguagens</label>
+            <input type="number" id="area-linguas" min="0" max="10" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="area-humanas">Humanas</label>
+            <input type="number" id="area-humanas" min="0" max="10" step="0.1">
+          </div>
+          <div class="campo">
+            <label for="area-biologicas">Biológicas</label>
+            <input type="number" id="area-biologicas" min="0" max="10" step="0.1">
+          </div>
+        </div>
+        <p class="resumo-geral">Simulados (AC2): <strong id="simulado-geral">–</strong></p>
+      </section>
+
+      <section class="bloco-areas bloco-bonus">
+        <h2>Bônus (nota extra)</h2>
+        <p>
+          O Bônus vem de uma nota extra ÷ 10, somado na AC2 de toda matéria (sem
+          passar de 10). É igual para todas — inclusive a AC2 de cada matéria abaixo é
+          compartilhada com as outras da mesma área.
+        </p>
+        <div class="filtros">
+          <div class="campo">
+            <label for="nota-extra">Nota extra</label>
+            <input type="number" id="nota-extra" min="0" max="10" step="0.1">
+          </div>
+        </div>
+        <p class="resumo-geral">Bônus na AC2: <strong id="bonus-geral">–</strong></p>
+      </section>
+
+      <div class="config-minima">
+        <label for="nota-minima">Nota mínima para aprovação</label>
+        <input type="number" id="nota-minima" value="6" min="0" max="10" step="0.1">
+      </div>
+
+      <div id="lista-materias" class="lista-materias"></div>
+    </div>
+  </main>
+
+  <footer>
+    Se a escola mudar algum peso, edite <code>calculadora/materias.js</code> —
+    não precisa mexer no resto do site.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="../assets/js/firebase-init.js"></script>
+  <script src="materias.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/calculadora.js"></script>
+</body>
+</html>
